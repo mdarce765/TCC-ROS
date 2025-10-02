@@ -1,0 +1,91 @@
+\chapter{INTRODUÇÃO}
+\label{intro}
+
+\begin{comment}
+\emph{Questão a ser respondida pela Introdução: O que você fez? E por que você fez isso?}
+Na introdução devemos ajudar o leitor a entender o motivo / importância da pesquisa e o que ela está contribuindo para a área. Portanto, indique a motivação (ou motivações) para fazer a pesquisa e o que ela contribuirá para o campo.
+
+Dê também ao leitor uma breve descrição sobre a área de pesquisa de forma geral e ampla e, então, reduza ao foco específico do trabalho, oferecendo informações detalhadas sobre o tópico pesquisado.
+
+Deixe claro quais são os objetivos da pesquisa. 
+
+Pode-se, no final da introdução, apresentar ainda a estrutura do trabalho, indicando como ele está organizado e os tópicos que serão abordados em cada seção subsequente.
+
+Nos últimos anos, a globalização e as transformações tecnológicas vêm redefinindo a estrutura do mercado de trabalho em todo o mundo [1]. Essas mudanças têm afetado profundamente a segurança do emprego e as condições de trabalho dos indivíduos. O objetivo deste trabalho é investigar o impacto da automação e da inteligência artificial na precarização do trabalho, analisando como essas tecnologias têm contribuído para o aumento da informalidade e da desigualdade no mercado de trabalho. Este estudo é relevante em um contexto em que a preocupação com a segurança no emprego e a equidade está no centro das discussões globais.
+
+Nos últimos anos, a Inteligência Artificial (IA) se consolidou como uma das tecnologias mais promissoras e transformadores do nosso tempo [1]. A capacidade das máquinas de aprender e tomar decisões de forma
+autônoma tem aplicações em uma variedade de setores, desde a medicina até o transporte [2]. Este estudo tem como objetivo investigar o uso da IA na otimização de sistemas de recomendação em plataformas de streaming de vídeos. Com o crescente volume de conteúdo disponível, tornou-se crucial para as empresas de streaming entender as preferências dos usuários e oferecer recomendações personalizadas. Esta pesquisa é relevante não apenas do ponto de vista da indústria de entretenimento,
+mas também do ponto de vista da pesquisa em IA, pois aborda desafios técnicos significativos.
+\end{comment}
+
+
+
+A conteinerização é uma ferramenta poderosa no campo de desenvolvimento e implementação, disponibilizando certa camada de isolamento entre componentes de um projeto, assegurando que estes não irão conflitar, seja por funções internas ou dependências de versões diferentes sendo utilizadas. No campo da robótica, conteinerização é vista como uma técnica para facilitar o desenvolvimento, portabilidade e consistência em projetos de robótica, mas não foram feitas pesquisas detalhando a integração destes projetos com Docker e seus efeitos no desempenho de um robô físico. A proposta do projeto é justamente esta: integrar ROS 2 e Docker, explicando os passos utilizados e comparando o desempenho com e sem conteinerização, sendo dividido em 2 partes: em um simulador Gazebo, e em um robô Turtlebot real.
+\begin{comment}
+    \begin{itemize}
+    \item Contexto
+    \begin{enumerate}
+        \item Como esse tópico se encaixa no contexto da área de pesquisa?\\
+        R: Se encaixa na pesquisa pois estamos utilizando técnicas da área da ciência da computação para implementar e avaliar o desempenho de ROS + Docker.
+        \item Qual a relevância do tópico escolhido para a área de estudo?\\
+        R: O trabalho é relevante pois pode ajudar futuros projetos utilizando ROS+Docker, ao evidenciar certas falhas e/ou perdas de desempenho relacionado com essa integração
+        \item Quais eventos históricos e/ou recentes que contextualizam esse tópico?\\
+        R: O crescimento do uso de containers em projetos com grande quantidade de complexidade/dependências [colocar artigo aqui]
+    \end{enumerate}
+    \item Problema de pesquisa
+    \begin{enumerate}
+        \item Qual a questão central que seu TCC se propõe a abordar?\\
+        R: Diferenças de desempenho relacionada à integração Docker, além de possível incompatibilidades/peculiariades relacionadas.
+        \item Por que esse problema é significativo ou merece investigação?\\
+        R: Pois sem saber destas diferenças, é difícil fazer a decisão de qual partes do projeto podem ser integradas a Docker, e qual os possíveis riscos.
+        \item Existem lacunas na literatura existente relacionada a esse problema?\\
+        R: Sim, já foram feitos vários estudos relacionados ao desempenho do ROS+Docker em simulações, ou sua inicialização [colocar artigo aqui], mas não no robô físico.
+    \end{enumerate}
+    \item Objetivos
+    \begin{enumerate}
+        \item Quais são os principais objetivos do seu TCC?\\
+        R: Encontrar e avaliar diferenças na performance e compatibilidade de projetos ROS e ROS+Docker
+        \item Como seus objetivos estão relacionados ao problema de pesquisa?\\
+        R: Ter estes dados irá facilitar a avaliação e desenvolvimento de futuros projetos ROS+Docker.
+        \item O que você espera alcançar com esta pesquisa?\\
+        R: A obtenção de dados relevantes à decisão de integrar Docker ao projeto, e quais partes deste podem ganhar com esta integração.
+    \end{enumerate}
+    \item Justificativa
+    \begin{enumerate}
+        \item Por que é importante abordar esse problema de pesquisa?\\
+        R: 
+        \item Quais são as implicações práticas e teóricas da sua pesquisa?\\
+        R: 
+        \item Como sua pesquisa contribuirá para o conhecimento existente na área?\\
+        R: 
+    \end{enumerate}
+    \item Hipótese
+    \begin{enumerate}
+        \item Qual é a suposição sendo feita com base na revisão da literatura?\\
+        R: Que existem diferenças que não se mostram em simulações.
+        \item Como sua suposição se relaciona ao problema de pesquisa?\\
+        R: 
+        \item Como você pretende testar ou validar essa hipótese?\\
+        R: Utilizando métricas como tempo e aproveitamento para medir o desempenho, e uma medição binária para compatibilidades
+    \end{enumerate}
+\end{itemize}
+\end{comment}
+
+
+\section{OBJETIVO}
+Documentar e avaliar o desempenho do robô simulado e do robô real quando comparados à sua implementação com e sem conteinerização.
+
+\begin{comment}
+\section{ESTRUTURA DO TRABALHO}
+
+O restante deste trabalho é dividido da seguinte maneira: na Seção 2, serão
+apresentados todos os conceitos utilizados e relacionados ao tema abordado, para que o leitor possa entender com clareza as técnicas que estão sendo tratadas no trabalho e compreender os termos que serão descritos posteriormente.
+
+Na Seção 3, os trabalhos relacionados disponíveis na literatura, com o objetivo de apresentar o cenário atual de pesquisa da área.
+ 
+A Seção 4 detalhará a metodologia que será utilizada para o desenvolvimento deste trabalho, demonstrando as técnicas que serão utilizadas e os passos a serem realizados para atingir o objetivo final.
+
+O Seção 5 irá expor o que os autores deste trabalho esperam ao longo do desenvolvimento e após a implementação da metodologia proposta.
+
+\end{comment}
+
