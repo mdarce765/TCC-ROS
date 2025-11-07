@@ -1,0 +1,76 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[CoppeliaSim 2020]{cop2020}
+\abntrefinfo{CoppeliaSim}{COPPELIASIM}{2020}
+{COPPELIASIM. \textbf{ROS2 tutorial}. 2020.
+Accessed: 2025-05-25.
+Dispon{\'\i}vel em:
+  \url{https://manual.coppeliarobotics.com/en/ros2Tutorial.htm}.}
+
+\bibitem[Foundation 2018]{ros2025}
+\abntrefinfo{Foundation}{FOUNDATION}{2018}
+{FOUNDATION, I. O. S.~R. \textbf{ROS}. 2018.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em: \url{https://wiki.ros.org/ROS/Introduction}.}
+
+\bibitem[Foundation 2022]{gzb2025}
+\abntrefinfo{Foundation}{FOUNDATION}{2022}
+{\underline{\ \ \ \ \ \ \ \ }. \textbf{Gazebo Simulator}. 2022.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em: \url{https://gazebosim.org/home}.}
+
+\bibitem[Foundation 2025]{tbt2025}
+\abntrefinfo{Foundation}{FOUNDATION}{2025}
+{\underline{\ \ \ \ \ \ \ \ }. \textbf{TurtleBot}. 2025.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em: \url{https://www.turtlebot.com/}.}
+
+\bibitem[Gao et al. 2023]{Gao2023}
+\abntrefinfo{Gao et al.}{GAO et al.}{2023}
+{GAO, X. et al. Design and ground performance evaluation of a multi-joint
+  wheel-track composite mobile robot for enhanced terrain adaptability.
+\textbf{Applied Sciences}, v.~13, n.~12, 2023.
+ISSN 2076-3417.
+Dispon{\'\i}vel em: \url{https://www.mdpi.com/2076-3417/13/12/7270}.}
+
+\bibitem[Inc. 2025]{dck2025}
+\abntrefinfo{Inc.}{INC.}{2025}
+{INC., D. \textbf{Docker}. 2025.
+Accessed: 2025-05-25.
+Dispon{\'\i}vel em:
+  \url{https://docs.docker.com/get-started/docker-overview/}.}
+
+\bibitem[{ROBOTIS} 2025]{turtlebot3_manual}
+\abntrefinfo{{ROBOTIS}}{{ROBOTIS}}{2025}
+{{ROBOTIS}. \textbf{{TurtleBot3 e-Manual: Overview}}. 2025.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em:
+  \url{https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/}.}
+
+\bibitem[ROBOTIS-GIT 2025]{turtlebot3_github}
+\abntrefinfo{ROBOTIS-GIT}{ROBOTIS-GIT}{2025}
+{ROBOTIS-GIT. \textbf{TurtleBot3 GitHub Repository}. 2025.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em: \url{https://github.com/ROBOTIS-GIT/turtlebot3}.}
+
+\bibitem[Sobieraj e Kotyński 2024]{SMKD2024}
+\abntrefinfo{Sobieraj e Kotyński}{SOBIERAJ; KOTYńSKI}{2024}
+{SOBIERAJ, M.; KOTYńSKI, D. Docker performance evaluation across operating
+  systems.
+\textbf{Applied Sciences}, v.~14, n.~15, 2024.
+ISSN 2076-3417.
+Dispon{\'\i}vel em: \url{https://www.mdpi.com/2076-3417/14/15/6672}.}
+
+\bibitem[Wen et al. 2023]{Wen2023}
+\abntrefinfo{Wen et al.}{WEN et al.}{2023}
+{WEN, L. et al. Bare-metal vs. hypervisors and containers: Performance
+  evaluation of virtualization technologies for software-defined vehicles. In:
+  . [s.n.], 2023. Dispon{\'\i}vel em:
+  \url{https://www.researchgate.net/publication/372496789\_Bare-Metal\_vs\_Hypervisors\_and\_Containers\_Performance\_Evaluation\_of\_Virtualization\_Technologies\_for\_Software-Defined\_Vehicles}.}
+
+\end{thebibliography}
