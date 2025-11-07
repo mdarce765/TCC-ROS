@@ -18,9 +18,7 @@ autônoma tem aplicações em uma variedade de setores, desde a medicina até o 
 mas também do ponto de vista da pesquisa em IA, pois aborda desafios técnicos significativos.
 \end{comment}
 
-
-
-A conteinerização é uma ferramenta poderosa no campo de desenvolvimento e implementação, disponibilizando certa camada de isolamento entre componentes de um projeto, assegurando que estes não irão conflitar, seja por funções internas ou dependências de versões diferentes sendo utilizadas. No campo da robótica, conteinerização é vista como uma técnica para facilitar o desenvolvimento, portabilidade e consistência em projetos de robótica, mas não foram feitas pesquisas detalhando a integração destes projetos com Docker e seus efeitos no desempenho de um robô físico. A proposta do projeto é justamente esta: integrar ROS 2 e Docker, explicando os passos utilizados e comparando o desempenho com e sem conteinerização, sendo dividido em 2 partes: em um simulador Gazebo, e em um robô Turtlebot real.
+A conteinerização é uma ferramenta poderosa no campo de desenvolvimento e implementação, disponibilizando certa camada de isolamento entre componentes de um projeto, assegurando que estes não irão conflitar, seja por funções internas ou dependências de versões diferentes sendo utilizadas. No campo da robótica, conteinerização é vista como uma técnica para facilitar o desenvolvimento, portabilidade e consistência em projetos de robótica, mas não foram feitas pesquisas detalhando sobre a integração destes projetos com Docker e quais efeitos o desempenho de um robô pode acabar sofrendo.
 \begin{comment}
     \begin{itemize}
     \item Contexto
@@ -73,19 +71,44 @@ A conteinerização é uma ferramenta poderosa no campo de desenvolvimento e imp
 
 
 \section{OBJETIVO}
-Documentar e avaliar o desempenho do robô simulado e do robô real quando comparados à sua implementação com e sem conteinerização.
+O objetivo deste projeto é o de documentar e avaliar o desempenho de um robô simulado com e
+sem conteinerização em arenas simuladas baseadas na arena da sala K4-04 do Centro Universitário
+FEI sendo executado no software Gazebo Classic.
+
+\section{ESTRUTURA DO TRABALHO}
+O decorrer deste projeto está dividido da seguinte maneira: na seção 2, serão abordados os
+conceitos utilizados no projeto junto às ferramentas utilizadas para que o leitor possa
+entender com clareza o tema abordado no projeto e compreender os termos utilizados posteriormente.
+
+Na seção 3, são abordados os trabalhos que possuem alguma relação com o projeto, como métricas,
+ideias e etc.
+
+A Seção 4, são abordados os detalhes da metodologia que será utilizada para o desenvolvimento deste 
+trabalho, demonstrando as técnicas que serão utilizadas e os passos a serem realizados para 
+atingir o objetivo final.
+
+Na seção 5, são abordados os experimentos e resultados obtidos ao longo do projeto, como os
+experimentos foram executados, os problemas obtidos e, no final, mostrar os resultados que foram
+obtidos, explicando o que era esperado e o que acabou por ser obtido. 
+
+Na seção 6, são abordadas a discussão, conclusão e os trabalhos futuros a serem desenvolvidos.
+São explicados e discutidos os resultados obtidos do projeto, o que foi concluído com os
+resultados e, no final, explicar alguns passos que não foram realizados e que estão disponíveis.
+para algum aluno desenvolver no futuro.
 
 \begin{comment}
-\section{ESTRUTURA DO TRABALHO}
-
 O restante deste trabalho é dividido da seguinte maneira: na Seção 2, serão
-apresentados todos os conceitos utilizados e relacionados ao tema abordado, para que o leitor possa entender com clareza as técnicas que estão sendo tratadas no trabalho e compreender os termos que serão descritos posteriormente.
+apresentados todos os conceitos utilizados e relacionados ao tema abordado, para que o leitor 
+possa entender com clareza as técnicas que estão sendo tratadas no trabalho e compreender os 
+termos que serão descritos posteriormente.
 
-Na Seção 3, os trabalhos relacionados disponíveis na literatura, com o objetivo de apresentar o cenário atual de pesquisa da área.
+Na Seção 3, os trabalhos relacionados disponíveis na literatura, com o objetivo de apresentar 
+o cenário atual de pesquisa da área.
  
-A Seção 4 detalhará a metodologia que será utilizada para o desenvolvimento deste trabalho, demonstrando as técnicas que serão utilizadas e os passos a serem realizados para atingir o objetivo final.
+A Seção 4 detalhará a metodologia que será utilizada para o desenvolvimento deste trabalho, 
+demonstrando as técnicas que serão utilizadas e os passos a serem realizados para atingir o 
+objetivo final.
 
-O Seção 5 irá expor o que os autores deste trabalho esperam ao longo do desenvolvimento e após a implementação da metodologia proposta.
-
+O Seção 5 irá expor o que os autores deste trabalho esperam ao longo do desenvolvimento e após 
+a implementação da metodologia proposta.
 \end{comment}
-

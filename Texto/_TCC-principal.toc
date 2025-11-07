@@ -2,13 +2,14 @@
 \babel@toc {portuges}{}\relax
 \contentsline {chapter}{\numberline {1}INTRODUÇÃO}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}OBJETIVO}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}ESTRUTURA DO TRABALHO}{5}{section.1.2}%
 \contentsline {chapter}{\numberline {2}CONCEITOS FUNDAMENTAIS}{6}{chapter.2}%
 \contentsline {section}{\numberline {2.1}FERRAMENTAS}{6}{section.2.1}%
 \contentsline {chapter}{\numberline {3}TRABALHOS RELACIONADOS}{9}{chapter.3}%
 \contentsline {chapter}{\numberline {4}METODOLOGIA}{10}{chapter.4}%
 \contentsline {chapter}{\numberline {5}EXPERIMENTOS E RESULTADOS[EXPLICAR FIGURAS]}{11}{chapter.5}%
-\contentsline {section}{\numberline {5.1}DESENVOLVIMENTO DAS ARENAS}{11}{section.5.1}%
-\contentsline {section}{\numberline {5.2}TESTES}{11}{section.5.2}%
-\contentsline {chapter}{\numberline {6}TRABALHOS FUTUROS}{17}{chapter.6}%
-\contentsline {chapter}{\numberline {7}DISCUSSÃO E CONCLUSÃO}{18}{chapter.7}%
-\contentsline {chapter}{\hspace {4em}\mdseries REFER\^ENCIAS}{19}{section*.17}%
+\contentsline {section}{\numberline {5.1}EXPERIMENTOS}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}RESULTADOS}{11}{section.5.2}%
+\contentsline {chapter}{\numberline {6}DISCUSSÃO E CONCLUSÃO}{17}{chapter.6}%
+\contentsline {section}{\numberline {6.1}TRABALHOS FUTUROS}{17}{section.6.1}%
+\contentsline {chapter}{\hspace {4em}\mdseries REFER\^ENCIAS}{18}{section*.17}%

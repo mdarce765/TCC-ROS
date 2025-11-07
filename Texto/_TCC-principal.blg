@@ -8,7 +8,6 @@ A level-1 auxiliary file: tcc-conceitos.aux
 A level-1 auxiliary file: tcc-trabalhos.aux
 A level-1 auxiliary file: tcc-metodologia.aux
 A level-1 auxiliary file: tcc-experimentos.aux
-A level-1 auxiliary file: tcc-futuro.aux
 A level-1 auxiliary file: tcc-discussao-conclusao.aux
 The style file: abntex2-alf.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -45,45 +44,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 14 entries,
+You've used 13 entries,
             6714 wiz_defined-function locations,
-            1266 strings with 11036 characters,
-and the built_in function-call counts, 19138 in all, are:
-= -- 2460
-> -- 221
-< -- 575
-+ -- 697
-- -- 69
-* -- 1088
-:= -- 2375
-add.period$ -- 50
-call.type$ -- 14
-change.case$ -- 100
-chr.to.int$ -- 17
-cite$ -- 10
-duplicate$ -- 2034
-empty$ -- 722
-format.name$ -- 330
-if$ -- 3750
+            1258 strings with 10768 characters,
+and the built_in function-call counts, 17491 in all, are:
+= -- 2275
+> -- 179
+< -- 530
++ -- 639
+- -- 57
+* -- 973
+:= -- 2166
+add.period$ -- 45
+call.type$ -- 13
+change.case$ -- 86
+chr.to.int$ -- 13
+cite$ -- 9
+duplicate$ -- 1871
+empty$ -- 674
+format.name$ -- 269
+if$ -- 3426
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 209
-newline$ -- 68
-num.names$ -- 50
-pop$ -- 269
+missing$ -- 192
+newline$ -- 61
+num.names$ -- 45
+pop$ -- 249
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 42
 quote$ -- 0
-skip$ -- 2210
+skip$ -- 2051
 stack$ -- 1
-substring$ -- 829
-swap$ -- 687
-text.length$ -- 14
+substring$ -- 768
+swap$ -- 629
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1
 warning$ -- 0
-while$ -- 72
+while$ -- 65
 width$ -- 0
-write$ -- 165
+write$ -- 147
 (There were 7 warnings)
