@@ -1,30 +1,15 @@
-\chapter{CONCEITOS FUNDAMENTAIS} \label{conceitos}
+\chapter{CONCEITOS FUNDAMENTAIS} 
+\label{conceitos}
 
-\begin{comment}
-\emph{Questão a ser respondida pelos Conceitos: Quais são os fundamentos teóricos relevantes?}
-Aqui define-se os principais termos e conceitos que serão utilizados ao longo do trabalho. Para essa seção é recomendada a utilização de livros e artigos já consolidados na literatura. Todos os parágrafos dessa seção devem ter pelo menos uma citação. 
-\end{comment}
-\textbf{Conteinerização:} Uma forma de virtualização feita para ser mais rápida e flexível que a emulação, é um processo de implantação que consegue ser executado em diversos dispositivos e sistemas operacionais, isso ocorre pelo fato de que um contêiner consegue armazenar os arquivos e bibliotecas para ser executado, permitindo um usuário executar uma aplicação de outro sistema operacional no sistema operacional que o mesmo possua, além disso, o contêiner permite que falhas ocorram sem afetar outros processos que não estão agrupados no mesmo. \cite{Wen2023}
-
-\begin{comment}
-    \textbf{Conteinerização:} Uma forma de virtualização feita para ser mais rápida e flexível que emulação, mas ainda ter sua consistência e isolamento do Sistema Operacional principal \cite{Wen2023}.
-
-    A conteinerização é um processo de implantação de software que agrupa o código de uma aplicação com todos os arquivos e bibliotecas de que ela precisa para ser executado em qualquer infraestrutura. Tradicionalmente, para executar qualquer aplicação em seu computador, era necessário instalar a versão que correspondia ao sistema operacional da sua máquina. Por exemplo, você precisava instalar a versão Windows de um pacote de software em uma máquina Windows. No entanto, com a conteinerização, você pode criar um único pacote de software, ou contêiner, que é executado em todos os tipos de dispositivos e sistemas operacionais. 
-\end{comment}
+Este capítulo aborda os conceitos teóricos e as ferramentas utilizadas no desenvolvimento deste trabalho, com o intuito de descrever e relacionar estes conceitos, para haver entendimento nas etapas posteriores abordadas. O principal conceito a ser abordado é a \textbf{Containerização:} uma forma de virtualização feita para ser mais rápida e flexível que a emulação, é um processo de implantação que consegue ser executado em diversos dispositivos e sistemas operacionais, isso ocorre pelo fato de que um contêiner consegue armazenar os arquivos e bibliotecas para ser executado, permitindo a um usuário executar uma aplicação de outro sistema operacional no sistema operacional que o mesmo possua, além disso, o contêiner permite que falhas ocorram sem afetar outros processos que não estão agrupados no mesmo.\cite{Wen2023}. 
+A Containerização será feita usando o \textbf{Docker:} É uma plataforma utilizada para desenvolvimento, envio e funcionamento de aplicações de maneira separada da infraestrutura por conta da conteinerização, por conta deste fator o usuário consegue gerir as aplicações da mesma maneira que gera sua infraestrutura, outro fator importante é que o Docker permite que as aplicações desenvolvidas sejam testadas e executadas com menos atraso do que a maneira convencional. Contêineres são bons para fluxos de integrações e entregas de trabalho contínuas.\cite{dck2025}
+Para realizar os testes no robô simulado, será utilizado o \textbf{ROS2(Robot Operating System 2):} que é um meta-sistema operacional de código aberto utilizado para auxiliar a desenvolver aplicações para robôs, o mesmo possui serviços que outros sistemas operacionais normalmente possuem, mas com o foco maior para a área da robótica, facilitando comunicação entre processos, funções que se comunicam com as demais e entre muitos outros. Para o desenvolvimento do projeto, será utilizado o ROS 2 que mantém o conceito modular e distribuido, mas possui melhorias e mais funcionalidades que o ROS original (Figura \ref{fig:ROS25}) \cite{ros2025}
 
 \textbf{Meta-sistema operacional:} Um meta-sistema operacional se trata de um sistema operacional para robôs, o mesmo realiza todas as funções que um sistema operacional faz. O mesmo possui bibliotecas e ferramentas que executam códigos em multiplos computadores. Este sistema operacional é utilizado em robôs...
-%https://wiki.ros.org/ROS/Introduction
 
 \textbf{Middleware:} Uma camada de software que conecta as aplicações a um sistema operacional, permitindo uma comunicação e compartilhamento de dados mais simples entre os componentes de um sistema, esta facilidade permite que os desenvolvedores foquem no desenvolvimento das principais funções de uma aplicação, pois a comunicação entre a aplicação e o sistema operacional está sendo feita pelo middleware.
 
 \textbf{DDS:} Um protocolo middleware e uma API para conexão centrada em dados, este protocolo integra os componentes de um sistema que muitas aplicações precisam, como arquitetura escalar, confiabilidade e prover conectividade de dados de baixa latência. Este protocolo foi criado pela OMG.
-
-\section{FERRAMENTAS}
-Para o desenvolvimento do projeto, serão utilizados softwares e ferramentas para que os testes possam ser realizados e analisados. As ferramentas utilizadas serão:
-
-\textbf{Docker:} É uma plataforma utilizada para desenvolvimento, envio e funcionamento de aplicações de maneira separada da infraestrutura por conta da conteinerização, por conta deste fator o usuário consegue gerir as aplicações da mesma maneira que gera sua infraestrutura, outro fator importante é que o Docker permite que as aplicações desenvolvidas sejam testadas e executadas com menos atraso do que a maneira convencional. Contêineres são bons para fluxos de integrações e entregas de trabalho contínuas.\cite{dck2025}
-
-\textbf{ROS2(Robot Operating System 2):} É um meta-sistema operacional de código aberto utilizado para auxiliar a desenvolver aplicações para robôs, o mesmo possui serviços que outros sistemas operacionais normalmente possuem, mas com o foco maior para a área da robótica, facilitando comunicação entre processos, funções que se comunicam com as demais e entre muitos outros. Para o desenvolvimento do projeto, será utilizado o ROS 2 que mantém o conceito modular e distribuido, mas possui melhorias e mais funcionalidades que o ROS original (Figura \ref{fig:ROS25}) \cite{ros2025}
 
 \textbf{Gazebo Simulator:} É um software usado para desenvolver simulações, possui diversos projetos de código aberto para que os interessados possam utilizar e desenvolver suas próprias simulações. Neste software estão presentes também diversos modelos, tanto como objetos como também robôs.(Figura \ref{fig:gzb25}) \cite{gzb2025}
 
