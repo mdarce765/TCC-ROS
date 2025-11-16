@@ -1,9 +1,15 @@
 \chapter{EXPERIMENTOS E RESULTADOS[EXPLICAR FIGURAS]}
 \label{experimentos}
 \section{EXPERIMENTOS}
-Para serem realizados os testes de conteinerização, foram desenvolvidas arenas simuladas no software Gazebo Classic. As arenas foram desenvolvidas com base na arena presente na instituição, na sala K4-04 (COLOCAR IMAGEM DA ARENA REAL E DA ARENA SIMULADA SEM NADA). O motivo de esta arena ter sido utilizada se deu por conta da comparação que poderia ser realizada entre os testes virtuais e reais. Foram desenvolvidas quatro arenas, duas principais e duas alternativas, que são iguais às arenas principais, mas com a possibilidade de adicionar robôs patrulheiros que seriam obstáculos para o robô principal. O modelo da arena foi fornecido pelo professor da instituição, Fagner Pimentel, que forneceu um arquivo ".sdf" para ser utilizado, para então serem adicionadas placas como obstáculos (as placas seriam o principal obstáculo por conta do respeito para com as regras da arena real), gerando as arenas de teste.
+Os experimentos utilizam uma arena practicamente idêntica à arena presente na instituição, na sala K4-04 (COLOCAR IMAGEM DA ARENA REAL E DA ARENA SIMULADA SEM NADA). O motivo de esta arena ter sido escolhida se deu por conta da comparação que poderia futuramente ser realizada entre os testes virtuais e reais. O modelo da arena foi fornecido pelo professor da instituição, Fagner Pimentel, que forneceu o arquivo ".sdf" utilizado.
 
-\section{RESULTADOS}
+Experimentos feitos:
+Experimento Setup: Testes iniciais para confirmar o comportamento de ROS2 dentro de um container Docker
+Experimento Base: Simulações utilizando o mapa base sem patrulheiros
+Experimento Patrulheiros: Simulações utilizando o mapa base com patrulheiros
+Experimento Base+Docker: Simulações utilizando mapa base sem patrulheiros, com a stack nav2 e rviz dentro de um container Docker
+Experimento Patrulheiros+Docker: Simulações utilizando o mapa base com patrulheiros, com a stack nav2 e rviz dentro de um container Docker
+\section{RESULTADOS SETUP}
 Foram feitos testes 
 %\cite{github_tcc_docker}
 para implementar a parte simulada proposta, sendo utilizado o manual \cite{turtlebot3_manual} e pacotes \cite{turtlebot3_github} disponíveis pelo grupo ROBOTIS, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava de 20+ minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
@@ -11,7 +17,7 @@ para implementar a parte simulada proposta, sendo utilizado o manual \cite{turtl
 
 Houve certas dificuldades para integrar o ROS2 dentro do contêiner Docker com o ROS2 nativo, que lidaria com a simulação Gazebo. Foi descoberto que o middleware utilizado por padrão pelo ROS2 Humble, FastDDS, não interage de forma consistente com Docker. Ele era capaz de compartilhar os tópicos entre os ambientes, mas causava falha na publicação e recebimento de mensagens, não mostrando nenhuma.
 
-Para solucionar isso, o FastDDS foi substituído por outro middleware disponível para ROS2 Humble, CycloneDDS, o qual foi utilizado especificamente no contêiner Docker.
+Para solucionar isso, o FastDDS foi substituído por outro middleware disponível para ROS2 Humble, CycloneDDS, o qual foi utilizado especificamente no container Docker.
 
 \begin{figure}[htb]
     \centering
@@ -79,4 +85,24 @@ Para solucionar isso, o FastDDS foi substituído por outro middleware disponíve
     \caption{Turtlebot3 Burger é movimentado pelo ROS2 Humble presente dentro do conteiner Docker}
     \label{fig:enter-label}
 \end{figure}
-
+\section{RESULTADOS BASE}
+--A EDITAR--
+Foram feitos testes para adquirir os dados de desempenho de simulações sem Docker, utilizando a arena base sem patrulheiros.
+1- Rodar o comando no diretório do repositório (INSERIR COMANDO)
+2- Imagens durante a execução do teste
+3- Mostrar dados via nmonvisualizer
+\section{RESULTADOS PATRULHEIROS}
+Foram feitos testes para adquirir os dados de desempenho de simulações sem Docker, utilizando a arena base com patrulheiros.
+1- Rodar o comando no diretório do repositório (INSERIR COMANDO)
+2- Imagens durante a execução do teste
+3- Mostrar dados via nmonvisualizer
+\section{RESULTADOS BASE+DOCKER}
+Foram feitos testes para adquirir os dados de desempenho de simulações com Docker, utilizando a arena base sem patrulheiros.
+1- Rodar o comando no diretório do repositório (INSERIR COMANDO)
+2- Imagens durante a execução do teste
+3- Mostrar dados via nmonvisualizer
+\section{RESULTADOS PATRULHEIROS+DOCKER}
+Foram feitos testes para adquirir os dados de desempenho de simulações com Docker, utilizando a arena base com patrulheiros.
+1- Rodar o comando no diretório do repositório (INSERIR COMANDO)
+2- Imagens durante a execução do teste
+3- Mostrar dados via nmonvisualizer
