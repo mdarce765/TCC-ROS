@@ -2010,9 +2010,6 @@ INPUT ./Figures/TurtleBot3.jpg
 OUTPUT _TCC-principal.mw
 INPUT _TCC-principal.mw
 OUTPUT _TCC-principal.mw
-OUTPUT _TCC-principal.mw
-INPUT _TCC-principal.mw
-OUTPUT _TCC-principal.mw
 INPUT ./tcc-trabalhos.tex
 INPUT ./tcc-trabalhos.tex
 INPUT ./tcc-trabalhos.tex

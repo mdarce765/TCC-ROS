@@ -5,24 +5,11 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
-\bibitem[CoppeliaSim 2020]{cop2020}
-\abntrefinfo{CoppeliaSim}{COPPELIASIM}{2020}
-{COPPELIASIM. \textbf{ROS2 tutorial}. 2020.
-Accessed: 2025-05-25.
-Dispon{\'\i}vel em:
-  \url{https://manual.coppeliarobotics.com/en/ros2Tutorial.htm}.}
-
 \bibitem[Foundation 2018]{ros2025}
 \abntrefinfo{Foundation}{FOUNDATION}{2018}
 {FOUNDATION, I. O. S.~R. \textbf{ROS}. 2018.
 Accessed: 2025-05-24.
 Dispon{\'\i}vel em: \url{https://wiki.ros.org/ROS/Introduction}.}
-
-\bibitem[Foundation 2022]{gzb2025}
-\abntrefinfo{Foundation}{FOUNDATION}{2022}
-{\underline{\ \ \ \ \ \ \ \ }. \textbf{Gazebo Simulator}. 2022.
-Accessed: 2025-05-24.
-Dispon{\'\i}vel em: \url{https://gazebosim.org/home}.}
 
 \bibitem[Foundation 2025]{tbt2025}
 \abntrefinfo{Foundation}{FOUNDATION}{2025}
@@ -49,6 +36,19 @@ Dispon{\'\i}vel em:
 {ROBOTIS-GIT. \textbf{TurtleBot3 GitHub Repository}. 2025.
 Accessed: 2025-05-24.
 Dispon{\'\i}vel em: \url{https://github.com/ROBOTIS-GIT/turtlebot3}.}
+
+\bibitem[Silva 2025]{gzb2025}
+\abntrefinfo{Silva}{SILVA}{2025a}
+{SILVA, M. D.~B. \textbf{Arena da K4-04}. 2025.
+Accessed: 2025-05-24.}
+
+\bibitem[Silva 2025]{rosrqt}
+\abntrefinfo{Silva}{SILVA}{2025b}
+{\underline{\ \ \ \ \ \ \ \ }. \textbf{Exemplo usando turtlesim, ros e rqt}.
+  2025.
+Accessed: 2025-11-16.
+Dispon{\'\i}vel em:
+  \url{https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html}.}
 
 \bibitem[Sobieraj e Kotyński 2024]{SMKD2024}
 \abntrefinfo{Sobieraj e Kotyński}{SOBIERAJ; KOTYńSKI}{2024}
