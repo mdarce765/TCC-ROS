@@ -7,8 +7,8 @@
 \contentsline {chapter}{\numberline {3}TRABALHOS RELACIONADOS}{10}{chapter.3}%
 \contentsline {chapter}{\numberline {4}METODOLOGIA}{11}{chapter.4}%
 \contentsline {chapter}{\numberline {5}EXPERIMENTOS E RESULTADOS[EXPLICAR FIGURAS]}{12}{chapter.5}%
-\contentsline {section}{\numberline {5.1}\textbf {EXPERIMENTOS}}{12}{section.5.1}%
-\contentsline {section}{\numberline {5.2}\textbf {RESULTADOS}}{12}{section.5.2}%
+\contentsline {section}{\numberline {5.1}EXPERIMENTOS}{12}{section.5.1}%
+\contentsline {section}{\numberline {5.2}RESULTADOS}{12}{section.5.2}%
 \contentsline {chapter}{\numberline {6}DISCUSSÃO E CONCLUSÃO}{18}{chapter.6}%
 \contentsline {section}{\numberline {6.1}TRABALHOS FUTUROS}{18}{section.6.1}%
 \contentsline {chapter}{\hspace {4em}\mdseries REFER\^ENCIAS}{19}{section*.17}%
