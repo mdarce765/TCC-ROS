@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.11.2)  7 NOV 2025 11:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.11.2)  15 NOV 2025 20:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1298,7 +1298,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout2 = `tcc-conceitos.aux'.
 
- (./tcc-conceitos.tex Excluding 'comment' comment. Excluding 'comment' comment.
+ (./tcc-conceitos.tex
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 4.32004pt, for example:
@@ -1318,14 +1318,10 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-\openout3 = `_TCC-principal.mw'.
-
-\openout3 = `_TCC-principal.mw'.
-
-<Figures/ROS.png, id=121, 733.74126pt x 494.84875pt>
+<Figures/ROS.png, id=118, 733.74126pt x 494.84875pt>
 File: Figures/ROS.png Graphic file (type png)
 <use Figures/ROS.png>
-Package pdftex.def Info: Figures/ROS.png  used on input line 39.
+Package pdftex.def Info: Figures/ROS.png  used on input line 24.
 (pdftex.def)             Requested size: 227.62206pt x 153.50723pt.
 
 
@@ -1335,18 +1331,18 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[7 <./Figures/ROS.png>] (./_TCC-principal.mw)
+[7] (./_TCC-principal.mw)
 \openout3 = `_TCC-principal.mw'.
 
-<Figures/gazebo.png, id=135, 1449.415pt x 745.78625pt>
-File: Figures/gazebo.png Graphic file (type png)
-<use Figures/gazebo.png>
-Package pdftex.def Info: Figures/gazebo.png  used on input line 47.
-(pdftex.def)             Requested size: 227.62206pt x 117.12056pt.
-<Figures/TurtleBot3.jpg, id=138, 205.76875pt x 246.9225pt>
+<Figures/Gazebo.png, id=129, 1856.9375pt x 1052.93375pt>
+File: Figures/Gazebo.png Graphic file (type png)
+<use Figures/Gazebo.png>
+Package pdftex.def Info: Figures/Gazebo.png  used on input line 32.
+(pdftex.def)             Requested size: 227.62206pt x 129.06183pt.
+<Figures/TurtleBot3.jpg, id=133, 205.76875pt x 246.9225pt>
 File: Figures/TurtleBot3.jpg Graphic file (type jpg)
 <use Figures/TurtleBot3.jpg>
-Package pdftex.def Info: Figures/TurtleBot3.jpg  used on input line 54.
+Package pdftex.def Info: Figures/TurtleBot3.jpg  used on input line 39.
 (pdftex.def)             Requested size: 136.57462pt x 163.88866pt.
 )
 
@@ -1356,7 +1352,18 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[8 <./Figures/gazebo.png> <./Figures/TurtleBot3.jpg>] (./_TCC-principal.mw)
+[8 <./Figures/ROS.png> <./Figures/Gazebo.png>] (./_TCC-principal.mw)
+\openout3 = `_TCC-principal.mw'.
+
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 4.32004pt, for example:
+(fancyhdr)                \setlength{\footskip}{4.32004pt}.
+
+\openout3 = `_TCC-principal.mw'.
+
+[9 <./Figures/TurtleBot3.jpg>] (./_TCC-principal.mw)
 \openout3 = `_TCC-principal.mw'.
 
 \openout2 = `tcc-trabalhos.aux'.
@@ -1374,7 +1381,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[9
+[10
 
 
 
@@ -1392,7 +1399,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 <Figures/FluxogramaTCC.png, id=157, 1417.54594pt x 515.67656pt>
 File: Figures/FluxogramaTCC.png Graphic file (type png)
 <use Figures/FluxogramaTCC.png>
-Package pdftex.def Info: Figures/FluxogramaTCC.png  used on input line 10.
+Package pdftex.def Info: Figures/FluxogramaTCC.png  used on input line 6.
 (pdftex.def)             Requested size: 409.71692pt x 149.04665pt.
 )
 
@@ -1402,7 +1409,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[10
+[11
 
 
 
@@ -1417,60 +1424,60 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 \openout2 = `tcc-experimentos.aux'.
 
  (./tcc-experimentos.tex
-<Figures/TestePadraoFalha.png, id=169, 1519.6775pt x 517.935pt>
+<Figures/TestePadraoFalha.png, id=170, 1519.6775pt x 517.935pt>
 File: Figures/TestePadraoFalha.png Graphic file (type png)
 <use Figures/TestePadraoFalha.png>
-Package pdftex.def Info: Figures/TestePadraoFalha.png  used on input line 16.
+Package pdftex.def Info: Figures/TestePadraoFalha.png  used on input line 18.
 (pdftex.def)             Requested size: 455.24411pt x 155.1525pt.
-<Figures/TesteCycloneSucesso.png, id=170, 1519.6775pt x 517.935pt>
+<Figures/TesteCycloneSucesso.png, id=171, 1519.6775pt x 517.935pt>
 File: Figures/TesteCycloneSucesso.png Graphic file (type png)
 <use Figures/TesteCycloneSucesso.png>
-Package pdftex.def Info: Figures/TesteCycloneSucesso.png  used on input line 22.
+Package pdftex.def Info: Figures/TesteCycloneSucesso.png  used on input line 24.
 (pdftex.def)             Requested size: 455.24411pt x 155.1525pt.
-<Figures/ComposeFinal.png, id=171, 896.34875pt x 248.93pt>
+<Figures/ComposeFinal.png, id=172, 896.34875pt x 248.93pt>
 File: Figures/ComposeFinal.png Graphic file (type png)
 <use Figures/ComposeFinal.png>
-Package pdftex.def Info: Figures/ComposeFinal.png  used on input line 28.
+Package pdftex.def Info: Figures/ComposeFinal.png  used on input line 30.
 (pdftex.def)             Requested size: 455.24411pt x 126.42844pt.
-<Figures/SimulacaoGazeboLancada.png, id=172, 754.82pt x 539.01375pt>
+<Figures/SimulacaoGazeboLancada.png, id=173, 754.82pt x 539.01375pt>
 File: Figures/SimulacaoGazeboLancada.png Graphic file (type png)
 <use Figures/SimulacaoGazeboLancada.png>
-Package pdftex.def Info: Figures/SimulacaoGazeboLancada.png  used on input line 34.
+Package pdftex.def Info: Figures/SimulacaoGazeboLancada.png  used on input line 36.
 (pdftex.def)             Requested size: 455.24411pt x 325.08856pt.
-<Figures/GazeboLancado.png, id=173, 1843.88875pt x 1050.92625pt>
+<Figures/GazeboLancado.png, id=174, 1843.88875pt x 1050.92625pt>
 File: Figures/GazeboLancado.png Graphic file (type png)
 <use Figures/GazeboLancado.png>
-Package pdftex.def Info: Figures/GazeboLancado.png  used on input line 40.
+Package pdftex.def Info: Figures/GazeboLancado.png  used on input line 42.
 (pdftex.def)             Requested size: 455.24411pt x 259.45961pt.
-<Figures/BurgerMovido.png, id=174, 1848.9075pt x 1048.91875pt>
+<Figures/BurgerMovido.png, id=175, 1848.9075pt x 1048.91875pt>
 File: Figures/BurgerMovido.png Graphic file (type png)
 <use Figures/BurgerMovido.png>
-Package pdftex.def Info: Figures/BurgerMovido.png  used on input line 46.
+Package pdftex.def Info: Figures/BurgerMovido.png  used on input line 48.
 (pdftex.def)             Requested size: 455.24411pt x 258.25975pt.
-<Figures/DockerAdquireTopicos.png, id=175, 1530.71875pt x 539.01375pt>
+<Figures/DockerAdquireTopicos.png, id=176, 1530.71875pt x 539.01375pt>
 File: Figures/DockerAdquireTopicos.png Graphic file (type png)
 <use Figures/DockerAdquireTopicos.png>
-Package pdftex.def Info: Figures/DockerAdquireTopicos.png  used on input line 52.
+Package pdftex.def Info: Figures/DockerAdquireTopicos.png  used on input line 54.
 (pdftex.def)             Requested size: 455.24411pt x 160.30717pt.
-<Figures/DockerBuildaProjetos.png, id=176, 778.91pt x 533.995pt>
+<Figures/DockerBuildaProjetos.png, id=177, 778.91pt x 533.995pt>
 File: Figures/DockerBuildaProjetos.png Graphic file (type png)
 <use Figures/DockerBuildaProjetos.png>
-Package pdftex.def Info: Figures/DockerBuildaProjetos.png  used on input line 58.
+Package pdftex.def Info: Figures/DockerBuildaProjetos.png  used on input line 60.
 (pdftex.def)             Requested size: 455.24411pt x 312.09656pt.
-<Figures/DockerRodaProjetoDrive.png, id=177, 778.91pt x 533.995pt>
+<Figures/DockerRodaProjetoDrive.png, id=178, 778.91pt x 533.995pt>
 File: Figures/DockerRodaProjetoDrive.png Graphic file (type png)
 <use Figures/DockerRodaProjetoDrive.png>
-Package pdftex.def Info: Figures/DockerRodaProjetoDrive.png  used on input line 64.
+Package pdftex.def Info: Figures/DockerRodaProjetoDrive.png  used on input line 66.
 (pdftex.def)             Requested size: 455.24411pt x 312.09656pt.
-<Figures/DockerMovimentaRobo1.png, id=178, 1837.86626pt x 1055.945pt>
+<Figures/DockerMovimentaRobo1.png, id=179, 1837.86626pt x 1055.945pt>
 File: Figures/DockerMovimentaRobo1.png Graphic file (type png)
 <use Figures/DockerMovimentaRobo1.png>
-Package pdftex.def Info: Figures/DockerMovimentaRobo1.png  used on input line 70.
+Package pdftex.def Info: Figures/DockerMovimentaRobo1.png  used on input line 72.
 (pdftex.def)             Requested size: 455.24411pt x 261.55263pt.
-<Figures/DockerMovimentaRobo2.png, id=179, 1837.86626pt x 1055.945pt>
+<Figures/DockerMovimentaRobo2.png, id=180, 1837.86626pt x 1055.945pt>
 File: Figures/DockerMovimentaRobo2.png Graphic file (type png)
 <use Figures/DockerMovimentaRobo2.png>
-Package pdftex.def Info: Figures/DockerMovimentaRobo2.png  used on input line 76.
+Package pdftex.def Info: Figures/DockerMovimentaRobo2.png  used on input line 78.
 (pdftex.def)             Requested size: 455.24411pt x 261.55263pt.
 )
 
@@ -1480,7 +1487,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[11
+[12
 
 
 
@@ -1508,7 +1515,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[12 <./Figures/TestePadraoFalha.png> <./Figures/TesteCycloneSucesso.png> <./Figures/ComposeFinal.png>] (./_TCC-principal.mw)
+[13 <./Figures/TestePadraoFalha.png> <./Figures/TesteCycloneSucesso.png> <./Figures/ComposeFinal.png>] (./_TCC-principal.mw)
 \openout3 = `_TCC-principal.mw'.
 
 
@@ -1519,7 +1526,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[13 <./Figures/SimulacaoGazeboLancada.png> <./Figures/GazeboLancado.png>] (./_TCC-principal.mw)
+[14 <./Figures/SimulacaoGazeboLancada.png> <./Figures/GazeboLancado.png>] (./_TCC-principal.mw)
 \openout3 = `_TCC-principal.mw'.
 
 
@@ -1530,7 +1537,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[14 <./Figures/BurgerMovido.png> <./Figures/DockerAdquireTopicos.png>] (./_TCC-principal.mw)
+[15 <./Figures/BurgerMovido.png> <./Figures/DockerAdquireTopicos.png>] (./_TCC-principal.mw)
 \openout3 = `_TCC-principal.mw'.
 
 
@@ -1541,7 +1548,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[15 <./Figures/DockerBuildaProjetos.png> <./Figures/DockerRodaProjetoDrive.png>] (./_TCC-principal.mw)
+[16 <./Figures/DockerBuildaProjetos.png> <./Figures/DockerRodaProjetoDrive.png>] (./_TCC-principal.mw)
 \openout3 = `_TCC-principal.mw'.
 
 
@@ -1552,7 +1559,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[16 <./Figures/DockerMovimentaRobo1.png> <./Figures/DockerMovimentaRobo2.png>] (./_TCC-principal.mw)
+[17 <./Figures/DockerMovimentaRobo1.png> <./Figures/DockerMovimentaRobo2.png>] (./_TCC-principal.mw)
 \openout3 = `_TCC-principal.mw'.
 
 \openout2 = `tcc-discussao-conclusao.aux'.
@@ -1565,7 +1572,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[17
+[18
 
 
 
@@ -1589,7 +1596,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[18
+[19
 
 
 
@@ -1624,10 +1631,6 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 \openout3 = `_TCC-principal.mw'.
 
 ) (./tcc-conceitos.aux
-\openout3 = `_TCC-principal.mw'.
-
-\openout3 = `_TCC-principal.mw'.
-
 \openout3 = `_TCC-principal.mw'.
 
 \openout3 = `_TCC-principal.mw'.
@@ -1676,7 +1679,7 @@ LaTeX Warning: There were multiply-defined labels.
 \openout3 = `_TCC-principal.out'.
 
 Package rerunfilecheck Info: File `_TCC-principal.out' has not changed.
-(rerunfilecheck)             Checksum: D2317EE3676A54ED01472CCF6C510E88;1779.
+(rerunfilecheck)             Checksum: ADDAEB60F093C07071A95DAFEFF2EDA6;1669.
 \openout3 = `_TCC-principal.idx'.
 
 \openout3 = `_TCC-principal.toc'.
@@ -1687,18 +1690,18 @@ Package rerunfilecheck Info: File `_TCC-principal.out' has not changed.
 ### semi simple group (level 1) entered at line 95 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 45865 strings out of 478287
- 1018000 string characters out of 5849289
+ 45866 strings out of 478287
+ 1018010 string characters out of 5849289
  1475067 words of memory out of 5000000
- 63088 multiletter control sequences out of 15000+600000
+ 63087 multiletter control sequences out of 15000+600000
  492142 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,11n,105p,1373b,38676s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,12n,105p,1373b,38677s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on _TCC-principal.pdf (20 pages, 2074020 bytes).
+Output written on _TCC-principal.pdf (21 pages, 2063213 bytes).
 PDF statistics:
  284 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
+ 224 compressed objects within 3 object streams
  56 named destinations out of 1000 (max. 500000)
- 192 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
 
