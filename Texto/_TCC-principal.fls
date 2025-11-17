@@ -2164,6 +2164,11 @@ INPUT ./tcc-discussao-conclusao.tex
 INPUT tcc-discussao-conclusao.tex
 INPUT ./tcc-discussao-conclusao.tex
 INPUT tcc-discussao-conclusao.tex
+INPUT ./Figures/Graficos.png
+INPUT ./Figures/Graficos.png
+INPUT Figures/Graficos.png
+INPUT ./Figures/Graficos.png
+INPUT ./Figures/Graficos.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
 OUTPUT _TCC-principal.mw
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
