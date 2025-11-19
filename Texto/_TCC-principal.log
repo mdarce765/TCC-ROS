@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.11.2)  18 NOV 2025 17:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.11.2)  19 NOV 2025 18:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1326,12 +1326,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout2 = `tcc-trabalhos.aux'.
 
- (./tcc-trabalhos.tex Excluding 'comment' comment.
-Overfull \hbox (35.34506pt too wide) in paragraph at lines 15--16
-[]\T1/ptm/m/n/12 O ar-tigo "Doc-ker Per-for-mance Eva-lu-a-tion across Ope-ra-ting Sys-tems"([]SOBIERAJ; KOTY«SKI[],
- []
-
-)
+ (./tcc-trabalhos.tex Excluding 'comment' comment.)
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 4.32004pt, for example:
@@ -1694,15 +1689,15 @@ Package rerunfilecheck Info: File `_TCC-principal.out' has not changed.
 ### semi simple group (level 1) entered at line 95 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 45898 strings out of 478287
- 1018508 string characters out of 5849289
+ 45895 strings out of 478287
+ 1018456 string characters out of 5849289
  1476067 words of memory out of 5000000
- 63113 multiletter control sequences out of 15000+600000
+ 63110 multiletter control sequences out of 15000+600000
  492142 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,11n,105p,1736b,38678s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,11n,105p,1736b,38675s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on _TCC-principal.pdf (21 pages, 1832658 bytes).
+Output written on _TCC-principal.pdf (21 pages, 1832715 bytes).
 PDF statistics:
  307 PDF objects out of 1000 (max. 8388607)
  245 compressed objects within 3 object streams
