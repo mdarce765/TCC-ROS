@@ -1,7 +1,7 @@
 \chapter{EXPERIMENTOS E RESULTADOS[EXPLICAR FIGURAS]}
 \label{experimentos}
-\section{EXPERIMENTOS}
-Os experimentos utilizam uma arena praticamente idêntica à arena presente na instituição, na sala K4-04 (Figura \ref{fig:gzb25}). O motivo de esta arena ter sido escolhida se deu por conta da comparação que poderia futuramente ser realizada entre os testes virtuais e reais o que infelizmente não ocorreu. O modelo da arena foi fornecido pelo professor da instituição, Fagner Pimentel, que forneceu o arquivo ".sdf" utilizado.
+Os experimentos utilizam uma arena praticamente idêntica à arena presente na instituição, na sala K4-04 (Figura \ref{fig:gzb25}). O motivo de esta arena ter sido escolhida se deu por conta da comparação que poderia futuramente ser realizada entre os testes virtuais e reais. 
+%o que infelizmente não ocorreu. O modelo da arena foi fornecido pelo professor da instituição, Fagner Pimentel, que forneceu o arquivo ".sdf" utilizado.
 
 Experimentos feitos:
 Experimento Setup: Testes iniciais para confirmar o comportamento de ROS2 dentro de um container Docker
@@ -12,10 +12,9 @@ Experimento Patrulheiros + Docker: Simulações utilizando o mapa base com patru
 \section{RESULTADOS SETUP}
 Foram feitos testes 
 %\cite{github_tcc_docker}
-Para implementar a parte simulada proposta, foi utilizado o manual \cite{turtlebot3_manual} e pacotes \cite{turtlebot3_github} disponíveis pelo grupo ROBOTIS, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava de 20+ minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
-%Foram feitos testes  para implementar a parte simulada proposta, sendo utilizado o manual \cite{turtlebot3_manual} e pacotes \cite{turtlebot3_github} disponíveis pelo grupo ROBOTIS, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava de 20+ minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
+Para implementar a parte simulada proposta, foi utilizado o manual \cite{turtlebot3_manual} e pacotes \cite{turtlebot3_github} disponíveis pelo grupo ROBOTIS, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava de mais 20 minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
 
-Houve certas dificuldades para integrar o ROS2 dentro do contêiner Docker com o ROS2 nativo, que lidaria com a simulação Gazebo. Foi descoberto que o middleware utilizado por padrão pelo ROS2 Humble, FastDDS, não interage de forma consistente com Docker. Ele era capaz de compartilhar os tópicos entre os ambientes, mas causava falha na publicação e recebimento de mensagens, não mostrando nenhuma.
+Houve certas dificuldades para integrar o ROS2 dentro do contêiner Docker com o ROS2 nativo, que lidaria com a simulação Gazebo. Foi descoberto que o FastDDS (middleware utilizado por padrão pelo ROS2 Humble), não interage de forma consistente com Docker. Ele era capaz de compartilhar os tópicos entre os ambientes, mas causava falha na publicação e recebimento de mensagens, não mostrando nenhuma.
 
 Para solucionar isso, o FastDDS foi substituído por outro middleware disponível para ROS2 Humble, CycloneDDS, o qual foi utilizado especificamente no container Docker.
 

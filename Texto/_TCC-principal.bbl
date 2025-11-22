@@ -5,30 +5,11 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
-\bibitem[Autores 2025]{gzb2025}
-\abntrefinfo{Autores}{AUTORES}{2025a}
-{AUTORES. \textbf{Arena da K4-04}. 2025.
-Accessed: 2025-05-24.}
-
-\bibitem[Autores 2025]{rosrqt}
-\abntrefinfo{Autores}{AUTORES}{2025b}
-{\underline{\ \ \ \ \ \ \ \ }. \textbf{Exemplo usando turtlesim, ros e rqt}.
-  2025.
-Accessed: 2025-11-16.
-Dispon{\'\i}vel em:
-  \url{https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html}.}
-
 \bibitem[Foundation 2018]{ros2025}
 \abntrefinfo{Foundation}{FOUNDATION}{2018}
 {FOUNDATION, I. O. S.~R. \textbf{ROS}. 2018.
 Accessed: 2025-05-24.
 Dispon{\'\i}vel em: \url{https://wiki.ros.org/ROS/Introduction}.}
-
-\bibitem[Foundation 2025]{tbt2025}
-\abntrefinfo{Foundation}{FOUNDATION}{2025}
-{\underline{\ \ \ \ \ \ \ \ }. \textbf{TurtleBot}. 2025.
-Accessed: 2025-05-24.
-Dispon{\'\i}vel em: \url{https://www.turtlebot.com/}.}
 
 \bibitem[Inc. 2025]{dck2025}
 \abntrefinfo{Inc.}{INC.}{2025}

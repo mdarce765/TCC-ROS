@@ -2152,9 +2152,6 @@ OUTPUT _TCC-principal.mw
 OUTPUT _TCC-principal.mw
 INPUT _TCC-principal.mw
 OUTPUT _TCC-principal.mw
-OUTPUT _TCC-principal.mw
-INPUT _TCC-principal.mw
-OUTPUT _TCC-principal.mw
 INPUT ./tcc-discussao-conclusao.tex
 INPUT ./tcc-discussao-conclusao.tex
 INPUT ./tcc-discussao-conclusao.tex
@@ -2238,9 +2235,6 @@ OUTPUT _TCC-principal.mw
 INPUT ./tcc-experimentos.aux
 INPUT tcc-experimentos.aux
 INPUT tcc-experimentos.aux
-OUTPUT _TCC-principal.mw
-INPUT _TCC-principal.mw
-OUTPUT _TCC-principal.mw
 OUTPUT _TCC-principal.mw
 INPUT _TCC-principal.mw
 OUTPUT _TCC-principal.mw

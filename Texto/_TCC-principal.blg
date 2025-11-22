@@ -25,14 +25,8 @@ Warning--entry type for "turtlebot3_manual" isn't style-file defined
 --line 127 of file tcc-referencias.bib
 Warning--entry type for "turtlebot3_github" isn't style-file defined
 --line 142 of file tcc-referencias.bib
-Warning--entry type for "tbt2025" isn't style-file defined
---line 150 of file tcc-referencias.bib
 Warning--entry type for "dck2025" isn't style-file defined
 --line 174 of file tcc-referencias.bib
-Warning--entry type for "rosrqt" isn't style-file defined
---line 182 of file tcc-referencias.bib
-Warning--entry type for "gzb2025" isn't style-file defined
---line 190 of file tcc-referencias.bib
 Warning--entry type for "ros2025" isn't style-file defined
 --line 197 of file tcc-referencias.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -44,45 +38,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 13 entries,
+You've used 10 entries,
             6714 wiz_defined-function locations,
-            1256 strings with 10822 characters,
-and the built_in function-call counts, 17959 in all, are:
-= -- 2346
-> -- 179
-< -- 556
-+ -- 666
-- -- 57
-* -- 997
-:= -- 2211
-add.period$ -- 44
-call.type$ -- 13
-change.case$ -- 86
-chr.to.int$ -- 12
-cite$ -- 9
-duplicate$ -- 1951
-empty$ -- 673
-format.name$ -- 269
-if$ -- 3495
-int.to.chr$ -- 4
+            1246 strings with 10583 characters,
+and the built_in function-call counts, 13554 in all, are:
+= -- 1798
+> -- 134
+< -- 420
++ -- 514
+- -- 42
+* -- 755
+:= -- 1670
+add.period$ -- 30
+call.type$ -- 10
+change.case$ -- 65
+chr.to.int$ -- 10
+cite$ -- 6
+duplicate$ -- 1451
+empty$ -- 500
+format.name$ -- 200
+if$ -- 2646
+int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 192
-newline$ -- 60
-num.names$ -- 45
-pop$ -- 249
+missing$ -- 141
+newline$ -- 43
+num.names$ -- 30
+pop$ -- 181
 preamble$ -- 1
-purify$ -- 42
+purify$ -- 33
 quote$ -- 0
-skip$ -- 2131
+skip$ -- 1631
 stack$ -- 1
-substring$ -- 793
-swap$ -- 656
-text.length$ -- 10
+substring$ -- 598
+swap$ -- 486
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1
 warning$ -- 0
-while$ -- 64
+while$ -- 44
 width$ -- 0
-write$ -- 146
-(There were 7 warnings)
+write$ -- 102
+(There were 4 warnings)
