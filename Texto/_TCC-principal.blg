@@ -22,13 +22,13 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: tcc-referencias.bib
 Warning--entry type for "turtlebot3_manual" isn't style-file defined
---line 127 of file tcc-referencias.bib
+--line 22 of file tcc-referencias.bib
 Warning--entry type for "turtlebot3_github" isn't style-file defined
---line 142 of file tcc-referencias.bib
+--line 37 of file tcc-referencias.bib
 Warning--entry type for "dck2025" isn't style-file defined
---line 174 of file tcc-referencias.bib
+--line 53 of file tcc-referencias.bib
 Warning--entry type for "ros2025" isn't style-file defined
---line 197 of file tcc-referencias.bib
+--line 76 of file tcc-referencias.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -38,45 +38,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 10 entries,
+You've used 11 entries,
             6714 wiz_defined-function locations,
-            1246 strings with 10583 characters,
-and the built_in function-call counts, 13554 in all, are:
-= -- 1798
-> -- 134
-< -- 420
-+ -- 514
-- -- 42
-* -- 755
-:= -- 1670
-add.period$ -- 30
-call.type$ -- 10
-change.case$ -- 65
-chr.to.int$ -- 10
-cite$ -- 6
-duplicate$ -- 1451
-empty$ -- 500
-format.name$ -- 200
-if$ -- 2646
+            1251 strings with 10903 characters,
+and the built_in function-call counts, 15197 in all, are:
+= -- 1979
+> -- 192
+< -- 453
++ -- 571
+- -- 59
+* -- 872
+:= -- 1875
+add.period$ -- 34
+call.type$ -- 11
+change.case$ -- 82
+chr.to.int$ -- 11
+cite$ -- 7
+duplicate$ -- 1583
+empty$ -- 559
+format.name$ -- 285
+if$ -- 2991
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 141
-newline$ -- 43
-num.names$ -- 30
-pop$ -- 181
+missing$ -- 159
+newline$ -- 48
+num.names$ -- 35
+pop$ -- 212
 preamble$ -- 1
-purify$ -- 33
+purify$ -- 39
 quote$ -- 0
-skip$ -- 1631
+skip$ -- 1776
 stack$ -- 1
-substring$ -- 598
-swap$ -- 486
-text.length$ -- 8
+substring$ -- 650
+swap$ -- 532
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1
 warning$ -- 0
-while$ -- 44
+while$ -- 51
 width$ -- 0
-write$ -- 102
+write$ -- 116
 (There were 4 warnings)

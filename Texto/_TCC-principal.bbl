@@ -5,18 +5,18 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
-\bibitem[Foundation 2018]{ros2025}
-\abntrefinfo{Foundation}{FOUNDATION}{2018}
-{FOUNDATION, I. O. S.~R. \textbf{ROS}. 2018.
-Accessed: 2025-05-24.
-Dispon{\'\i}vel em: \url{https://wiki.ros.org/ROS/Introduction}.}
-
-\bibitem[Inc. 2025]{dck2025}
-\abntrefinfo{Inc.}{INC.}{2025}
-{INC., D. \textbf{Docker}. 2025.
+\bibitem[Docker 2025]{dck2025}
+\abntrefinfo{Docker}{DOCKER}{2025}
+{DOCKER, I. \textbf{Docker}. 2025.
 Accessed: 2025-05-25.
 Dispon{\'\i}vel em:
   \url{https://docs.docker.com/get-started/docker-overview/}.}
+
+\bibitem[Open e Source 2018]{ros2025}
+\abntrefinfo{Open e Source}{OPEN; SOURCE}{2018}
+{OPEN; SOURCE, R. F.~I. \textbf{ROS}. 2018.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em: \url{https://wiki.ros.org/ROS/Introduction}.}
 
 \bibitem[{ROBOTIS} 2025]{turtlebot3_manual}
 \abntrefinfo{{ROBOTIS}}{{ROBOTIS}}{2025}
@@ -39,11 +39,17 @@ Dispon{\'\i}vel em: \url{https://github.com/ROBOTIS-GIT/turtlebot3}.}
 ISSN 2076-3417.
 Dispon{\'\i}vel em: \url{https://www.mdpi.com/2076-3417/14/15/6672}.}
 
+\bibitem[Wen et al. 2024]{Wen2024}
+\abntrefinfo{Wen et al.}{WEN et al.}{2024}
+{WEN, L. et al. \textbf{A Containerized Microservice Architecture for a ROS 2
+  Autonomous Driving Software: An End-to-End Latency Evaluation}. 2024.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2404.12683}.}
+
 \bibitem[Wen et al. 2023]{Wen2023}
 \abntrefinfo{Wen et al.}{WEN et al.}{2023}
-{WEN, L. et al. Bare-metal vs. hypervisors and containers: Performance
-  evaluation of virtualization technologies for software-defined vehicles. In:
-  . [s.n.], 2023. Dispon{\'\i}vel em:
+{\underline{\ \ \ \ \ \ \ \ }. Bare-metal vs. hypervisors and containers:
+  Performance evaluation of virtualization technologies for software-defined
+  vehicles. In:  . [s.n.], 2023. Dispon{\'\i}vel em:
   \url{https://www.researchgate.net/publication/372496789\_Bare-Metal\_vs\_Hypervisors\_and\_Containers\_Performance\_Evaluation\_of\_Virtualization\_Technologies\_for\_Software-Defined\_Vehicles}.}
 
 \end{thebibliography}
