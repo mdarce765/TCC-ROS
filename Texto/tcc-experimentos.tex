@@ -1,113 +1,105 @@
-\chapter{EXPERIMENTOS E RESULTADOS[EXPLICAR FIGURAS]}
+\chapter{EXPERIMENTOS E RESULTADOS}
 \label{experimentos}
 Os experimentos utilizam uma arena praticamente idêntica à arena presente na instituição, na sala K4-04 (Figura \ref{fig:gzb25}). O motivo de esta arena ter sido escolhida se deu por conta da comparação que poderia futuramente ser realizada entre os testes virtuais e reais. 
-%o que infelizmente não ocorreu. O modelo da arena foi fornecido pelo professor da instituição, Fagner Pimentel, que forneceu o arquivo ".sdf" utilizado.
 
-Experimentos feitos:
-Experimento Setup: Testes iniciais para confirmar o comportamento de ROS2 dentro de um container Docker
-Experimento Base: Simulações utilizando o mapa base sem patrulheiros
-Experimento Patrulheiros: Simulações utilizando o mapa base com patrulheiros
-Experimento Base+Docker: Simulações utilizando mapa base sem patrulheiros, com a stack nav2 e rviz dentro de um container Docker
-Experimento Patrulheiros + Docker: Simulações utilizando o mapa base com patrulheiros, com a stack nav2 e rviz dentro de um container Docker.
+Foram feitos cinco experimentos com resultados satisfatórios, e um que acabou não fornecendo os resultados devidos por conta de instabilidades. O primeiro deles (Setup) teve testes iniciais para confirmar o comportamento do ROS 2 dentro de um container Docker. 
+No segundo experimento (Base), usou simulações utilizando o mapa base sem patrulheiros.
+O terceiro dos testes (Patrulheiros) usava simulações utilizando o mapa base com patrulheiros.
+O quarto experimento (Base + Docker) usava simulações utilizando mapa base sem patrulheiros, com a stack nav2 e rviz dentro de um container Docker.
+No quinto experimento (Patrulheiros + Docker) possuía simulações utilizando o mapa base com patrulheiros, com a stack nav2 e rviz dentro de um container Docker.
+Foram realizados experimentos usando as arenas com labirintos como obstáculo para o robô, tanto sem como com os patrulheiros.
+
 \section{RESULTADOS SETUP}
-Foram feitos testes 
-%\cite{github_tcc_docker}
-Para implementar a parte simulada proposta, foi utilizado o manual \cite{turtlebot3_manual} e pacotes \cite{turtlebot3_github} disponíveis pelo grupo ROBOTIS, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava de mais 20 minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
+Foram feitos testes \cite{tccdockergithub} para implementar a parte simulada proposta, foi utilizado o manual \cite{turtlebot3_manual} e pacotes \cite{turtlebot3_github} disponíveis pelo grupo ROBOTIS, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava de mais 20 minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
 
 Houve certas dificuldades para integrar o ROS2 dentro do contêiner Docker com o ROS2 nativo, que lidaria com a simulação Gazebo. Foi descoberto que o FastDDS (middleware utilizado por padrão pelo ROS2 Humble), não interage de forma consistente com Docker. Ele era capaz de compartilhar os tópicos entre os ambientes, mas causava falha na publicação e recebimento de mensagens, não mostrando nenhuma.
 
 Para solucionar isso, o FastDDS foi substituído por outro middleware disponível para ROS2 Humble, CycloneDDS, o qual foi utilizado especificamente no container Docker.
 
+\section{TESTES BASE}
+Foram feitos testes para adquirir os dados de desempenho das simulações sem Docker, utilizando a arena base sem patrulheiros. Estes testes consistiam de fazer o robô percorrer um trajeto de uma ponta até a outra da arena, durante a execução, foi utilizado o software nmon para verificar o desempenho de CPU, memória RAM e rede, e assim armazenar os dados.
+
+\begin{comment}
+    1- Rodar o comando no diretório do repositório (INSERIR COMANDO)
+    2 - Imagens durante a execução do teste
+    3- Mostrar dados via nmonvisualizer
+\end{comment}
+
+\section{TESTES PATRULHEIROS}
+Neste teste foram posicionados robôs patrulheiros que percorriam um simples trajeto para servir de obstáculo para o robô que deveria percorrer o mesmo trajeto de antes, novamente foi utilizado a arena base, e sem o uso do docker.
+
+\begin{comment}
+    1- Rodar o comando no diretório do repositório (INSERIR COMANDO)
+    2 - Imagens durante a execução do teste
+    3- Mostrar dados via nmonvisualizer
+\end{comment}    
+
+\section{TESTES BASE + DOCKER}
+Estes testes foram realizados utilizando a arena base mas com o uso do docker no robô, o robô realizou o mesmo trajeto que o teste anterior de seguir de uma ponta da arena até a outra, os testes foram realizados enquanto o software Nmon verificava o desempenho do computador.
+
+\begin{comment}
+    1- Rodar o comando no diretório do repositório (INSERIR COMANDO)
+    2 - Imagens durante a execução do teste
+    3- Mostrar dados via nmonvisualizer
+\end{comment}
+
+\section{TESTES PATRULHEIROS + DOCKER}
+Para finalizar foram feitos testes para adquirir os dados de desempenho de simulações com Docker, utilizando a arena base com patrulheiros.
+
+\section{TESTES LABIRINTOS}
+Foram realizados testes, com e sem patrulheiros, com e sem o uso de docker, em duas arenas com labirintos como obstaculo para o robô, os labirintos foram desenvolvidos utilizando placas, que são os obstaculos presentes na arena física da K4-04, respeitando o espaço da arena, placas e possiveis posições. Estes testes acabaram por falhar, por conta da instabilidade que era para se executar os testes, alguns testes necessitavam de poucas execuções para conseguir realizar o trajeto por completo, enquanto outras vezes necessitava de diversas execuções e mesmo assim o robô acabava por não funcionar.
+
+\section{RESULTADOS}
+Os resultados obtidos foram salvos e utilizados em gráficos gerados pela biblioteca Pandas, os dados usados foram a porcentagem do uso do computador (CPU, memória RAM e Rede), com relação ao passo executado no Nmon. Estes gráficos revelam que a utilização do Docker afetou os testes, mas de uma maneira mínima. 
+No teste de CPU (Figura \ref{fig:GACPU}), a mesma acabou por ser mais exigida quando não se utilizava o Docker, por volta de 1\% da média de uso. 
+Os testes com memória RAM (Figura \ref{fig:GAMEM}) se diferenciaram no uso de cerca de 500 MB a mais no uso do Docker. 
+Nos testes de rede (Figura \ref{fig:GANET}), o uso do Docker é mais evidente, tendo um pico de uso muito alto, mas que diminuiu e se encerrou logo em seguida. Este pico de uso ocorreu por conta da necessidade do Docker em se comunicar, via rede, com os outros tópicos utilizados pelo host.  
+
+Os testes nas arenas com patrulheiros se demonstraram muito semelhantes aos testes das arenas bases em termos de gráficos, mas os mesmos utilizaram bem mais do computador.
+No teste de CPU (Figura \ref{fig:GPCPU}), foi exigido bem mais da CPU do computador, enquanto na arena base era exigido até 30\% da CPU, com os patrulheiros foi exigido 50\%, nesta arena a falta do Docker exigiu mais do computador, enquanto com o Docker houve poucos picos de uso. 
+Os testes com memória RAM (Figura \ref{fig:GPMEM}) se diferenciaram no uso de cerca de 500 MB a mais no uso do Docker, semelhante à arena base, exigindo mais da memória no geral do teste. 
+Nos testes de rede (Figura \ref{fig:GPNET}), o uso do Docker é novamente mais evidente, tendo um pico de uso muito alto, que logo diminuiu, mas que ainda ficou mais acima dos testes sem Docker. 
+
+Com relação aos testes com os labirintos, os mesmos se demonstraram instáveis, então não foram testados por conta da quantidade de testes aleatórios que precisavam ser feitos para ter um teste que gerasse bons resultados para serem observados.
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=1\linewidth]{Figures/TestePadraoFalha.png}
-    \caption{Falha utilizando RMW padrão (FastDDS)}
-    \label{fig:exp1}
+    \includegraphics[width=0.6\linewidth]{Figures/Graficos/arena_cpu.png}
+    \caption{Gráfico do resultado dos testes na arena base com e sem docker: CPU.}
+    \label{fig:GACPU}
 \end{figure}
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=1\linewidth]{Figures/TesteCycloneSucesso.png}
-    \caption{Sucesso utilizando RMW CycloneDDS }
-    \label{fig:exp2}
+    \includegraphics[width=0.6\linewidth]{Figures/Graficos/arena_mem.png}
+    \caption{Gráfico do resultado dos testes na arena base com e sem docker: Memória RAM.}
+    \label{fig:GAMEM}
 \end{figure}
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=1\linewidth]{Figures/ComposeFinal.png}
-    \caption{Compose proposto para testes}
-    \label{fig:exp3}
+    \includegraphics[width=0.6\linewidth]{Figures/Graficos/arena_net.png}
+    \caption{Gráfico do resultado dos testes na arena base com e sem docker: Rede.}
+    \label{fig:GANET}
 \end{figure}
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=1\linewidth]{Figures/SimulacaoGazeboLancada.png}
-    \caption{Simulação Gazebo é lançada pelo host}
-    \label{fig:exp4}
+    \includegraphics[width=0.6\linewidth]{Figures/Graficos/patrulha_cpu.png}
+    \caption{Gráfico do resultado dos testes na arena com robôs patrulheiros com e sem docker: CPU.}
+    \label{fig:GPCPU}
 \end{figure}
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=1\linewidth]{Figures/GazeboLancado.png}
-    \caption{Aparência inicial da simulação Gazebo}
-    \label{fig:exp5}
+    \includegraphics[width=0.6\linewidth]{Figures/Graficos/patrulha_mem.png}
+    \caption{Gráfico do resultado dos testes na arena com robôs patrulheiros com e sem docker: Memória RAM.}
+    \label{fig:GPMEM}
 \end{figure}
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=1\linewidth]{Figures/BurgerMovido.png}
-    \caption{Turtlebot3 Burger é movido para dentro da casa}
-    \label{fig:exp6}
+    \includegraphics[width=0.6\linewidth]{Figures/Graficos/patrulha_net.png}
+    \caption{Gráfico do resultado dos testes na arena com robôs patrulheiros com e sem docker: Rede.}
+    \label{fig:GPNET}
 \end{figure}
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=1\linewidth]{Figures/DockerAdquireTopicos.png}
-    \caption{ROS2 Humble dentro do Docker adquire os novos tópicos}
-    \label{fig:exp7}
-\end{figure}
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=1\linewidth]{Figures/DockerBuildaProjetos.png}
-    \caption{ROS2 Humble dentro do Docker builda projetos}
-    \label{fig:exp8}
-\end{figure}
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=1\linewidth]{Figures/DockerRodaProjetoDrive.png}
-    \caption{ROS2 Humble dentro do Docker roda projetos para movimentação do robô dentro da simulação Gazebo presente no host}
-    \label{fig:exp9}
-\end{figure}
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=1\linewidth]{Figures/DockerMovimentaRobo1.png}
-    \caption{Turtlebot3 Burger é movimentado pelo ROS2 Humble presente dentro do conteiner Docker}
-    \label{fig:exp10}
-\end{figure}
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=1\linewidth]{Figures/DockerMovimentaRobo2.png}
-    \caption{Turtlebot3 Burger é movimentado pelo ROS2 Humble presente dentro do conteiner Docker}
-    \label{fig:exp11}
-\end{figure}
-\section{RESULTADOS BASE}
---A EDITAR--
-Foram feitos testes para adquirir os dados de desempenho de simulações sem Docker, utilizando a arena base sem patrulheiros.
-1- Rodar o comando no diretório do repositório (INSERIR COMANDO)
-2 - Imagens durante a execução do teste
-3- Mostrar dados via nmonvisualizer
-\section{RESULTADOS PATRULHEIROS}
-Foram feitos testes para adquirir os dados de desempenho de simulações sem Docker, utilizando a arena base com patrulheiros.
-1- Rodar o comando no diretório do repositório (INSERIR COMANDO)
-2 - Imagens durante a execução do teste.
-3- Mostrar dados via nmonvisualizer
-\section{RESULTADOS BASE + DOCKER}
-Foram feitos testes para adquirir os dados de desempenho de simulações com Docker, utilizando a arena base sem patrulheiros.
-1- Rodar o comando no diretório do repositório (INSERIR COMANDO)
-2 - Imagens durante a execução do teste.
-3- Mostrar dados via nmonvisualizer
-\section{RESULTADOS PATRULHEIROS + DOCKER}
-Foram feitos testes para adquirir os dados de desempenho de simulações com Docker, utilizando a arena base com patrulheiros.
-1- Rodar o comando no diretório do repositório (INSERIR COMANDO)
-2 - Imagens durante a execução do teste.
-3- Mostrar dados via nmonvisualizer.
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=1\linewidth]{Figures/Graficos.png}
-    \caption{Resultados dos testes representados em gráficos.}
-    \label{fig:GResultados}
-\end{figure}
+\begin{comment}
+    1- Rodar o comando no diretório do repositório (INSERIR COMANDO)
+    2 - Imagens durante a execução do teste
+    3- Mostrar dados via nmonvisualizer
+\end{comment}
+
