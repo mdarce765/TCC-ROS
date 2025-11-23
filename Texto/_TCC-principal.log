@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.11.2)  22 NOV 2025 21:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.11.2)  23 NOV 2025 08:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1326,7 +1326,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout2 = `tcc-trabalhos.aux'.
 
- (./tcc-trabalhos.tex
+ (./tcc-trabalhos.tex)
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 4.32004pt, for example:
@@ -1346,7 +1346,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-)
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 4.32004pt, for example:
@@ -1388,57 +1388,57 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 \openout2 = `tcc-experimentos.aux'.
 
  (./tcc-experimentos.tex
-<Figures/TestePadraoFalha.png, id=184, 1519.6775pt x 517.935pt>
+<Figures/TestePadraoFalha.png, id=187, 1519.6775pt x 517.935pt>
 File: Figures/TestePadraoFalha.png Graphic file (type png)
 <use Figures/TestePadraoFalha.png>
 Package pdftex.def Info: Figures/TestePadraoFalha.png  used on input line 23.
 (pdftex.def)             Requested size: 455.24411pt x 155.1525pt.
-<Figures/TesteCycloneSucesso.png, id=185, 1519.6775pt x 517.935pt>
+<Figures/TesteCycloneSucesso.png, id=188, 1519.6775pt x 517.935pt>
 File: Figures/TesteCycloneSucesso.png Graphic file (type png)
 <use Figures/TesteCycloneSucesso.png>
 Package pdftex.def Info: Figures/TesteCycloneSucesso.png  used on input line 29.
 (pdftex.def)             Requested size: 455.24411pt x 155.1525pt.
-<Figures/ComposeFinal.png, id=186, 896.34875pt x 248.93pt>
+<Figures/ComposeFinal.png, id=189, 896.34875pt x 248.93pt>
 File: Figures/ComposeFinal.png Graphic file (type png)
 <use Figures/ComposeFinal.png>
 Package pdftex.def Info: Figures/ComposeFinal.png  used on input line 35.
 (pdftex.def)             Requested size: 455.24411pt x 126.42844pt.
-<Figures/SimulacaoGazeboLancada.png, id=187, 754.82pt x 539.01375pt>
+<Figures/SimulacaoGazeboLancada.png, id=190, 754.82pt x 539.01375pt>
 File: Figures/SimulacaoGazeboLancada.png Graphic file (type png)
 <use Figures/SimulacaoGazeboLancada.png>
 Package pdftex.def Info: Figures/SimulacaoGazeboLancada.png  used on input line 41.
 (pdftex.def)             Requested size: 455.24411pt x 325.08856pt.
-<Figures/GazeboLancado.png, id=188, 1843.88875pt x 1050.92625pt>
+<Figures/GazeboLancado.png, id=191, 1843.88875pt x 1050.92625pt>
 File: Figures/GazeboLancado.png Graphic file (type png)
 <use Figures/GazeboLancado.png>
 Package pdftex.def Info: Figures/GazeboLancado.png  used on input line 47.
 (pdftex.def)             Requested size: 455.24411pt x 259.45961pt.
-<Figures/BurgerMovido.png, id=189, 1848.9075pt x 1048.91875pt>
+<Figures/BurgerMovido.png, id=192, 1848.9075pt x 1048.91875pt>
 File: Figures/BurgerMovido.png Graphic file (type png)
 <use Figures/BurgerMovido.png>
 Package pdftex.def Info: Figures/BurgerMovido.png  used on input line 53.
 (pdftex.def)             Requested size: 455.24411pt x 258.25975pt.
-<Figures/DockerAdquireTopicos.png, id=190, 1530.71875pt x 539.01375pt>
+<Figures/DockerAdquireTopicos.png, id=193, 1530.71875pt x 539.01375pt>
 File: Figures/DockerAdquireTopicos.png Graphic file (type png)
 <use Figures/DockerAdquireTopicos.png>
 Package pdftex.def Info: Figures/DockerAdquireTopicos.png  used on input line 59.
 (pdftex.def)             Requested size: 455.24411pt x 160.30717pt.
-<Figures/DockerBuildaProjetos.png, id=191, 778.91pt x 533.995pt>
+<Figures/DockerBuildaProjetos.png, id=194, 778.91pt x 533.995pt>
 File: Figures/DockerBuildaProjetos.png Graphic file (type png)
 <use Figures/DockerBuildaProjetos.png>
 Package pdftex.def Info: Figures/DockerBuildaProjetos.png  used on input line 65.
 (pdftex.def)             Requested size: 455.24411pt x 312.09656pt.
-<Figures/DockerRodaProjetoDrive.png, id=192, 778.91pt x 533.995pt>
+<Figures/DockerRodaProjetoDrive.png, id=195, 778.91pt x 533.995pt>
 File: Figures/DockerRodaProjetoDrive.png Graphic file (type png)
 <use Figures/DockerRodaProjetoDrive.png>
 Package pdftex.def Info: Figures/DockerRodaProjetoDrive.png  used on input line 71.
 (pdftex.def)             Requested size: 455.24411pt x 312.09656pt.
-<Figures/DockerMovimentaRobo1.png, id=193, 1837.86626pt x 1055.945pt>
+<Figures/DockerMovimentaRobo1.png, id=196, 1837.86626pt x 1055.945pt>
 File: Figures/DockerMovimentaRobo1.png Graphic file (type png)
 <use Figures/DockerMovimentaRobo1.png>
 Package pdftex.def Info: Figures/DockerMovimentaRobo1.png  used on input line 77.
 (pdftex.def)             Requested size: 455.24411pt x 261.55263pt.
-<Figures/DockerMovimentaRobo2.png, id=194, 1837.86626pt x 1055.945pt>
+<Figures/DockerMovimentaRobo2.png, id=197, 1837.86626pt x 1055.945pt>
 File: Figures/DockerMovimentaRobo2.png Graphic file (type png)
 <use Figures/DockerMovimentaRobo2.png>
 Package pdftex.def Info: Figures/DockerMovimentaRobo2.png  used on input line 83.
@@ -1482,7 +1482,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-<Figures/Graficos.png, id=210, 1505.625pt x 501.875pt>
+<Figures/Graficos.png, id=213, 1505.625pt x 501.875pt>
 File: Figures/Graficos.png Graphic file (type png)
 <use Figures/Graficos.png>
 Package pdftex.def Info: Figures/Graficos.png  used on input line 110.
@@ -1714,18 +1714,18 @@ Package rerunfilecheck Info: File `_TCC-principal.out' has not changed.
 ### semi simple group (level 1) entered at line 95 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 45890 strings out of 478287
- 1018406 string characters out of 5849289
+ 45895 strings out of 478287
+ 1018512 string characters out of 5849289
  1475067 words of memory out of 5000000
- 63101 multiletter control sequences out of 15000+600000
+ 63105 multiletter control sequences out of 15000+600000
  492142 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,11n,105p,1736b,38675s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on _TCC-principal.pdf (23 pages, 1835891 bytes).
+Output written on _TCC-principal.pdf (23 pages, 1835987 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 242 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
+ 310 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
