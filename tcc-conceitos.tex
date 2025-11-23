@@ -1,0 +1,39 @@
+\chapter{CONCEITOS FUNDAMENTAIS} 
+\label{conceitos}
+
+Este capítulo aborda os conceitos teóricos e as ferramentas utilizadas no desenvolvimento deste trabalho, com o intuito de descrever e relacionar estes conceitos, para haver entendimento nas etapas posteriores abordadas. 
+
+O principal conceito a ser abordado é a 
+Containerização, uma forma de virtualização feita para ser mais rápida e flexível que a emulação, é um processo de implantação que consegue ser executado em diversos dispositivos e sistemas operacionais. Isso ocorre pelo fato de que um contêiner consegue armazenar os arquivos e bibliotecas para ser executado, permitindo a um usuário executar uma aplicação de outro sistema operacional no sistema operacional que o mesmo possua. Além disso, o contêiner permite que falhas ocorram sem afetar outros processos que não estão agrupados no mesmo. \cite{Wen2023}. A containerização será feita usando o 
+Docker que é uma plataforma utilizada para desenvolvimento, envio e funcionamento de aplicações de maneira separada da infraestrutura por conta da conteinerização. Por conta deste fator, o usuário consegue gerir as aplicações da mesma maneira que gera sua infraestrutura. Outro fator importante é que o Docker permite que as aplicações desenvolvidas sejam testadas e executadas com menos atraso do que a maneira convencional. Contêineres são bons para fluxos de integrações e entregas de trabalho contínuas. \cite{dck2025}
+
+Para realizar os testes no robô simulado, será utilizado o ROS2 (Robot Operating System 2), que é um meta-sistema operacional 
+um sistema operacional para robôs, o mesmo realiza funções similares a outros sistemas operacionais, com exceção de controles de CPU, pois o mesmo executa processos robóticos (planejamento de movimento, navegação, manipulação de objetos, entre outros), fluxos de dados, entre outros. Possui bibliotecas e ferramentas que executam códigos em múltiplos computadores. Este conceito é utilizado pelo ROS 2, sendo o método mais utilizado nos robôs atuais, sendo uma camada acima de um sistema operacional real, que oferece abstrações e serviços para os sistemas robóticos.
+O ROS 2 é justamente um meta-sistema operacional de código aberto utilizado para auxiliar a desenvolver aplicações para robôs. O mesmo possui serviços que outros sistemas operacionais normalmente possuem, mas com o foco maior para a área da robótica, facilitando comunicação entre processos, funções que se comunicam com as demais e entre muitos outros. Para o desenvolvimento do projeto, será utilizado o ROS 2, que mantém o conceito modular e distribuído, mas possui melhorias e mais funcionalidades que o ROS original (Figura \ref{fig:ROS25}) \cite{ros2025}. Para conectar as aplicações, foram utilizados DDS (Data Distribution Service), que são protocolos Middleware. Os
+Middlewares são uma camada de software que conecta as aplicações a um sistema operacional, permitindo uma comunicação e compartilhamento de dados mais simples entre os componentes de um sistema. Esta facilidade permite que os desenvolvedores foquem no desenvolvimento das principais funções de uma aplicação, pois a comunicação entre a aplicação e o sistema operacional está sendo feita pelo middleware. O
+DDS é um protocolo middleware e uma API para conexão centrada em dados, este protocolo integra os componentes de um sistema que muitas aplicações precisam, como arquitetura escalável, confiabilidade e prover conectividade de dados de baixa latência. Este protocolo foi criado pela OMG (Object Management Group). Para este projeto, foram utilizados dois tipos de DDS, o primeiro é o
+Fast DDS uma implementação de DDS feita em C++, possui uma biblioteca que oferece uma API e protocolo de comunicação que disponibiliza um modelo Publisher-Subscriber centrado em dados (DCPS). Este modelo visa ser eficiente e confiável para distribuir as informações para o sistema em tempo real. O segundo DDS utilizado é o
+Cyclone DDS, que é uma implementação de DDS com alto desempenho, permite que os desenvolvedores que o utilizam possam criar "gêmeos" digitais das entidades de seus sistemas, permitindo compartilhar estados, eventos, fluxos de dados e mensagens pela rede em tempo real, visa ser rápido, consistente e seguro.
+
+Os testes simulados foram executados em modelos baseados na arena presente na sala K4-04 do Centro Universitário FEI, para isso, será utilizado o software
+Gazebo Simulator Classic que é um software usado para desenvolver simulações, possui diversos projetos de código aberto para que os interessados possam utilizar e desenvolver suas próprias simulações. Neste software estão presentes também diversos modelos, tanto como objetos como também robôs.(Figura \ref{fig:gzb25}). Para realizar estes testes, será utilizado o modelo virtual do robô 
+TurtleBot3 Burger que é um robô customizável de preço acessível ao público baseado no modelo ROS para ser utilizado como um material educativo, de pesquisas, entretenimento pessoal e etc, é um robô que foi desenvolvido com o intuito de ser barato, por conta disto, o mesmo não possui uma grande funcionalidade ou qualidade, mas o mesmo compensa na relação da quantidade de aplicações que o mesmo consegue realizar.(Figura \ref{fig:tbt3b25}) \cite{turtlebot3_manual}.
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.32\linewidth]{Figures/ROS.png}
+    \caption{Exemplo do ROS 2, utilizando turtlesim, ROS e RQT. Fonte: Autores, 2025}
+    \label{fig:ROS25}
+\end{figure}
+\newpage
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.42\linewidth]{Figures/Gazebo.png}
+    \caption{Exemplo do Gazebo Simulator Classic com a arena Presente na K4-04. Fonte: Autores, 2025}
+    \label{fig:gzb25}
+\end{figure}
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.28\linewidth]{Figures/TurtleBot3.jpg}
+    \caption{TurtleBot3 Burger. Fonte: FOUNDATION, 2025}
+    \label{fig:tbt3b25}
+\end{figure}
