@@ -24,11 +24,11 @@ Database file #2: tcc-referencias.bib
 Warning--entry type for "turtlebot3_manual" isn't style-file defined
 --line 22 of file tcc-referencias.bib
 Warning--entry type for "turtlebot3_github" isn't style-file defined
---line 37 of file tcc-referencias.bib
+--line 38 of file tcc-referencias.bib
 Warning--entry type for "dck2025" isn't style-file defined
---line 53 of file tcc-referencias.bib
+--line 54 of file tcc-referencias.bib
 Warning--entry type for "ros2025" isn't style-file defined
---line 76 of file tcc-referencias.bib
+--line 77 of file tcc-referencias.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -40,34 +40,34 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 +---------------------------------------------------------+
 You've used 12 entries,
             6714 wiz_defined-function locations,
-            1256 strings with 11006 characters,
-and the built_in function-call counts, 16553 in all, are:
-= -- 2145
-> -- 207
+            1256 strings with 11018 characters,
+and the built_in function-call counts, 16635 in all, are:
+= -- 2146
+> -- 216
 < -- 492
-+ -- 615
-- -- 64
-* -- 947
-:= -- 2045
++ -- 619
+- -- 66
+* -- 958
+:= -- 2060
 add.period$ -- 39
 call.type$ -- 12
-change.case$ -- 89
+change.case$ -- 92
 chr.to.int$ -- 12
 cite$ -- 8
 duplicate$ -- 1730
 empty$ -- 617
-format.name$ -- 308
-if$ -- 3258
+format.name$ -- 322
+if$ -- 3278
 int.to.chr$ -- 3
 int.to.str$ -- 0
 missing$ -- 176
 newline$ -- 54
 num.names$ -- 40
-pop$ -- 235
+pop$ -- 234
 preamble$ -- 1
-purify$ -- 42
+purify$ -- 43
 quote$ -- 0
-skip$ -- 1922
+skip$ -- 1925
 stack$ -- 1
 substring$ -- 709
 swap$ -- 582
