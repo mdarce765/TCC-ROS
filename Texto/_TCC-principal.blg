@@ -27,8 +27,20 @@ Warning--entry type for "turtlebot3_github" isn't style-file defined
 --line 38 of file tcc-referencias.bib
 Warning--entry type for "dck2025" isn't style-file defined
 --line 54 of file tcc-referencias.bib
+Warning--entry type for "gzb2025" isn't style-file defined
+--line 70 of file tcc-referencias.bib
 Warning--entry type for "ros2025" isn't style-file defined
 --line 77 of file tcc-referencias.bib
+Warning--entry type for "mdw2025" isn't style-file defined
+--line 85 of file tcc-referencias.bib
+Warning--entry type for "dds2025" isn't style-file defined
+--line 93 of file tcc-referencias.bib
+Warning--entry type for "fdds2025" isn't style-file defined
+--line 101 of file tcc-referencias.bib
+Warning--entry type for "cdds2025" isn't style-file defined
+--line 109 of file tcc-referencias.bib
+Warning--entry type for "nmon2025" isn't style-file defined
+--line 117 of file tcc-referencias.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -38,45 +50,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 11 entries,
+You've used 17 entries,
             6714 wiz_defined-function locations,
-            1251 strings with 10915 characters,
-and the built_in function-call counts, 15279 in all, are:
-= -- 1980
-> -- 201
-< -- 453
-+ -- 575
-- -- 61
-* -- 883
-:= -- 1890
-add.period$ -- 34
-call.type$ -- 11
-change.case$ -- 85
-chr.to.int$ -- 11
-cite$ -- 7
-duplicate$ -- 1583
-empty$ -- 559
-format.name$ -- 299
-if$ -- 3011
+            1275 strings with 11332 characters,
+and the built_in function-call counts, 23725 in all, are:
+= -- 2962
+> -- 377
+< -- 660
++ -- 848
+- -- 115
+* -- 1402
+:= -- 2947
+add.period$ -- 63
+call.type$ -- 17
+change.case$ -- 149
+chr.to.int$ -- 17
+cite$ -- 13
+duplicate$ -- 2398
+empty$ -- 910
+format.name$ -- 561
+if$ -- 4727
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 159
-newline$ -- 48
-num.names$ -- 35
-pop$ -- 211
+missing$ -- 265
+newline$ -- 83
+num.names$ -- 65
+pop$ -- 362
 preamble$ -- 1
-purify$ -- 40
+purify$ -- 64
 quote$ -- 0
-skip$ -- 1779
+skip$ -- 2613
 stack$ -- 1
-substring$ -- 650
-swap$ -- 532
-text.length$ -- 9
+substring$ -- 976
+swap$ -- 814
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1
 warning$ -- 0
-while$ -- 51
+while$ -- 92
 width$ -- 0
-write$ -- 116
-(There were 4 warnings)
+write$ -- 205
+(There were 10 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.11.2)  5 DEC 2025 11:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.11.2)  6 DEC 2025 10:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1306,7 +1306,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-<Figures/ROS.png, id=137, 503.8825pt x 541.02126pt>
+<Figures/ROS.png, id=151, 503.8825pt x 541.02126pt>
 File: Figures/ROS.png Graphic file (type png)
 <use Figures/ROS.png>
 Package pdftex.def Info: Figures/ROS.png  used on input line 28.
@@ -1322,12 +1322,12 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 [9] (./_TCC-principal.mw)
 \openout3 = `_TCC-principal.mw'.
 
-<Figures/Gazebo.png, id=148, 1856.9375pt x 1052.93375pt>
+<Figures/Gazebo.png, id=167, 1856.9375pt x 1052.93375pt>
 File: Figures/Gazebo.png Graphic file (type png)
 <use Figures/Gazebo.png>
 Package pdftex.def Info: Figures/Gazebo.png  used on input line 36.
 (pdftex.def)             Requested size: 191.20169pt x 108.41643pt.
-<Figures/TurtleBot3.jpg, id=149, 205.76875pt x 246.9225pt>
+<Figures/TurtleBot3.jpg, id=168, 205.76875pt x 246.9225pt>
 File: Figures/TurtleBot3.jpg Graphic file (type jpg)
 <use Figures/TurtleBot3.jpg>
 Package pdftex.def Info: Figures/TurtleBot3.jpg  used on input line 43.
@@ -1396,7 +1396,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 10.
-<Figures/FluxogramaTCC.png, id=181, 934.99312pt x 465.23813pt>
+<Figures/FluxogramaTCC.png, id=199, 934.99312pt x 465.23813pt>
 File: Figures/FluxogramaTCC.png Graphic file (type png)
 <use Figures/FluxogramaTCC.png>
 Package pdftex.def Info: Figures/FluxogramaTCC.png  used on input line 14.
@@ -1458,16 +1458,11 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-<Figures/Arena/ArenaLabirinto1.png, id=207, 723.70375pt x 874.26625pt>
-File: Figures/Arena/ArenaLabirinto1.png Graphic file (type png)
-<use Figures/Arena/ArenaLabirinto1.png>
-Package pdftex.def Info: Figures/Arena/ArenaLabirinto1.png  used on input line 39.
-(pdftex.def)             Requested size: 136.57462pt x 164.9784pt.
-<Figures/Arena/ArenaLabirinto2.png, id=208, 723.70375pt x 874.26625pt>
-File: Figures/Arena/ArenaLabirinto2.png Graphic file (type png)
-<use Figures/Arena/ArenaLabirinto2.png>
-Package pdftex.def Info: Figures/Arena/ArenaLabirinto2.png  used on input line 46.
-(pdftex.def)             Requested size: 136.57462pt x 164.9784pt.
+<Figures/Arena/ArenaPatrulheiros.png, id=224, 967.615pt x 757.83125pt>
+File: Figures/Arena/ArenaPatrulheiros.png Graphic file (type png)
+<use Figures/Arena/ArenaPatrulheiros.png>
+Package pdftex.def Info: Figures/Arena/ArenaPatrulheiros.png  used on input line 34.
+(pdftex.def)             Requested size: 136.57462pt x 106.96292pt.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1476,7 +1471,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[17] (./_TCC-principal.mw)
+[17 <./Figures/Arena/ArenaPatrulheiros.png>] (./_TCC-principal.mw)
 \openout3 = `_TCC-principal.mw'.
 
 \openout3 = `_TCC-principal.mw'.
@@ -1487,10 +1482,16 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-\openout3 = `_TCC-principal.mw'.
-
-\openout3 = `_TCC-principal.mw'.
-
+<Figures/Arena/ArenaLabirinto1.png, id=233, 723.70375pt x 874.26625pt>
+File: Figures/Arena/ArenaLabirinto1.png Graphic file (type png)
+<use Figures/Arena/ArenaLabirinto1.png>
+Package pdftex.def Info: Figures/Arena/ArenaLabirinto1.png  used on input line 47.
+(pdftex.def)             Requested size: 136.57462pt x 164.9784pt.
+<Figures/Arena/ArenaLabirinto2.png, id=234, 723.70375pt x 874.26625pt>
+File: Figures/Arena/ArenaLabirinto2.png Graphic file (type png)
+<use Figures/Arena/ArenaLabirinto2.png>
+Package pdftex.def Info: Figures/Arena/ArenaLabirinto2.png  used on input line 54.
+(pdftex.def)             Requested size: 136.57462pt x 164.9784pt.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1506,35 +1507,35 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-<Figures/Graficos/arena_cpu.png, id=231, 462.528pt x 346.896pt>
+<Figures/Graficos/arena_cpu.png, id=249, 462.528pt x 346.896pt>
 File: Figures/Graficos/arena_cpu.png Graphic file (type png)
 <use Figures/Graficos/arena_cpu.png>
-Package pdftex.def Info: Figures/Graficos/arena_cpu.png  used on input line 69.
+Package pdftex.def Info: Figures/Graficos/arena_cpu.png  used on input line 77.
 (pdftex.def)             Requested size: 318.66948pt x 239.01443pt.
-<Figures/Graficos/arena_mem.png, id=232, 642.4pt x 481.8pt>
+<Figures/Graficos/arena_mem.png, id=250, 642.4pt x 481.8pt>
 File: Figures/Graficos/arena_mem.png Graphic file (type png)
 <use Figures/Graficos/arena_mem.png>
-Package pdftex.def Info: Figures/Graficos/arena_mem.png  used on input line 76.
+Package pdftex.def Info: Figures/Graficos/arena_mem.png  used on input line 84.
 (pdftex.def)             Requested size: 318.66948pt x 239.01003pt.
-<Figures/Graficos/arena_net.png, id=233, 642.4pt x 481.8pt>
+<Figures/Graficos/arena_net.png, id=251, 642.4pt x 481.8pt>
 File: Figures/Graficos/arena_net.png Graphic file (type png)
 <use Figures/Graficos/arena_net.png>
-Package pdftex.def Info: Figures/Graficos/arena_net.png  used on input line 83.
+Package pdftex.def Info: Figures/Graficos/arena_net.png  used on input line 91.
 (pdftex.def)             Requested size: 318.66948pt x 239.01003pt.
-<Figures/Graficos/patrulha_cpu.png, id=234, 642.4pt x 481.8pt>
+<Figures/Graficos/patrulha_cpu.png, id=252, 642.4pt x 481.8pt>
 File: Figures/Graficos/patrulha_cpu.png Graphic file (type png)
 <use Figures/Graficos/patrulha_cpu.png>
-Package pdftex.def Info: Figures/Graficos/patrulha_cpu.png  used on input line 90.
+Package pdftex.def Info: Figures/Graficos/patrulha_cpu.png  used on input line 98.
 (pdftex.def)             Requested size: 318.66948pt x 239.01003pt.
-<Figures/Graficos/patrulha_mem.png, id=235, 642.4pt x 481.8pt>
+<Figures/Graficos/patrulha_mem.png, id=253, 642.4pt x 481.8pt>
 File: Figures/Graficos/patrulha_mem.png Graphic file (type png)
 <use Figures/Graficos/patrulha_mem.png>
-Package pdftex.def Info: Figures/Graficos/patrulha_mem.png  used on input line 97.
+Package pdftex.def Info: Figures/Graficos/patrulha_mem.png  used on input line 105.
 (pdftex.def)             Requested size: 318.66948pt x 239.01003pt.
-<Figures/Graficos/patrulha_net.png, id=236, 642.4pt x 481.8pt>
+<Figures/Graficos/patrulha_net.png, id=254, 642.4pt x 481.8pt>
 File: Figures/Graficos/patrulha_net.png Graphic file (type png)
 <use Figures/Graficos/patrulha_net.png>
-Package pdftex.def Info: Figures/Graficos/patrulha_net.png  used on input line 104.
+Package pdftex.def Info: Figures/Graficos/patrulha_net.png  used on input line 112.
 (pdftex.def)             Requested size: 318.66948pt x 239.01003pt.
 )
 
@@ -1544,7 +1545,11 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[19 <./Figures/Graficos/arena_cpu.png>] (./_TCC-principal.mw)
+[19] (./_TCC-principal.mw)
+\openout3 = `_TCC-principal.mw'.
+
+\openout3 = `_TCC-principal.mw'.
+
 \openout3 = `_TCC-principal.mw'.
 
 
@@ -1555,7 +1560,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[20 <./Figures/Graficos/arena_mem.png> <./Figures/Graficos/arena_net.png>] (./_TCC-principal.mw)
+[20 <./Figures/Graficos/arena_cpu.png> <./Figures/Graficos/arena_mem.png>] (./_TCC-principal.mw)
 \openout3 = `_TCC-principal.mw'.
 
 
@@ -1566,7 +1571,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[21 <./Figures/Graficos/patrulha_cpu.png> <./Figures/Graficos/patrulha_mem.png>] (./_TCC-principal.mw)
+[21 <./Figures/Graficos/arena_net.png> <./Figures/Graficos/patrulha_cpu.png>] (./_TCC-principal.mw)
 \openout3 = `_TCC-principal.mw'.
 
 
@@ -1577,7 +1582,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 \openout3 = `_TCC-principal.mw'.
 
-[22 <./Figures/Graficos/patrulha_net.png>] (./_TCC-principal.mw)
+[22 <./Figures/Graficos/patrulha_mem.png> <./Figures/Graficos/patrulha_net.png>] (./_TCC-principal.mw)
 \openout3 = `_TCC-principal.mw'.
 
 \openout2 = `tcc-discussao-conclusao.aux'.
@@ -1706,7 +1711,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 \openout3 = `_TCC-principal.out'.
 
 Package rerunfilecheck Info: File `_TCC-principal.out' has not changed.
-(rerunfilecheck)             Checksum: 3DA479602E9DDA64A7755F7D72575A9D;1939.
+(rerunfilecheck)             Checksum: 62442692AED638FA2D8652AC1C55EB61;1939.
 \openout3 = `_TCC-principal.idx'.
 
 \openout3 = `_TCC-principal.toc'.
@@ -1717,18 +1722,18 @@ Package rerunfilecheck Info: File `_TCC-principal.out' has not changed.
 ### semi simple group (level 1) entered at line 95 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 45873 strings out of 478287
- 1017661 string characters out of 5849289
- 1473067 words of memory out of 5000000
- 63072 multiletter control sequences out of 15000+600000
+ 45912 strings out of 478287
+ 1018359 string characters out of 5849289
+ 1476067 words of memory out of 5000000
+ 63103 multiletter control sequences out of 15000+600000
  505524 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,12n,105p,1397b,38663s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on _TCC-principal.pdf (26 pages, 492866 bytes).
+Output written on _TCC-principal.pdf (26 pages, 910092 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 253 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 336 PDF objects out of 1000 (max. 8388607)
+ 282 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 198 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -26,8 +26,16 @@ Foram feitos testes para adquirir os dados de desempenho das simulações sem Do
 
 \section{TESTES PATRULHEIROS}
 Neste teste foram posicionados robôs patrulheiros que percorriam um 
-\textcolor{red}{simples trajeto} \textcolor{blue}{trajeto de linha reta onde saiam e retornavam as seus pontos de origem}\textcolor{green}{ADICIONAR IMAGEM} 
-para servir de obstáculo para o robô que deveria percorrer o mesmo trajeto de antes. Novamente foi utilizada a arena base, e sem o uso do docker. Foram feitos testes para adquirir os dados de desempenho de simulações com Docker, utilizando a arena base com patrulheiros.
+\textcolor{red}{simples trajeto} \textcolor{blue}{trajeto de linha reta onde saiam e retornavam as seus pontos de origem}
+(Figura \ref{fig:AP}) para servir de obstáculo para o robô que deveria percorrer o mesmo trajeto de antes. Novamente foi utilizada a arena base, e sem o uso do docker. Foram feitos testes para adquirir os dados de desempenho de simulações com Docker, utilizando a arena base com patrulheiros.
+
+\begin{figure}[htb]
+    \caption{Arena Patrulheiros}
+    \includegraphics[width=0.3\linewidth]{Figures/Arena/ArenaPatrulheiros.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda: As retas em vemelho são os trajetos realizados pelos patrulheiros}
+    \label{fig:AP}
+\end{figure}
 
 \section{TESTES LABIRINTOS}
 Inicialmente, foram realizados testes sem patrulheiros, com e sem o uso de docker, em duas arenas com labirintos (Figuras \ref{fig:AL1} e \ref{fig:AL2}) como obstáculo para o robô. Os labirintos foram desenvolvidos utilizando placas, que são os obstáculos presentes na arena física da K4-04, respeitando o espaço da arena, placas e possíveis posições. Estes testes acabaram por falhar, por conta da inconsistência da navegação do teste, tendo casos em que a navegação falhava no meio do caminho, ou outros em que 
