@@ -5,20 +5,39 @@
 
 Os experimentos usam um modelo digital da arena física presente no laboratório da sala K4-04 da instituição. O motivo de esta arena ter sido escolhida se deu por conta da comparação que futuramente pode ser realizada entre os testes virtuais e reais. 
 
-Foram feitos cinco experimentos com resultados satisfatórios, e um que acabou não fornecendo os resultados devidos por conta de instabilidades. O primeiro deles (Setup) teve testes iniciais para confirmar o comportamento do ROS 2 dentro de um container Docker. 
-No segundo experimento (Base), usaram-se simulações utilizando o mapa base sem patrulheiros.
+Foram feitos cinco experimentos com resultados satisfatórios, e um que acabou não fornecendo os resultados devidos por conta de instabilidades. 
+\textcolor{blue}{
+Todos os testes foram feitos em um computador com as especificações seguintes:
+Linux Jammy 22.04 com um processador AMD Ryzen 5 1600X (12 Cores, 3.6GHz), 16 GB RAM DDR4
+Foi utilizado ROS2 Humble, Docker Engine Jammy 22.04 Stable e Gazebo Classic, todas as ferramentas e configurações destas estão disponíveis em um playbook, no repositório
+A imagem Docker utilizada no projeto se baseia na imagem usada para ROS2 Humble, presente no repositório oficial da robotis (https://github.com/ROBOTIS-GIT/turtlebot3/tree/main/docker/humble), modificada para ter as configurações e arquivos necessários.
+Nmon obtém os dados gerais de desempenho da máquina a cada segundo, dados como, mas não limitados a Utilização de CPU, Rede e RAM, permitindo que outros projetos avaliem categorias diferentes das propostas neste. 
+}
+O primeiro deles (Setup) teve testes iniciais para confirmar o comportamento do ROS 2 dentro de um container Docker. 
+O segundo experimento (Base), usaram-se simulações utilizando o mapa base sem patrulheiros.
 O terceiro experimento (Patrulheiros) usou simulações utilizando o mapa base com patrulheiros.
 O quarto experimento (Base + Docker) usou simulações utilizando o mapa base sem patrulheiros, com a stack nav2 e rviz dentro de um container Docker.
 No quinto experimento (Patrulheiros + Docker), usaram-se simulações utilizando o mapa base com patrulheiros, com a stack nav2 e rviz dentro de um container Docker.
 Foram também realizados experimentos usando arenas com labirintos para testar a navegação do robô, \textcolor{red}{mas a navegação acabou tendo problemas em experimentos com e sem Docker, dando a indicar que é um problema com o mapa, ou com as bibliotecas ROS2 utilizadas, e não com a conteinerização.} \textcolor{green}{EXPLICAR PROBLEMA}
 
+\section{CONTEÚDO REPOSITÓRIO}
+\textcolor{blue}{
+O repositório github criado para este projeto possui várias ferramentas que podem ser utilizadas para facilitar a reprodução dos testes executados.
+O README contém um overview de como instalar o projeto e utilizar os scripts presentes no projeto.
+Foi criado um playbook ansible (playbook.yaml) para facilitar a configuração e instalação do Docker, ROS2 Humble, Gazebo Classic e suas dependências.
+Foram também criados vários arquivos .sh para facilitar a reprodução dos testes, por garantir que os comandos corretos serão executados na sequência correta, sem necessidade de intervenção do usuário, onde os arquivos "inicioRapido" possuem os comandos utilizados para cada um dos testes feitos para este projeto.
+Os arquivos .sh na pasta /scripts possuem funcionalidades genéricas criadas para os testes, como a inicialização do nmon (iniciarNmon.sh), mover o robô ao inicializar rviz e mandar uma mensagem de goal (moverMain.sh), entre outras.
+No pacote ROS2 criado (localizado em /tcc) está uma versão modificada do arquivo turtlebot3_absolute_move.py (turtlebot3_absolute_move_Arena.py, localizada em /tcc/tcc), que é utilizado na movimentação dos robôs patrulheiros. Esta modificação faz com que os robôs inicializados entrem em um loop infinito de movimentação entre 2 pontos especificados, lógica utilizada no script  rotasRobos.sh.
+Há também uma versão modificada de multi_robot.launch.py (multi_robot_Arena.launch.py) com as posições iniciais dos robôs patrulheiros e turtlebot3_world.launch.py (turtlebot3_Arena.launch.py), que permite carregar o robô em um posição fixa em qualquer mapa, contanto que o nome seja especificado e o arquivo .world presente em /tcc/worlds
+}
 \section{RESULTADOS SETUP}
 Foram feitos testes para implementar a parte simulada proposta, foi utilizado o manual \cite{turtlebot3_manual} e pacotes\footnote{\cite{turtlebot3_github}} disponíveis pelo grupo ROBOTIS, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS 2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava mais de 20 minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
 
 Houve certas dificuldades para integrar o ROS 2 dentro do contêiner Docker com o ROS 2 nativo, que lidaria com a simulação Gazebo. 
-\textcolor{red}{Foi descoberto que o FastDDS (middleware utilizado por padrão pelo ROS 2 Humble) não interage de forma consistente com Docker. Ele era capaz de compartilhar os tópicos entre os ambientes, mas causava falha na publicação e recebimento de mensagens, não mostrando nenhuma.} \textcolor{green}{DESENVOLVER}
+\textcolor{red}{Foi descoberto que o FastDDS (middleware utilizado por padrão pelo ROS 2 Humble) não interage de forma consistente com Docker. Ele era capaz de compartilhar os tópicos entre os ambientes, mas causava falha na publicação e recebimento de mensagens, não mostrando nenhuma.}\textcolor{blue}{ADICIONAR IMAGEM DE TESTE SETUP (TestePadraoFalha;Desc: Terminal na esquerda host com implementação default (FastDDS), Terminal na direita docker com implementação default (FastDDS) )} \textcolor{green}{DESENVOLVER}
 
 Para solucionar isso, o FastDDS foi substituído por outro middleware disponível para ROS 2 Humble, CycloneDDS, o qual foi utilizado especificamente no container Docker.
+\textcolor{blue}{(TesteCycloneSucesso; Terminal na esquerda host com implementação default (FastDDS), Terminal na direita docker com implementação rmw_cyclonedds_cpp)}
 
 \section{TESTES BASE}
 Foram feitos testes para adquirir os dados de desempenho das simulações sem Docker, utilizando a arena base sem patrulheiros. Estes testes consistiam em fazer o robô percorrer um trajeto de uma ponta até a outra da arena. Durante a execução, foi utilizado o software Nmon para verificar o desempenho de CPU, memória RAM e rede, e assim armazenar os dados. Os testes com a arena base + docker, o robô realizou o mesmo trajeto que o teste anterior de seguir de uma ponta da arena até a outra. Os testes foram realizados enquanto o software Nmon verificava o desempenho do sistema.
