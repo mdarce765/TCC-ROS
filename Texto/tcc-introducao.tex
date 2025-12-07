@@ -1,9 +1,9 @@
 \chapter{INTRODUÇÃO}
 \label{intro}
 
-A conteinerização é uma ferramenta poderosa no campo de desenvolvimento e implementação, disponibilizando uma camada de isolamento entre componentes de um projeto, assegurando que estes não irão conflitar, seja por funções internas ou dependências de versões diferentes utilizadas. Na robótica, conteinerização é vista como uma técnica para facilitar o desenvolvimento, portabilidade e consistência em projetos de robótica, mas há um problema com relação a isso, 
+A conteinerização é uma ferramenta poderosa no campo de desenvolvimento e implementação, disponibilizando uma camada de isolamento entre componentes de um projeto, o que assegura que eles não entrarão em conflito, seja por funções internas ou devido a dependências de versões diferentes. Na robótica, conteinerização é vista como uma técnica para facilitar o desenvolvimento, portabilidade e consistência em projetos de robótica, mas há um problema com relação a isso, 
 \textcolor{red}{não foram feitas pesquisas detalhando sobre a mudança de desempenho que ocorre entre a integração do ROS 2 com relação ao Docker,} \textcolor{blue}{existem poucas pesquisas sobre essa mudança de desempenho entre a integração do ROS 2 com o Docker}, 
-esta integração pode levar a perdas de desempenho para o robô, causando atraso de mensagens recebidas ou travando o robô, esse atraso pode ser causado por conta da sobrecarga do sistema por conta dos recursos a mais utilizados pelo Docker.
+esta integração pode levar a perdas de desempenho para o robô, causando atraso de mensagens recebidas ou travando o robô, esse atraso pode ser causado pela sobrecarga do sistema de arquivos do Docker.
 
 \section{OBJETIVO}
 O objetivo deste projeto é o de documentar e avaliar o desempenho de um robô simulado com e sem conteinerização em arenas simuladas baseadas na arena da sala K4-04 do Centro Universitário FEI sendo executado no software Gazebo Classic.
@@ -12,7 +12,7 @@ O decorrer deste projeto está dividido da seguinte maneira: na seção 2, serã
 
 Na seção 3, são abordados os trabalhos que possuem alguma relação com o projeto, como métricas, ideias e etc.
 
-A Seção 4, é abordada a metodologia utilizada para o desenvolvimento deste projeto, demonstrando as técnicas utilizadas e os passos a serem realizados para atingir o objetivo final.
+Na Seção 4, é abordada a metodologia utilizada para o desenvolvimento deste projeto, demonstrando as técnicas utilizadas e os passos a serem realizados para atingir o objetivo final.
 
 Na seção 5, são abordados os experimentos e resultados obtidos ao longo do projeto, como os experimentos foram executados, os problemas obtidos e, no final, mostrar os resultados que foram obtidos, explicando o que era esperado e o que acabou por ser obtido. 
 
