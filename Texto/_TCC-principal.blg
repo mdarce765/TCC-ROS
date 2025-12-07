@@ -23,8 +23,6 @@ Database file #1: abntex2-options.bib
 Database file #2: tcc-referencias.bib
 Warning--entry type for "turtlebot3_manual" isn't style-file defined
 --line 22 of file tcc-referencias.bib
-Warning--entry type for "turtlebot3_github" isn't style-file defined
---line 38 of file tcc-referencias.bib
 Warning--entry type for "dck2025" isn't style-file defined
 --line 54 of file tcc-referencias.bib
 Warning--entry type for "gzb2025" isn't style-file defined
@@ -50,45 +48,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 17 entries,
+You've used 16 entries,
             6714 wiz_defined-function locations,
-            1275 strings with 11332 characters,
-and the built_in function-call counts, 23725 in all, are:
-= -- 2962
-> -- 377
-< -- 660
-+ -- 848
-- -- 115
-* -- 1402
-:= -- 2947
-add.period$ -- 63
-call.type$ -- 17
-change.case$ -- 149
-chr.to.int$ -- 17
-cite$ -- 13
-duplicate$ -- 2398
-empty$ -- 910
-format.name$ -- 561
-if$ -- 4727
+            1271 strings with 11235 characters,
+and the built_in function-call counts, 22312 in all, are:
+= -- 2787
+> -- 362
+< -- 618
++ -- 801
+- -- 110
+* -- 1324
+:= -- 2771
+add.period$ -- 58
+call.type$ -- 16
+change.case$ -- 142
+chr.to.int$ -- 16
+cite$ -- 12
+duplicate$ -- 2242
+empty$ -- 852
+format.name$ -- 538
+if$ -- 4451
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 265
-newline$ -- 83
-num.names$ -- 65
-pop$ -- 362
+missing$ -- 248
+newline$ -- 77
+num.names$ -- 60
+pop$ -- 340
 preamble$ -- 1
-purify$ -- 64
+purify$ -- 61
 quote$ -- 0
-skip$ -- 2613
+skip$ -- 2457
 stack$ -- 1
-substring$ -- 976
-swap$ -- 814
-text.length$ -- 14
+substring$ -- 914
+swap$ -- 761
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1
 warning$ -- 0
-while$ -- 92
+while$ -- 85
 width$ -- 0
-write$ -- 205
-(There were 10 warnings)
+write$ -- 190
+(There were 9 warnings)
