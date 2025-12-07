@@ -21,14 +21,16 @@ Foram também realizados experimentos usando arenas com labirintos para testar a
 
 \section{CONTEÚDO REPOSITÓRIO}
 \textcolor{blue}{
-O repositório github criado para este projeto possui várias ferramentas que podem ser utilizadas para facilitar a reprodução dos testes executados.
-O README contém um overview de como instalar o projeto e utilizar os scripts presentes no projeto.
-Foi criado um playbook ansible (playbook.yaml) para facilitar a configuração e instalação do Docker, ROS2 Humble, Gazebo Classic e suas dependências.
-Foram também criados vários arquivos .sh para facilitar a reprodução dos testes, por garantir que os comandos corretos serão executados na sequência correta, sem necessidade de intervenção do usuário, onde os arquivos "inicioRapido" possuem os comandos utilizados para cada um dos testes feitos para este projeto.
-Os arquivos .sh na pasta /scripts possuem funcionalidades genéricas criadas para os testes, como a inicialização do nmon (iniciarNmon.sh), mover o robô ao inicializar rviz e mandar uma mensagem de goal (moverMain.sh), entre outras.
-No pacote ROS2 criado (localizado em /tcc) está uma versão modificada do arquivo turtlebot3_absolute_move.py (turtlebot3_absolute_move_Arena.py, localizada em /tcc/tcc), que é utilizado na movimentação dos robôs patrulheiros. Esta modificação faz com que os robôs inicializados entrem em um loop infinito de movimentação entre 2 pontos especificados, lógica utilizada no script  rotasRobos.sh.
-Há também uma versão modificada de multi_robot.launch.py (multi_robot_Arena.launch.py) com as posições iniciais dos robôs patrulheiros e turtlebot3_world.launch.py (turtlebot3_Arena.launch.py), que permite carregar o robô em um posição fixa em qualquer mapa, contanto que o nome seja especificado e o arquivo .world presente em /tcc/worlds
+O repositório github criado para este projeto possui várias ferramentas que podem ser utilizadas para facilitar a reprodução dos testes executados. 
+O README contém um overview de como instalar o projeto e utilizar os scripts presentes no projeto. 
+Foi criado um playbook ansible (playbook.yaml) para facilitar a configuração e instalação do Docker, ROS2 Humble, Gazebo Classic e suas dependências. 
+Foram também criados vários arquivos .sh para facilitar a reprodução dos testes, por garantir que os comandos corretos serão executados na sequência correta, sem necessidade de intervenção do usuário, onde os arquivos "inicioRapido" possuem os comandos utilizados para cada um dos testes feitos para este projeto. 
+Os arquivos .sh na pasta /scripts possuem funcionalidades genéricas criadas para os testes, como a inicialização do nmon (iniciarNmon.sh), mover o robô ao inicializar rviz e mandar uma mensagem de goal (moverMain.sh), entre outras. 
+No pacote ROS2 criado (localizado em /tcc) está uma versão modificada do arquivo turtlebot3\_absolute\_move.py (turtlebot3\_absolute\_move\_Arena.py, localizada em /tcc/tcc), que é utilizado na movimentação dos robôs patrulheiros. 
+Esta modificação faz com que os robôs inicializados entrem em um loop infinito de movimentação entre 2 pontos especificados, lógica utilizada no script rotasRobos.sh. 
+Há também uma versão modificada de multi\_robot\_Arena.launch.py com as posições iniciais dos robôs patrulheiros e turtlebot3\_world.launch.py (turtlebot3\_Arena.launch.py), que permite carregar o robô em uma posição fixa em qualquer mapa, contanto que o nome seja especificado e o arquivo .world presente em /tcc/worlds.
 }
+
 \section{RESULTADOS SETUP}
 Foram feitos testes para implementar a parte simulada proposta, foi utilizado o manual \cite{turtlebot3_manual} e pacotes\footnote{\cite{turtlebot3_github}} disponíveis pelo grupo ROBOTIS, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS 2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava mais de 20 minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
 
@@ -36,7 +38,7 @@ Houve certas dificuldades para integrar o ROS 2 dentro do contêiner Docker com 
 \textcolor{red}{Foi descoberto que o FastDDS (middleware utilizado por padrão pelo ROS 2 Humble) não interage de forma consistente com Docker. Ele era capaz de compartilhar os tópicos entre os ambientes, mas causava falha na publicação e recebimento de mensagens, não mostrando nenhuma.}\textcolor{blue}{ADICIONAR IMAGEM DE TESTE SETUP (TestePadraoFalha;Desc: Terminal na esquerda host com implementação default (FastDDS), Terminal na direita docker com implementação default (FastDDS) )} \textcolor{green}{DESENVOLVER}
 
 Para solucionar isso, o FastDDS foi substituído por outro middleware disponível para ROS 2 Humble, CycloneDDS, o qual foi utilizado especificamente no container Docker.
-\textcolor{blue}{(TesteCycloneSucesso; Terminal na esquerda host com implementação default (FastDDS), Terminal na direita docker com implementação rmw_cyclonedds_cpp)}
+\textcolor{blue}{(TesteCycloneSucesso; Terminal na esquerda host com implementação default (FastDDS), Terminal na direita docker com implementação rmw\_cyclonedds\_cpp)}
 
 \section{TESTES BASE}
 Foram feitos testes para adquirir os dados de desempenho das simulações sem Docker, utilizando a arena base sem patrulheiros. Estes testes consistiam em fazer o robô percorrer um trajeto de uma ponta até a outra da arena. Durante a execução, foi utilizado o software Nmon para verificar o desempenho de CPU, memória RAM e rede, e assim armazenar os dados. Os testes com a arena base + docker, o robô realizou o mesmo trajeto que o teste anterior de seguir de uma ponta da arena até a outra. Os testes foram realizados enquanto o software Nmon verificava o desempenho do sistema.
