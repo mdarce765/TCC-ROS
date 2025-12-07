@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {5.3}TESTES BASE}{18}{section.5.3}%
 \contentsline {section}{\numberline {5.4}TESTES PATRULHEIROS}{18}{section.5.4}%
 \contentsline {section}{\numberline {5.5}TESTES LABIRINTOS}{19}{section.5.5}%
-\contentsline {section}{\numberline {5.6}RESULTADOS}{20}{section.5.6}%
-\contentsline {chapter}{\numberline {6}CONCLUSÃO}{24}{chapter.6}%
-\contentsline {section}{\numberline {6.1}TRABALHOS FUTUROS}{24}{section.6.1}%
-\contentsline {chapter}{\hspace {4em}\mdseries REFER\^ENCIAS}{26}{section*.16}%
+\contentsline {section}{\numberline {5.6}RESULTADOS}{19}{section.5.6}%
+\contentsline {chapter}{\numberline {6}CONCLUSÃO}{25}{chapter.6}%
+\contentsline {section}{\numberline {6.1}TRABALHOS FUTUROS}{25}{section.6.1}%
+\contentsline {chapter}{\hspace {4em}\mdseries REFER\^ENCIAS}{27}{section*.18}%

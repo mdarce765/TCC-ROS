@@ -2098,6 +2098,16 @@ OUTPUT _TCC-principal.mw
 OUTPUT _TCC-principal.mw
 INPUT _TCC-principal.mw
 OUTPUT _TCC-principal.mw
+INPUT ./Figures/TestePadraoFalha.png
+INPUT ./Figures/TestePadraoFalha.png
+INPUT Figures/TestePadraoFalha.png
+INPUT ./Figures/TestePadraoFalha.png
+INPUT ./Figures/TestePadraoFalha.png
+INPUT ./Figures/TesteCycloneSucesso.png
+INPUT ./Figures/TesteCycloneSucesso.png
+INPUT Figures/TesteCycloneSucesso.png
+INPUT ./Figures/TesteCycloneSucesso.png
+INPUT ./Figures/TesteCycloneSucesso.png
 OUTPUT _TCC-principal.mw
 INPUT _TCC-principal.mw
 OUTPUT _TCC-principal.mw
@@ -2128,6 +2138,9 @@ INPUT ./Figures/Arena/ArenaLabirinto2.png
 INPUT Figures/Arena/ArenaLabirinto2.png
 INPUT ./Figures/Arena/ArenaLabirinto2.png
 INPUT ./Figures/Arena/ArenaLabirinto2.png
+OUTPUT _TCC-principal.mw
+INPUT _TCC-principal.mw
+OUTPUT _TCC-principal.mw
 OUTPUT _TCC-principal.mw
 INPUT _TCC-principal.mw
 OUTPUT _TCC-principal.mw

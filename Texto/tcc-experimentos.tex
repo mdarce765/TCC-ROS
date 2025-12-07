@@ -35,43 +35,58 @@ Há também uma versão modificada de multi\_robot\_Arena.launch.py com as posi�
 Foram feitos testes para implementar a parte simulada proposta, foi utilizado o manual \cite{turtlebot3_manual} e pacotes\footnote{(https://github.com/ROBOTIS-GIT/turtlebot3)} disponíveis pelo grupo ROBOTIS, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS 2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava mais de 20 minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
 
 Houve certas dificuldades para integrar o ROS 2 dentro do contêiner Docker com o ROS 2 nativo, que lidaria com a simulação Gazebo. 
-\textcolor{red}{Foi descoberto que o FastDDS (middleware utilizado por padrão pelo ROS 2 Humble) não interage de forma consistente com Docker. Ele era capaz de compartilhar os tópicos entre os ambientes, mas causava falha na publicação e recebimento de mensagens, não mostrando nenhuma.}\textcolor{blue}{ADICIONAR IMAGEM DE TESTE SETUP (TestePadraoFalha;Desc: Terminal na esquerda host com implementação default (FastDDS), Terminal na direita docker com implementação default (FastDDS) )} \textcolor{green}{DESENVOLVER}
+\textcolor{red}{Foi descoberto que o FastDDS (middleware utilizado por padrão pelo ROS 2 Humble) não interage de forma consistente com Docker. Ele era capaz de compartilhar os tópicos entre os ambientes, mas causava falha na publicação e recebimento de mensagens, não mostrando nenhuma.} \textcolor{blue}{(Figura \ref{fig:tpf})} \textcolor{green}{DESENVOLVER}
+
+\begin{figure}[htb]
+    \caption{Falha no teste padrão}
+    \includegraphics[width=1\linewidth]{Figures/TestePadraoFalha.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda: O terminal à esquerda é o host com implementação padrão (FastDDS), enquanto o terminal à direita está utilizando o Docker com implementação padrão (FastDDS).}
+    \label{fig:tpf}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{Sucesso no teste com CycloneDDS}
+    \includegraphics[width=1\linewidth]{Figures/TesteCycloneSucesso.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda: O terminal à esquerda é o host com implementação padrão (FastDDS), o terminal à direita utiliza o Docker com implementação rmw\_cyclonedds\_cpp.}
+    \label{fig:tcs}
+\end{figure}
 
 Para solucionar isso, o FastDDS foi substituído por outro middleware disponível para ROS 2 Humble, CycloneDDS, o qual foi utilizado especificamente no container Docker.
-\textcolor{blue}{(TesteCycloneSucesso; Terminal na esquerda host com implementação default (FastDDS), Terminal na direita docker com implementação rmw\_cyclonedds\_cpp)}
+\textcolor{blue}{(Figura \ref{fig:tcs})}
 
 \section{TESTES BASE}
-Foram feitos testes para adquirir os dados de desempenho das simulações sem Docker, utilizando a arena base sem patrulheiros. Estes testes consistiam em fazer o robô percorrer um trajeto de uma ponta até a outra da arena. Durante a execução, foi utilizado o software Nmon para verificar o desempenho de CPU, memória RAM e rede, e assim armazenar os dados. Os testes com a arena base + docker, o robô realizou o mesmo trajeto que o teste anterior de seguir de uma ponta da arena até a outra. Os testes foram realizados enquanto o software Nmon verificava o desempenho do sistema.
-
+Foram feitos testes para adquirir os dados de desempenho das simulações sem Docker, utilizando a arena base sem patrulheiros. Estes testes consistiam em fazer o robô percorrer um trajeto de uma ponta até a outra da arena. Durante a execução, foi utilizado o software Nmon para verificar o desempenho de CPU, memória RAM e rede, e assim armazenar os dados. Os testes com a arena base + Docker, o robô realizou o mesmo trajeto que o teste anterior de seguir de uma ponta da arena até a outra. Os testes foram realizados enquanto o software Nmon verificava o desempenho do sistema.
 
 \section{TESTES PATRULHEIROS}
 Neste teste foram posicionados robôs patrulheiros que percorriam um 
 \textcolor{red}{simples trajeto} \textcolor{blue}{trajeto de linha reta onde saiam e retornavam as seus pontos de origem}
-(Figura \ref{fig:AP}) para servir de obstáculo para o robô que deveria percorrer o mesmo trajeto de antes. Novamente foi utilizada a arena base, e sem o uso do docker. Foram feitos testes para adquirir os dados de desempenho de simulações com Docker, utilizando a arena base com patrulheiros.
+(Figura \ref{fig:AP}) para servir de obstáculo para o robô que deveria percorrer o mesmo trajeto de antes. Novamente foi utilizada a arena base, e sem o uso do Docker. Foram feitos testes para adquirir os dados de desempenho de simulações com Docker, utilizando a arena base com patrulheiros.
 
 \begin{figure}[htb]
     \caption{Arena Patrulheiros}
-    \includegraphics[width=0.3\linewidth]{Figures/Arena/ArenaPatrulheiros.png}
+    \includegraphics[width=0.45\linewidth]{Figures/Arena/ArenaPatrulheiros.png}
     \caption*{Fonte: Autores}
     \caption*{Legenda: As retas em vemelho são os trajetos realizados pelos patrulheiros}
     \label{fig:AP}
 \end{figure}
 
 \section{TESTES LABIRINTOS}
-Inicialmente, foram realizados testes sem patrulheiros, com e sem o uso de docker, em duas arenas com labirintos (Figuras \ref{fig:AL1} e \ref{fig:AL2}) como obstáculo para o robô. Os labirintos foram desenvolvidos utilizando placas, que são os obstáculos presentes na arena física da K4-04, respeitando o espaço da arena, placas e possíveis posições. Estes testes acabaram por falhar, por conta da inconsistência da navegação do teste, tendo casos em que a navegação falhava no meio do caminho, ou outros em que 
+Inicialmente, foram realizados testes sem patrulheiros, com e sem o uso de Docker, em duas arenas com labirintos (Figuras \ref{fig:AL1} e \ref{fig:AL2}) como obstáculo para o robô. Os labirintos foram desenvolvidos utilizando placas, que são os obstáculos presentes na arena física da K4-04, respeitando o espaço da arena, placas e possíveis posições. Estes testes acabaram por falhar, por conta da inconsistência da navegação do teste, tendo casos em que a navegação falhava no meio do caminho, ou outros em que 
 \textcolor{red}{eram necessárias entre 4 - 12 recuperações} \textcolor{blue}{era necessário refazer o teste de 4 a 12 vezes para o robô conseguir realizar o trajeto completo}. 
 Por conta disso, os testes com os patrulheiros não tiveram resultados consistentes em relação as métricas que seriam medidas.
 
 \begin{figure}[htb]
     \caption{Arena Labirinto 1}
-    \includegraphics[width=0.3\linewidth]{Figures/Arena/ArenaLabirinto1.png}
+    \includegraphics[width=0.45\linewidth]{Figures/Arena/ArenaLabirinto1.png}
     \caption*{Fonte: Autores}
     \label{fig:AL2}
 \end{figure}
 
 \begin{figure}[htb]
     \caption{Arena Labirinto 2}
-    \includegraphics[width=0.3\linewidth]{Figures/Arena/ArenaLabirinto2.png}
+    \includegraphics[width=0.45\linewidth]{Figures/Arena/ArenaLabirinto2.png}
     \caption*{Fonte: Autores}
     \label{fig:AL1}
 \end{figure}
@@ -93,42 +108,42 @@ Os dados apresentados são a média e desvio padrão das 30 execuções dos expe
 
 \textcolor{red}{EXPLICAR MELHOR OS GRÁFICOS}
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total de CPU dos testes na arena base com e sem docker com banda de erro ao tempo, cada Step é 1 segundo.}
+    \caption{Gráfico da métrica de porcentagem de uso total de CPU dos testes na arena base com e sem Docker com banda de erro ao tempo, cada Step é 1 segundo.}
     \includegraphics[width=0.7\linewidth]{Figures/Graficos/arena_cpu.png}
     \caption*{Fonte: Autores}
     \label{fig:GACPU}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total de memória RAM dos testes na arena base com e sem docker com banda de erro ao tempo, cada Step é 1 segundo.}
+    \caption{Gráfico da métrica de porcentagem de uso total de memória RAM dos testes na arena base com e sem Docker com banda de erro ao tempo, cada Step é 1 segundo.}
     \includegraphics[width=0.7\linewidth]{Figures/Graficos/arena_mem.png}
     \caption*{Fonte: Autores}
     \label{fig:GAMEM}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de uso total de Rede em kb/s dos testes na arena base com e sem docker com banda de erro ao tempo, cada Step é 1 segundo.}
+    \caption{Gráfico da métrica de uso total de Rede em kb/s dos testes na arena base com e sem Docker com banda de erro ao tempo, cada Step é 1 segundo.}
     \includegraphics[width=0.7\linewidth]{Figures/Graficos/arena_net.png}
     \caption*{Fonte: Autores}
     \label{fig:GANET}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total de CPU dos testes na arena com robôs patrulheiros, com e sem docker com banda de erro ao tempo, cada Step é 1 segundo.}
+    \caption{Gráfico da métrica de porcentagem de uso total de CPU dos testes na arena com robôs patrulheiros, com e sem Docker com banda de erro ao tempo, cada Step é 1 segundo.}
     \includegraphics[width=0.7\linewidth]{Figures/Graficos/patrulha_cpu.png}
     \caption*{Fonte: Autores}
     \label{fig:GPCPU}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total de memória RAM dos testes na arena com robôs patrulheiros, com e sem docker com banda de erro ao tempo, cada Step é 1 segundo.}
+    \caption{Gráfico da métrica de porcentagem de uso total de memória RAM dos testes na arena com robôs patrulheiros, com e sem Docker com banda de erro ao tempo, cada Step é 1 segundo.}
     \includegraphics[width=0.7\linewidth]{Figures/Graficos/patrulha_mem.png}
     \caption*{Fonte: Autores}
     \label{fig:GPMEM}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de uso total de Rede em kb/s dos testes na arena com robôs patrulheiros, com e sem docker com banda de erro ao tempo, cada Step é 1 segundo.}
+    \caption{Gráfico da métrica de uso total de Rede em kb/s dos testes na arena com robôs patrulheiros, com e sem Docker com banda de erro ao tempo, cada Step é 1 segundo.}
     \includegraphics[width=0.7\linewidth]{Figures/Graficos/patrulha_net.png}
     \caption*{Fonte: Autores}
     \label{fig:GPNET}
