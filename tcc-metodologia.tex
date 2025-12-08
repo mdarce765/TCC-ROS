@@ -3,35 +3,21 @@
 
 \textcolor{red}{ADICIONAR  lista de materiais; uma lista de métodos utilizados; e uma lista de métricas utilizadas.}
 \textcolor{blue}{
-Foi utilizado ROS2 Humble, Docker Engine Jammy 22.04 Stable e Gazebo Classic, a escolha de versão ROS e Docker Engine foram por conta de serem versões Long Term Support (LTS), enquanto a escolha do Gazebo Classic ter sido por conta de todos os recursos já disponíveis para esta versão de Gazebo, especificamente os disponibilizados pela ROBOTIS.
-Para a coleção de dados, foi escolhido Nigel's Monitor (nmon) por conta da sua capacidade de obter dados gerais do sistema, e de ter programas já criados que conseguem transformar seus arquivos de log em gráficos, utilizamos NMONVisualizer exibindo as informações de forma acessível.
-Nmon obtém os dados gerais de desempenho da máquina a cada segundo, dados como, mas não limitados a Utilização de CPU, Rede e RAM, permitindo que outros projetos avaliem categorias diferentes das propostas neste, parando de obter estes dados apenas quando o robô principal chega na posição setada pelo teste.
-}
+Foi utilizado ROS 2 Humble, Docker Engine Jammy 22.04 Stable e Gazebo Classic. A escolha das versões ROS e Docker Engine foi por conta de serem versões Long Term Support (LTS), enquanto a escolha do Gazebo Classic se deu por conta de todos os recursos já disponíveis para esta versão de Gazebo, especificamente os disponibilizados pela ROBOTIS.
+Para a coleção de dados, foi escolhido o Nigel's Monitor (nmon) por conta da sua capacidade de obter dados gerais do sistema, e de ter programas já criados que conseguem transformar seus arquivos de log em gráficos, utilizamos NMONVisualizer exibindo as informações de forma acessível.
+Nmon obtém os dados gerais de desempenho da máquina a cada segundo, dados como, mas não limitados a, Utilização de CPU, Rede e RAM, permitindo que outros projetos avaliem categorias diferentes das propostas neste, parando de obter estes dados somente quando o robô principal chega na posição setada pelo teste.
+As métricas utilizadas foram uso de CPU, uso de RAM e uso de Rede, por conta de que todas essas métricas estão relacionadas diretamente ao desempenho do robô.
+Aumentos significativos e picos repentinos destas métricas podem sinalizar um perigo de aumento de latência\/jitter, métricas relacionadas à diferença de tempo entre mandar uma mensagem e receber a resposta, e diminuição de RTF, métrica que mede o fator de processamento em tempo real na simulação, mas estes dados não foram diretamente medidos por conta do foco do projeto em recursos computacionais, e não em recursos temporais.
+O container docker usa a configuração “network\_mode: host”, utilizando a rede do host para comunicação.}
 A metodologia (Figura \ref{fig:Fluxograma}) é dividida em 2 partes, sem e com Docker, respectivamente, sendo que a integração com o Docker é na parte de navegação, isolando a stack nav2 e rviz do host. Todos os testes são executados em uma arena similar à presente na sala K4-04 da FEI. Foi utilizado o programa Nmon para obter os dados durante os testes, obtendo o desempenho do sistema inteiro, servindo para garantir que todas as estatísticas estão sendo comparadas de forma íntegra. 
-\textcolor{red}{Foram utilizados scripts bash para tornar a execução dos testes consistente, tendo cada parte do teste também em scripts, facilitando a criação/modificação de testes personalizados. Foi criado um pacote ROS2 (tcc)} \textcolor{green}{DESENVOLVER} 
+\textcolor{red}{Foram utilizados scripts bash\footnote{As configurações e arquivos para facilitar o setup estão presentes no repositório \url{https://github.com/joca2511/TCC_Docker}} para tornar a execução dos testes consistente, tendo cada parte do teste também em scripts, facilitando a criação\/modificação de testes personalizados. Foi criado um pacote ROS 2 (TCC)} \textcolor{green}{DESENVOLVER} 
 para organizar scripts, mapas e arquivos de lançamento, sendo que alguns destes são modificações de arquivos presentes em outros pacotes deste projeto. Foi utilizado um arquivo modificado de AMCL (burger.yaml), que é um arquivo usado para a localização dos robôs no ROS 2, para inicializar imediatamente a localização do TurtleBot, tornando os testes completamente autônomos e mais consistentes, já que a localização manual pode ser rejeitada. 
 \textcolor{red}{No primeiro teste, o robô simplesmente precisa percorrer a arena de ponta a ponta, tendo um SLAM pré-feito para o auxiliar, sem obstáculo algum. No segundo teste, o robô também precisa percorrer a arena de ponta a ponta com um SLAM pré-feito, mas dessa vez a arena está populada por outros robôs, que servem para atrapalhar o trajeto do robô principal, testando sua resiliência quanto à mudança de rotas com e sem Docker.} \textcolor{green}{DESENVOLVER} 
-Foram realizados testes em que o robô realizaria o mesmo objetivo dos dois primeiros testes, mas com o diferencial de a arena possuir um labirinto que pode ser montado na arena física (seguindo e respeitando as regras presentes na arena física da K4-04) como obstáculo para o robô. \footnote{As configurações e arquivos para facilitar o setup estão presentes no repositório \url{https://github.com/joca2511/TCC_Docker}}
-
-\section{AMBIENTE EXPERIMENTAL}
-Os experimentos foram realizados em um computador com:
-\begin{itemize}
-    \item 16 GB de RAM DDR4
-    \item Ryzen 5 1600X (12 núcleos, ~3.6GHz)
-\end{itemize}
-Foram utilizados os seguintes softwares:
-\begin{itemize}
-    \item Sistema Operacional: Ubuntu 22.04 Jammy Jellyfish
-    \item ROS 2 Humble Hawksbill
-    \item Docker Jammy 22.04 Stable
-    \item Gazebo Simulator Classic
-\end{itemize}
-
-\section{ETAPAS METODOLÓGICAS}
+Foram realizados testes em que o robô realizaria o mesmo objetivo dos dois primeiros testes, mas com o diferencial de a arena possuir um labirinto que pode ser montado na arena física (seguindo e respeitando as regras presentes na arena física da K4-04) como obstáculo para o robô.
 
 \begin{figure}[htb]
     \caption{Fluxograma do projeto}
-    \includegraphics[width=0.6\linewidth]{Figures/FluxogramaTCC.png}
+    \includegraphics[width=1\linewidth]{Figures/FluxogramaTCC.png}
     \caption*{Fonte: Autores}
     \label{fig:Fluxograma}
 \end{figure}
