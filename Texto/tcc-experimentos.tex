@@ -32,7 +32,14 @@ Há também uma versão modificada de multi\_robot\_Arena.launch.py com as posi�
 }
 
 \section{RESULTADOS SETUP}
-Foram feitos testes para implementar a parte simulada proposta, foi utilizado o manual \cite{turtlebot3_manual} e pacotes\footnote{(https://github.com/ROBOTIS-GIT/turtlebot3)} disponíveis pelo grupo ROBOTIS, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS 2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava mais de 20 minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
+Foram feitos testes para implementar a parte simulada proposta (Figura \ref{fig:ft}), foi utilizado o manual \cite{turtlebot3_manual} e pacotes\footnote{(https://github.com/ROBOTIS-GIT/turtlebot3)} disponíveis pelo grupo ROBOTIS, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS 2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava mais de 20 minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
+
+\begin{figure}[htb]
+    \caption{Fluxograma dos testes realizados}
+    \includegraphics[width=1\linewidth]{Figures/passosTestes.png}
+    \caption*{Fonte: Autores}
+    \label{fig:ft}
+\end{figure}
 
 Houve certas dificuldades para integrar o ROS 2 dentro do contêiner Docker com o ROS 2 nativo, que lidaria com a simulação Gazebo. 
 \textcolor{red}{Foi descoberto que o FastDDS (middleware utilizado por padrão pelo ROS 2 Humble) não interage de forma consistente com Docker. Ele era capaz de compartilhar os tópicos entre os ambientes, mas causava falha na publicação e recebimento de mensagens, não mostrando nenhuma.} \textcolor{blue}{(Figura \ref{fig:tpf})} \textcolor{green}{DESENVOLVER}
@@ -61,14 +68,14 @@ Foram feitos testes para adquirir os dados de desempenho das simulações sem Do
 
 \section{TESTES PATRULHEIROS}
 Neste teste foram posicionados robôs patrulheiros que percorriam um 
-\textcolor{red}{simples trajeto} \textcolor{blue}{trajeto de linha reta onde saiam e retornavam as seus pontos de origem}
-(Figura \ref{fig:AP}) para servir de obstáculo para o robô que deveria percorrer o mesmo trajeto de antes. Novamente foi utilizada a arena base, e sem o uso do Docker. Foram feitos testes para adquirir os dados de desempenho de simulações com Docker, utilizando a arena base com patrulheiros.
+\textcolor{red}{simples trajeto} \textcolor{blue}{trajeto de linha reta onde saiam e retornavam as seus pontos de origem (Figura \ref{fig:AP})} 
+para servir de obstáculo para o robô que deveria percorrer o mesmo trajeto de antes. Novamente foi utilizada a arena base, e sem o uso do Docker. Foram feitos testes para adquirir os dados de desempenho de simulações com Docker, utilizando a arena base com patrulheiros.
 
 \begin{figure}[htb]
     \caption{Arena Patrulheiros}
     \includegraphics[width=0.45\linewidth]{Figures/Arena/ArenaPatrulheiros.png}
     \caption*{Fonte: Autores}
-    \caption*{Legenda: As retas em vemelho são os trajetos realizados pelos patrulheiros}
+    \caption*{Legenda: As retas em vermelho são os trajetos realizados pelos patrulheiros}
     \label{fig:AP}
 \end{figure}
 
@@ -108,43 +115,49 @@ Os dados apresentados são a média e desvio padrão das 30 execuções dos expe
 
 \textcolor{red}{EXPLICAR MELHOR OS GRÁFICOS}
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total de CPU dos testes na arena base com e sem Docker com banda de erro ao tempo, cada Step é 1 segundo.}
+    \caption{Gráfico da métrica de porcentagem de uso total de CPU dos testes na arena base com e sem Docker com banda de erro ao tempo.}
     \includegraphics[width=0.7\linewidth]{Figures/Graficos/arena_cpu.png}
     \caption*{Fonte: Autores}
+    \caption*{Legenda: Cada passo (step) é igual a 1 segundo.}
     \label{fig:GACPU}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total de memória RAM dos testes na arena base com e sem Docker com banda de erro ao tempo, cada Step é 1 segundo.}
+    \caption{Gráfico da métrica de porcentagem de uso total de memória RAM dos testes na arena base com e sem Docker com banda de erro ao tempo.}
     \includegraphics[width=0.7\linewidth]{Figures/Graficos/arena_mem.png}
     \caption*{Fonte: Autores}
+    \caption*{Legenda: Cada passo (step) é igual a 1 segundo.}
     \label{fig:GAMEM}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de uso total de Rede em kb/s dos testes na arena base com e sem Docker com banda de erro ao tempo, cada Step é 1 segundo.}
+    \caption{Gráfico da métrica de uso total de Rede em kb/s dos testes na arena base com e sem Docker com banda de erro ao tempo.}
     \includegraphics[width=0.7\linewidth]{Figures/Graficos/arena_net.png}
     \caption*{Fonte: Autores}
+    \caption*{Legenda: Cada passo (step) é igual a 1 segundo.}
     \label{fig:GANET}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total de CPU dos testes na arena com robôs patrulheiros, com e sem Docker com banda de erro ao tempo, cada Step é 1 segundo.}
+    \caption{Gráfico da métrica de porcentagem de uso total de CPU dos testes na arena com robôs patrulheiros, com e sem Docker com banda de erro ao tempo.}
     \includegraphics[width=0.7\linewidth]{Figures/Graficos/patrulha_cpu.png}
     \caption*{Fonte: Autores}
+    \caption*{Legenda: Cada passo (step) é igual a 1 segundo.}
     \label{fig:GPCPU}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total de memória RAM dos testes na arena com robôs patrulheiros, com e sem Docker com banda de erro ao tempo, cada Step é 1 segundo.}
+    \caption{Gráfico da métrica de porcentagem de uso total de memória RAM dos testes na arena com robôs patrulheiros, com e sem Docker com banda de erro ao tempo.}
     \includegraphics[width=0.7\linewidth]{Figures/Graficos/patrulha_mem.png}
     \caption*{Fonte: Autores}
+    \caption*{Legenda: Cada passo (step) é igual a 1 segundo.}
     \label{fig:GPMEM}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de uso total de Rede em kb/s dos testes na arena com robôs patrulheiros, com e sem Docker com banda de erro ao tempo, cada Step é 1 segundo.}
+    \caption{Gráfico da métrica de uso total de Rede em kb/s dos testes na arena com robôs patrulheiros, com e sem Docker com banda de erro ao tempo.}
     \includegraphics[width=0.7\linewidth]{Figures/Graficos/patrulha_net.png}
     \caption*{Fonte: Autores}
+    \caption*{Legenda: Cada passo (step) é igual a 1 segundo.}
     \label{fig:GPNET}
 \end{figure}
