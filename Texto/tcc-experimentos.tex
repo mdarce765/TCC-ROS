@@ -114,50 +114,158 @@ Com relação aos testes com os labirintos, os mesmos se demonstraram instáveis
 Os dados apresentados são a média e desvio padrão das 30 execuções dos experimentos que foram descritos na seção anterior e \textcolor{red}{exibem} \textcolor{green}{DESENVOLVER}
 
 \textcolor{red}{EXPLICAR MELHOR OS GRÁFICOS}
+
+% ARENA BASE
+% GRÁFICOS DE BANDA
+\textbf{Gráficos com banda de erro}
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total de CPU dos testes na arena base com e sem Docker com banda de erro ao tempo.}
-    \includegraphics[width=0.7\linewidth]{Figures/Graficos/arena_cpu.png}
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena base com e sem Docker: CPU}
+    \includegraphics[width=0.7\linewidth]{Figures/novaArena/arena_cpu-band.png}
     \caption*{Fonte: Autores}
-    \caption*{Legenda: Cada passo (step) é igual a 1 segundo.}
-    \label{fig:GACPU}
+    \caption*{Legenda:}
+    \label{fig:GABNCPU}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total de memória RAM dos testes na arena base com e sem Docker com banda de erro ao tempo.}
-    \includegraphics[width=0.7\linewidth]{Figures/Graficos/arena_mem.png}
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena base com e sem Docker: Memória RAM}
+    \includegraphics[width=0.7\linewidth]{Figures/novaArena/arena_mem-band.png}
     \caption*{Fonte: Autores}
-    \caption*{Legenda: Cada passo (step) é igual a 1 segundo.}
-    \label{fig:GAMEM}
+    \caption*{Legenda:}
+    \label{fig:GABNMEM}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de uso total de Rede em kb/s dos testes na arena base com e sem Docker com banda de erro ao tempo.}
-    \includegraphics[width=0.7\linewidth]{Figures/Graficos/arena_net.png}
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena base com e sem Docker: Rede}
+    \includegraphics[width=0.7\linewidth]{Figures/novaArena/arena_net-band.png}
     \caption*{Fonte: Autores}
-    \caption*{Legenda: Cada passo (step) é igual a 1 segundo.}
-    \label{fig:GANET}
+    \caption*{Legenda:}
+    \label{fig:GABNNET}
+\end{figure}
+
+% GRÁFICO DE BARRA
+\textbf{Gráfico de barra}
+\begin{figure}[htb]
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena base com e sem Docker: CPU}
+    \includegraphics[width=0.7\linewidth]{Figures/novaArena/arena_cpu-bars.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda:}
+    \label{fig:GABRCPU}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total de CPU dos testes na arena com robôs patrulheiros, com e sem Docker com banda de erro ao tempo.}
-    \includegraphics[width=0.7\linewidth]{Figures/Graficos/patrulha_cpu.png}
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena base com e sem Docker: Memória RAM}
+    \includegraphics[width=0.7\linewidth]{Figures/novaArena/arena_mem-bars.png}
     \caption*{Fonte: Autores}
-    \caption*{Legenda: Cada passo (step) é igual a 1 segundo.}
-    \label{fig:GPCPU}
+    \caption*{Legenda:}
+    \label{fig:GABRMEM}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total de memória RAM dos testes na arena com robôs patrulheiros, com e sem Docker com banda de erro ao tempo.}
-    \includegraphics[width=0.7\linewidth]{Figures/Graficos/patrulha_mem.png}
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena base com e sem Docker: Rede}
+    \includegraphics[width=0.7\linewidth]{Figures/novaArena/arena_net-bars.png}
     \caption*{Fonte: Autores}
-    \caption*{Legenda: Cada passo (step) é igual a 1 segundo.}
-    \label{fig:GPMEM}
+    \caption*{Legenda:}
+    \label{fig:GABRNET}
+\end{figure}
+
+% TESTES T
+\textbf{Gráfico teste T}
+\begin{figure}[htb]
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena base com e sem Docker: CPU}
+    \includegraphics[width=0.7\linewidth]{Figures/novaArena/arena_cpu-ttest.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda:}
+    \label{fig:GATCPU}
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{Gráfico da métrica de uso total de Rede em kb/s dos testes na arena com robôs patrulheiros, com e sem Docker com banda de erro ao tempo.}
-    \includegraphics[width=0.7\linewidth]{Figures/Graficos/patrulha_net.png}
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena base com e sem Docker: Memória RAM}
+    \includegraphics[width=0.7\linewidth]{Figures/novaArena/arena_mem-ttest.png}
     \caption*{Fonte: Autores}
-    \caption*{Legenda: Cada passo (step) é igual a 1 segundo.}
-    \label{fig:GPNET}
+    \caption*{Legenda:}
+    \label{fig:GATMEM}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena base com e sem Docker: Rede}
+    \includegraphics[width=0.7\linewidth]{Figures/novaArena/arena_net-ttest.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda:}
+    \label{fig:GATNET}
+\end{figure}
+
+% ARENA PATRULHEIROS
+% GRÁFICO DE BANDA
+\begin{figure}[htb]
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena com robôs patrulheiros com e sem Docker: CPU}
+    \includegraphics[width=0.7\linewidth]{Figures/novaPatrulha/patrulha_cpu-band.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda:}
+    \label{fig:GPBNCPU}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena com robôs patrulheiros com e sem Docker: Memória RAM}
+    \includegraphics[width=0.7\linewidth]{Figures/novaPatrulha/patrulha_mem-band.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda:}
+    \label{fig:GPBNMEM}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena com robôs patrulheiros com e sem Docker: Rede}
+    \includegraphics[width=0.7\linewidth]{Figures/novaPatrulha/patrulha_net-band.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda:}
+    \label{fig:GPBNNET}
+\end{figure}
+
+% GRÁFICO DE BARRA
+\begin{figure}[htb]
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena com robôs patrulheiros com e sem Docker: CPU}
+    \includegraphics[width=0.7\linewidth]{Figures/novaPatrulha/patrulha_cpu-bars.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda:}
+    \label{fig:GPBRCPU}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena com robôs patrulheiros com e sem Docker: Memória RAM}
+    \includegraphics[width=0.7\linewidth]{Figures/novaPatrulha/patrulha_mem-bars.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda:}
+    \label{fig:GPBRMEM}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena com robôs patrulheiros com e sem Docker: Rede}
+    \includegraphics[width=0.7\linewidth]{Figures/novaPatrulha/patrulha_net-bars.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda:}
+    \label{fig:GPBRNET}
+\end{figure}
+
+% GRÁFICO TESTES T
+\begin{figure}[htb]
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena com robôs patrulheiros com e sem Docker: CPU}
+    \includegraphics[width=0.7\linewidth]{Figures/novaPatrulha/patrulha_cpu-ttest.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda:}
+    \label{fig:GPTCPU}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena com robôs patrulheiros com e sem Docker: Memória RAM}
+    \includegraphics[width=0.7\linewidth]{Figures/novaPatrulha/patrulha_mem-ttest.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda:}
+    \label{fig:GPTMEM}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena com robôs patrulheiros com e sem Docker: Rede}
+    \includegraphics[width=0.7\linewidth]{Figures/novaPatrulha/patrulha_net-ttest.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda:}
+    \label{fig:GPTNET}
 \end{figure}
