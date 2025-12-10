@@ -64,12 +64,15 @@ Para solucionar isso, o FastDDS foi substituído por outro middleware disponíve
 \textcolor{blue}{(Figura \ref{fig:tcs})}
 
 \section{TESTES BASE}
-Foram feitos testes para adquirir os dados de desempenho das simulações sem Docker, utilizando a arena base sem patrulheiros \ref{fig: AB}. Estes testes consistiam em fazer o robô percorrer um trajeto de uma ponta até a outra da arena. Durante a execução, foi utilizado o software Nmon para verificar o desempenho de CPU, memória RAM e rede, e assim armazenar os dados. Os testes com a arena base + Docker, o robô realizou o mesmo trajeto que o teste anterior de seguir de uma ponta da arena até a outra. Os testes foram realizados enquanto o software Nmon verificava o desempenho do sistema. \textcolor{yellow}{COLOCAR A FIGURA DA ARENA BASE COM O TURTLEBOT DO SLIDE 9}
-% \begin{figure}
-%     \caption{Caption}
-%     \includegraphics[width=0.45\linewidth]{Figures/Arena/}
-%     \label{fig:AB}
-% \end{figure}
+Foram feitos testes para adquirir os dados de desempenho das simulações sem Docker, utilizando a arena base sem patrulheiros (Figura \ref{fig:AB}). Estes testes consistiam em fazer o robô percorrer um trajeto de uma ponta até a outra da arena. Durante a execução, foi utilizado o software Nmon para verificar o desempenho de CPU, memória RAM e rede, e assim armazenar os dados. Os testes com a arena base + Docker, o robô realizou o mesmo trajeto que o teste anterior de seguir de uma ponta da arena até a outra. Os testes foram realizados enquanto o software Nmon verificava o desempenho do sistema.
+
+\begin{figure}
+    \caption{Arena base com robô TurtleBot3 Burger}
+    \includegraphics[width=0.45\linewidth]{Figures/Arena/ArenaBase.png}
+    \caption*{Fonte: Autores}
+    \caption*{Legenda: Trajeto realizado pelo robô está representado em verde.}
+    \label{fig:AB}
+\end{figure}
 
 \section{TESTES PATRULHEIROS}
 Neste teste foram posicionados robôs patrulheiros que percorriam um 
@@ -80,7 +83,7 @@ para servir de obstáculo para o robô que deveria percorrer o mesmo trajeto de 
     \caption{Arena Patrulheiros}
     \includegraphics[width=0.45\linewidth]{Figures/Arena/ArenaPatrulheiros.png}
     \caption*{Fonte: Autores}
-    \caption*{Legenda: As retas em vermelho são os trajetos realizados pelos patrulheiros}
+    \caption*{Legenda: As retas em vermelho são os trajetos realizados pelos patrulheiros, enquanto a curva em verde, representa o trajeto do robô.}
     \label{fig:AP}
 \end{figure}
 
@@ -121,33 +124,6 @@ Os dados apresentados são a média e desvio padrão das 30 execuções dos expe
 \textcolor{red}{EXPLICAR MELHOR OS GRÁFICOS}
 
 % ARENA BASE
-\begin{comment}
-% GRÁFICOS DE BANDA
-\textbf{Gráficos com banda de erro}
-\begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena base com e sem Docker: CPU}
-    \includegraphics[width=0.7\linewidth]{Figures/novaArena/arena_cpu-band.png}
-    \caption*{Fonte: Autores}
-    \caption*{Legenda:}
-    \label{fig:GABNCPU}
-\end{figure}
-
-\begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena base com e sem Docker: Memória RAM}
-    \includegraphics[width=0.7\linewidth]{Figures/novaArena/arena_mem-band.png}
-    \caption*{Fonte: Autores}
-    \caption*{Legenda:}
-    \label{fig:GABNMEM}
-\end{figure}
-
-\begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena base com e sem Docker: Rede}
-    \includegraphics[width=0.7\linewidth]{Figures/novaArena/arena_net-band.png}
-    \caption*{Fonte: Autores}
-    \caption*{Legenda:}
-    \label{fig:GABNNET}
-\end{figure}
-\end{comment}
 % GRÁFICO DE BARRA
 \begin{figure}[htb]
     \caption*{\textbf{Gráfico de barra}}
@@ -201,32 +177,6 @@ Os dados apresentados são a média e desvio padrão das 30 execuções dos expe
 \end{figure}
 
 % ARENA PATRULHEIROS
-\begin{comment}
-% GRÁFICO DE BANDA
-\begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena com robôs patrulheiros com e sem Docker: CPU}
-    \includegraphics[width=0.7\linewidth]{Figures/novaPatrulha/patrulha_cpu-band.png}
-    \caption*{Fonte: Autores}
-    \caption*{Legenda:}
-    \label{fig:GPBNCPU}
-\end{figure}
-
-\begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena com robôs patrulheiros com e sem Docker: Memória RAM}
-    \includegraphics[width=0.7\linewidth]{Figures/novaPatrulha/patrulha_mem-band.png}
-    \caption*{Fonte: Autores}
-    \caption*{Legenda:}
-    \label{fig:GPBNMEM}
-\end{figure}
-
-\begin{figure}[htb]
-    \caption{Gráfico da métrica de porcentagem de uso total dos testes na arena com robôs patrulheiros com e sem Docker: Rede}
-    \includegraphics[width=0.7\linewidth]{Figures/novaPatrulha/patrulha_net-band.png}
-    \caption*{Fonte: Autores}
-    \caption*{Legenda:}
-    \label{fig:GPBNNET}
-\end{figure}
-\end{comment}
 % GRÁFICO DE BARRA
 \begin{figure}[htb]
     \caption*{\textbf{Gráfico de barra}}

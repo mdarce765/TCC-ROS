@@ -7,15 +7,15 @@
 \contentsline {chapter}{\numberline {3}TRABALHOS RELACIONADOS}{12}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Bare-Metal vs. Hypervisors and Containers: Performance Evaluation of Virtualization Technologies for Software-Defined Vehicles}{12}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Docker Performance Evaluation across Operating Systems}{12}{section.3.2}%
-\contentsline {section}{\numberline {3.3}DA Containerized Microservice Architecture for a ROS 2 Autonomous Driving Software: An End-to-End Latency Evaluation}{13}{section.3.3}%
-\contentsline {chapter}{\numberline {4}METODOLOGIA}{14}{chapter.4}%
-\contentsline {chapter}{\numberline {5}EXPERIMENTOS E RESULTADOS}{16}{chapter.5}%
-\contentsline {section}{\numberline {5.1}CONTEÚDO REPOSITÓRIO}{16}{section.5.1}%
-\contentsline {section}{\numberline {5.2}RESULTADOS SETUP}{17}{section.5.2}%
-\contentsline {section}{\numberline {5.3}TESTES BASE}{18}{section.5.3}%
-\contentsline {section}{\numberline {5.4}TESTES PATRULHEIROS}{19}{section.5.4}%
+\contentsline {section}{\numberline {3.3}DA Containerized Microservice Architecture for a ROS 2 Autonomous Driving Software: An End-to-End Latency Evaluation}{14}{section.3.3}%
+\contentsline {chapter}{\numberline {4}METODOLOGIA}{15}{chapter.4}%
+\contentsline {chapter}{\numberline {5}EXPERIMENTOS E RESULTADOS}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}CONTEÚDO REPOSITÓRIO}{17}{section.5.1}%
+\contentsline {section}{\numberline {5.2}RESULTADOS SETUP}{18}{section.5.2}%
+\contentsline {section}{\numberline {5.3}TESTES BASE}{19}{section.5.3}%
+\contentsline {section}{\numberline {5.4}TESTES PATRULHEIROS}{20}{section.5.4}%
 \contentsline {section}{\numberline {5.5}TESTES LABIRINTOS}{20}{section.5.5}%
-\contentsline {section}{\numberline {5.6}RESULTADOS}{20}{section.5.6}%
-\contentsline {chapter}{\numberline {6}CONCLUSÃO}{32}{chapter.6}%
-\contentsline {section}{\numberline {6.1}TRABALHOS FUTUROS}{32}{section.6.1}%
-\contentsline {chapter}{\hspace {4em}\mdseries REFER\^ENCIAS}{34}{section*.31}%
+\contentsline {section}{\numberline {5.6}RESULTADOS}{21}{section.5.6}%
+\contentsline {chapter}{\numberline {6}CONCLUSÃO}{30}{chapter.6}%
+\contentsline {section}{\numberline {6.1}TRABALHOS FUTUROS}{30}{section.6.1}%
+\contentsline {chapter}{\hspace {4em}\mdseries REFER\^ENCIAS}{32}{section*.26}%
