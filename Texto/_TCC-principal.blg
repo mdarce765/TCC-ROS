@@ -32,13 +32,15 @@ Warning--entry type for "ros2025" isn't style-file defined
 Warning--entry type for "mdw2025" isn't style-file defined
 --line 85 of file tcc-referencias.bib
 Warning--entry type for "dds2025" isn't style-file defined
---line 93 of file tcc-referencias.bib
+--line 92 of file tcc-referencias.bib
 Warning--entry type for "fdds2025" isn't style-file defined
---line 101 of file tcc-referencias.bib
+--line 99 of file tcc-referencias.bib
 Warning--entry type for "cdds2025" isn't style-file defined
---line 109 of file tcc-referencias.bib
+--line 106 of file tcc-referencias.bib
 Warning--entry type for "nmon2025" isn't style-file defined
---line 117 of file tcc-referencias.bib
+--line 113 of file tcc-referencias.bib
+Warning--entry type for "jel2024" isn't style-file defined
+--line 120 of file tcc-referencias.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -48,45 +50,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 16 entries,
+You've used 17 entries,
             6714 wiz_defined-function locations,
-            1271 strings with 11235 characters,
-and the built_in function-call counts, 22312 in all, are:
-= -- 2787
-> -- 362
-< -- 618
-+ -- 801
-- -- 110
-* -- 1324
-:= -- 2771
+            1276 strings with 11520 characters,
+and the built_in function-call counts, 25666 in all, are:
+= -- 3269
+> -- 377
+< -- 769
++ -- 957
+- -- 115
+* -- 1506
+:= -- 3155
 add.period$ -- 58
-call.type$ -- 16
-change.case$ -- 142
-chr.to.int$ -- 16
-cite$ -- 12
-duplicate$ -- 2242
-empty$ -- 852
-format.name$ -- 538
-if$ -- 4451
+call.type$ -- 17
+change.case$ -- 144
+chr.to.int$ -- 17
+cite$ -- 13
+duplicate$ -- 2710
+empty$ -- 905
+format.name$ -- 561
+if$ -- 5024
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 248
-newline$ -- 77
-num.names$ -- 60
-pop$ -- 340
+missing$ -- 260
+newline$ -- 78
+num.names$ -- 65
+pop$ -- 357
 preamble$ -- 1
-purify$ -- 61
+purify$ -- 64
 quote$ -- 0
-skip$ -- 2457
+skip$ -- 2945
 stack$ -- 1
-substring$ -- 914
-swap$ -- 761
-text.length$ -- 13
+substring$ -- 1075
+swap$ -- 913
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1
 warning$ -- 0
-while$ -- 85
+while$ -- 92
 width$ -- 0
-write$ -- 190
-(There were 9 warnings)
+write$ -- 200
+(There were 10 warnings)
