@@ -1,0 +1,93 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Docker 2025]{dck2025}
+\abntrefinfo{Docker}{DOCKER}{2025}
+{DOCKER, I. \textbf{Docker}. 2025.
+Accessed: 2025-05-25.
+Dispon{\'\i}vel em:
+  \url{https://docs.docker.com/get-started/docker-overview/}.}
+
+\bibitem[Eclipse e Foundation 2022]{cdds2025}
+\abntrefinfo{Eclipse e Foundation}{ECLIPSE; FOUNDATION}{2022}
+{ECLIPSE; FOUNDATION. \textbf{CycloneDDS}. 2022.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em: \url{https://cyclonedds.io/}.}
+
+\bibitem[eProsima 2019]{fdds2025}
+\abntrefinfo{eProsima}{EPROSIMA}{2019}
+{EPROSIMA. \textbf{FastDDS}. 2019.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em: \url{https://fast-dds.docs.eprosima.com/en/stable/}.}
+
+\bibitem[Griffiths 2025]{nmon2025}
+\abntrefinfo{Griffiths}{GRIFFITHS}{2025}
+{GRIFFITHS, N. \textbf{Nigel's Monitor}. 2025.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em: \url{https://nmon.sourceforge.io/pmwiki.php}.}
+
+\bibitem[OMG et al. 2025]{dds2025}
+\abntrefinfo{OMG et al.}{OMG et al.}{2025}
+{OMG, O. et al. \textbf{DDS}. 2025.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em: \url{https://www.omg.org/omg-dds-portal/}.}
+
+\bibitem[Open et al. 2018]{ros2025}
+\abntrefinfo{Open et al.}{OPEN et al.}{2018}
+{OPEN et al. \textbf{ROS}. 2018.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em: \url{https://wiki.ros.org/ROS/Introduction}.}
+
+\bibitem[Open et al. 2025]{gzb2025}
+\abntrefinfo{Open et al.}{OPEN et al.}{2025}
+{\underline{\ \ \ \ \ \ \ \ }. \textbf{Gazebo Simulator}. 2025.
+Accessed: 2025-05-24.}
+
+\bibitem[QNX 2024]{jel2024}
+\abntrefinfo{QNX}{QNX}{2024}
+{QNX. \textbf{Optimizing Robotic Precision: Unleash Real-Time Performance With
+  Advanced Foundational Software Solutions}. 2024.
+Accessed: 2025-12-10.
+Dispon{\'\i}vel em:
+  \url{https://www.automate.org/robotics/tech-papers/optimizing-robotic-precision-unleash-real-time-performance-with-advanced-foundational-software-solutions}.}
+
+\bibitem[Red e Hat 2023]{mdw2025}
+\abntrefinfo{Red e Hat}{RED; HAT}{2023}
+{RED; HAT. \textbf{Middleware}. 2023.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em:
+  \url{https://www.redhat.com/en/topics/middleware/what-is-middleware}.}
+
+\bibitem[{ROBOTIS} 2025]{turtlebot3_manual}
+\abntrefinfo{{ROBOTIS}}{{ROBOTIS}}{2025}
+{{ROBOTIS}. \textbf{{TurtleBot3 e-Manual: Overview}}. 2025.
+Accessed: 2025-05-24.
+Dispon{\'\i}vel em:
+  \url{https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/}.}
+
+\bibitem[Sobieraj e Kotyński 2024]{SMKD2024}
+\abntrefinfo{Sobieraj e Kotyński}{SOBIERAJ; KOTYńSKI}{2024}
+{SOBIERAJ, M.; KOTYńSKI, D. Docker performance evaluation across operating
+  systems.
+\textbf{Applied Sciences}, v.~14, n.~15, 2024.
+ISSN 2076-3417.
+Dispon{\'\i}vel em: \url{https://www.mdpi.com/2076-3417/14/15/6672}.}
+
+\bibitem[Wen et al. 2024]{Wen2024}
+\abntrefinfo{Wen et al.}{WEN et al.}{2024}
+{WEN, L. et al. \textbf{A Containerized Microservice Architecture for a ROS 2
+  Autonomous Driving Software: An End-to-End Latency Evaluation}. 2024.
+Dispon{\'\i}vel em: \url{https://arxiv.org/abs/2404.12683}.}
+
+\bibitem[Wen et al. 2023]{Wen2023}
+\abntrefinfo{Wen et al.}{WEN et al.}{2023}
+{\underline{\ \ \ \ \ \ \ \ }. Bare-metal vs. hypervisors and containers:
+  Performance evaluation of virtualization technologies for software-defined
+  vehicles. In:  . [s.n.], 2023. Dispon{\'\i}vel em:
+  \url{https://www.researchgate.net/publication/372496789\_Bare-Metal\_vs\_Hypervisors\_and\_Containers\_Performance\_Evaluation\_of\_Virtualization\_Technologies\_for\_Software-Defined\_Vehicles}.}
+
+\end{thebibliography}
