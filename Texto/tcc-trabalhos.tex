@@ -1,8 +1,10 @@
-\chapter{TRABALHOS RELACIONADOS} 
+\chapter{TRABALHOS RELACIONADOS}
 \label{trabs}
 
-\textcolor{red}{DESENVOLVER, COLOCAR METODOLOGIA DOS PROJETOS}
-\section{Bare-Metal vs. Hypervisors and Containers: Performance Evaluation of Virtualization Technologies for Software-Defined Vehicles} 
+\novo{Este capítulo apresenta trabalhos que tratam de conteinerização de forma próxima a proposta deste trabalho, ou seja, tanto sobre a comparação de desempenho no uso de contêiner quanto do uso com o ROS para projetos de robótica.}
+
+\anot{DESENVOLVER, COLOCAR METODOLOGIA DOS PROJETOS}
+\section{Bare-Metal vs. Hypervisors and Containers: Performance Evaluation of Virtualization Technologies for Software-Defined Vehicles}
 
 % \begin{itemize}
 %     \item Materiais:
@@ -16,32 +18,56 @@
 
 % \textbf{Limitações}
 
-\textcolor{red}{O projeto de Wen et. al. (2023), auxilia com relação ao entendimento da conteinerização em sistemas embarcados e também com relação ao seu desempenho.} 
-\textcolor{blue}{Este projeto}
-No artigo, é detalhada a utilização de diferentes formas de conteinerização e seu efeito no desempenho em diferentes tipos de hardware. Foram realizados testes gerais que envolviam CPU, memória, rede e disco, em três ambientes diferentes: máquina virtual, contêiner e um contêiner dentro de uma máquina virtual. Com isso, foi concluído que as máquinas virtuais e os contêineres possuem um desempenho semelhante ao bare-metal (servidor físico que é de uso exclusivo para apenas um cliente, sem a camada de virtualização que fica entre o hardware e o sistema operacional), onde entre a CPU, rede e memória, sofria uma perda de no máximo 5\% enquanto no disco a diferença era de até 35\%. Foi observado que o Docker e a KVM (máquina virtual baseada no Kernel) foram 5 a 10\% mais lentos que o bare-metal, com o Docker sendo mais lento ainda na primeira inicialização, mas levando a concluir que conteinerização e virtualização podem ser utilizados em aplicações para automóveis. \cite{Wen2023}.
+\ante{O projeto de Wen et. al. (2023), auxilia com relação ao entendimento da conteinerização em sistemas embarcados e também com relação ao seu desempenho.No artigo, é detalhada}
+\novo{O artigo de \citeonline{Wen2023} detalha }
+a utilização de diferentes formas de conteinerização e seu efeito no desempenho em diferentes tipos de hardware. Foram realizados testes gerais que envolviam CPU, memória, rede e disco, em três ambientes diferentes: 
+\ante{máquina virtual, contêiner e um contêiner dentro de uma máquina virtual.}
+\novo{Integrado (utilizando uma Raspberry Pi 4 Modelo B), Computador desktop (Dell Optiplex 7040 PC) e uma estação de trabalho customizada de alto desempenho}
+\novo{Para realizar estes testes, foram utilizados Whetstone (versão 1.2), Dhrystone (versão 2.2a) e Kcbench (0.9.5), ferramentas de medição de desempenho, para realizar os testes de CPU. Para os testes de memória, foi utilizado o software RAMspeed (versão 3.5.0). Para medir os testes de rede, foi utilizado o iperf3 (versão 3.9), enquanto para analisar o desempenho do disco, foram utilizados Dbench (versão 4.00), Bonnie++ (versão 2.00) e o Sysbench (versão 1.0.20). Foram utilizados e analisados diversos contêineres engine, sendo estes o Docker (versão 20.10.17), KVM (v1.25.3), Podman (versão 3.4.4) e Systemd-Nspawn (versão 249.11). Para realizar os testes em diversos contêineres, foi utilizada uma versão leve do Kubernetes, o k3s (versão V1.25.3). Foi utilizado o Autoware, um framework para realizar simulações de condução autônoma, para verificar a inicialização dos ambientes virtualizados e contêinerizados}.
+Com isso, foi concluído que as máquinas virtuais e os contêineres possuem um desempenho semelhante ao bare-metal (servidor físico que é de uso exclusivo para apenas um cliente, sem a camada de virtualização que fica entre o hardware e o sistema operacional), onde entre a CPU, rede e memória, sofria uma perda de no máximo 5\% enquanto no disco a diferença era de até 35\%. Foi observado que o Docker e a KVM (máquina virtual baseada no Kernel) foram 5 a 10\% mais lentos que o bare-metal, com o Docker sendo mais lento ainda na primeira inicialização, mas levando a concluir que conteinerização e virtualização podem ser utilizados em aplicações para automóveis.
 
+\begin{comment}
+- CPU: Whetstone, Dhrystone, Kcbench
+- Memória: RAMspeed
+- Rede: iPerf3
+- Disco: Dbench, Bonnie++, Sysbench
+Além disso, o framework Autoware (utilizado para simulação de condução autônoma) foi testado em ambientes virtualizados e contêinerizados para medir o impacto na inicialização do sistema, que é crucial para aplicações automotivas.
+\end{comment}
 \section{Docker Performance Evaluation across Operating Systems}
 
-O trabalho de Sobieraj e Kotyński (2024), seu projeto auxilia no entendimento dos conceitos de avaliação do Docker com relação a outros sistemas operacionais.
-\textcolor{blue}{Este estudo realiza testes onde o Docker é executado em diversos sistemas operacionais, para isso foi utilizado um MacBook Pro 13, com uma CPU da Intel (Intel i5-8257u @ 1.40 GHz) como plataforma do hardware para a comparação de desempenho, 16 GB LPDDR3 2133 Mhz   de memória RAM e um armazenamento de 256 GB NVME SSD, o a versão do Docker Engine utilizada foi a 4.20 e configurado para utilizar 8 CPUs lógicos, 16 GB de RAM e 1 GB de memória swap}. 
-Para verificar a diferença entre os sistemas operacionais, foram utilizados sistemas operacionais recém-instalados que eram 
-\textcolor{red}{macOS Ventura, Ubuntu 22.04 e Windows 10 rodando em um MacBook Pro 13} 
-\textcolor{blue}{MacOS Ventura 13.5.1, Ubuntu 22.04-6.4.8-t2-jammy e Windows 10 22H2}. 
-\textcolor{red}{Os testes consistiam em estressar o Docker com relação à CPU, rede e na resiliência do mesmo.} 
-\textcolor{blue}{Neste projeto, foram realizados diversos testes com o objetivo de “estressar” o Docker, 
-os testes eram o cálculo de Pi na fórmula de Leibniz utilizando a linguagem C, em que utilizou a métrica o tempo de execução do cálculo pela fórmula. Este teste foi feito para testar o desempenho da CPU, 
-outro teste foi o teste do Sysbench, em que eram realizados cálculos dos números primos para verificar o desempenho do processador, com as métricas sendo a quantidade de operações por segundo. Além disso, foram feitas diversas leituras e gravações aleatórias e sequenciais no disco rígido para medir o tempo de resposta e taxa de transferência das operações (teste de Input/Output). As métricas foram os testes de leitura e escrita. 
-O teste do Iperf3 foi realizado a comunicação entre contêineres usando o protocolo TCP, depois utilizando o UDP, e por último a comunicação entre o host e o contêiner usando novamente o TCP. Este teste tinha como foco verificar o desempenho da rede, as métricas usadas foram Throughput (taxa de transferência) em TCP e UDP e a perda de pacotes. 
-Em seguida, foi realizado o teste utilizando o 7Zip, em que era medida a velocidade de compactação e descompactação dos arquivos, e verificar o comportamento e desempenho do Docker e do sistema operacional. 
+O
+\ante{trabalho}
+\novo{artigo}
+de \citeonline{SMKD2024} auxilia no entendimento dos conceitos de avaliação do Docker com relação a outros sistemas operacionais.
+\novo{Este estudo realiza testes onde o Docker é executado em diversos sistemas operacionais instalados em um MacBook Pro 13, com uma CPU da Intel i5-8257u @ 1.40GHz, 16GB LPDDR3 2133 Mhz de RAM e  256GB NVME SSD de armazenamento, com a versão 4.20 do Docker Engine e configurado para utilizar 8 CPUs lógicos, 16GB de RAM e 1GB de memória swap}.
+Para verificar a diferença entre os sistemas operacionais, 
+\ante{foram utilizados sistemas operacionais recém-instalados que eram macOS Ventura, Ubuntu 22.04 e Windows 10 rodando em um MacBook Pro 13}
+\novo{foram utilizados os sistemas operaiocnais MacOS Ventura 13.5.1, Ubuntu 22.04-6.4.8-t2-jammy e Windows 10 22H2 recem-instalados}.
+\ante{Os testes consistiam em estressar o Docker com relação à CPU, rede e na resiliência do mesmo.}
+\novo{Neste projeto, o objetivo foi estressar o Docker para medir o desempenho da CPU usando um programa escrito em linguagem C para realizar o cálculo de Pi pela fórmula de Leibniz, sendo a métrica escolhida o tempo de execução do programa. Outro teste foi o teste do Sysbench, em que eram realizados cálculos dos números primos para verificar o desempenho do processador, com as métricas sendo a quantidade de operações por segundo.}
+
+\novo{Além disso, foram feitas diversas leituras e gravações aleatórias e sequenciais no disco rígido para medir o tempo de resposta e taxa de transferência das operações (teste de Input/Output). As métricas foram os testes de leitura e escrita.
+O teste do Iperf3 foi realizado a comunicação entre contêineres usando o protocolo TCP, depois utilizando o UDP, e por último a comunicação entre o host e o contêiner usando novamente o TCP. Este teste tinha como foco verificar o desempenho da rede, as métricas usadas foram Throughput (taxa de transferência) em TCP e UDP e a perda de pacotes.
+Em seguida, foi realizado o teste utilizando o 7Zip, em que era medida a velocidade de compactação e descompactação dos arquivos, e verificar o comportamento e desempenho do Docker e do sistema operacional.
 Foi realizado o teste de verificação de desempenho de um banco de dados no Docker, foi utilizado o Pgbench, onde era medida a taxa de transações por segundo (TPS) e verificado como o desempenho variava.
 Por último, foi feito o teste de Apache slowhttp attack, em que foram abertas diversas conexões HTTP lentas e, com isso, testada a capacidade e resistência ao sofrer um ataque de negação de serviço (Denial of Service - DoS) e verificar qual sistema acabou sofrendo mais. Foi medido o tempo de resposta durante o ataque DoS.}
-
-Após realizar os testes, foi observado que o sistema operacional possui uma importante influência sobre o desempenho presente no conteiner Docker. Alguns possuíam benefícios em relação a outros em uma determinada categoria. O macOS se destacou com relação aos dados obtidos nas configurações utilizadas nos sistemas docker, não sofrendo grandes perdas de desempenho, se mostrando extremamente versátil,
-o Linux se mostrou mais eficiente quanto às aplicações que raramente utilizam escrita no disco, se mostrando uma escolha melhor que o MacOS com relação a bancos de dados em memória, cache e entre outros, pois por não necessitarem de tanta escrita, essas aplicações se beneficiam mais quando executadas em um conteiner com Linux, 
-o Windows acabou não se beneficiando tanto quanto os outros, a não ser pela taxa de transferência de rede entre os contêineres. Assim como o Linux, o Windows possui problemas com a velocidade em que a escrita é feita e com isso. 
-\textcolor{red}{Este projeto auxilia no entendimento com relação aos tipos de testes que podem ser realizados para analisar o desempenho do Docker, auxiliando de uma maneira que possa ser um pontapé inicial para o desenvolvimento dos testes com o Docker, e como medir o desempenho de um contêiner}
-\textcolor{blue}{O projeto evidencia como o Docker executa, sendo afetado por diferentes sistemas operacionais, mostrando que um contêiner Docker para Windows sofre bastante com o desempenho, mostrando que a melhor opção é primariamente o macOS e, em seguida, o Linux. Estes dados auxiliaram no entendimento de que, para este projeto, a melhor opção é o uso de um contêiner Linux (pela falta de acesso a dispositivos com macOS e melhor desempenho que o Windows) para que assim possa ser aplicado em um robô e para que se possa realizar os testes de desempenho para realizar a comparação desejada}. \cite{SMKD2024}
+Após realizar os testes, foi observado que o sistema operacional possui uma importante influência sobre o desempenho presente no conteiner. Alguns possuíam benefícios em relação a outros em uma determinada categoria. O macOS se destacou com relação aos dados obtidos nas configurações utilizadas nos sistemas docker, não sofrendo grandes perdas de desempenho, se mostrando extremamente versátil,
+o Linux se mostrou mais eficiente quanto às aplicações que raramente utilizam escrita no disco, se mostrando uma escolha melhor que o MacOS com relação a bancos de dados em memória, cache e entre outros, pois por não necessitarem de tanta escrita, essas aplicações se beneficiam mais quando executadas em um conteiner com Linux,
+o Windows acabou não se beneficiando tanto quanto os outros, a não ser pela taxa de transferência de rede entre os contêineres. Assim como o Linux, o Windows possui problemas com a velocidade em que a escrita é feita e com isso. Este artigo auxilia no entendimento com relação aos tipos de testes que podem ser realizados para analisar o desempenho do Docker, auxiliando de uma maneira que possa ser um pontapé inicial para o desenvolvimento dos testes com o Docker, e como medir o desempenho de um contêiner.
 
 \section{DA Containerized Microservice Architecture for a ROS 2 Autonomous Driving Software: An End-to-End Latency Evaluation}
 
-Conforme Wen et. al. (2024), o artigo aborda a arquitetura baseada em microserviços para sistemas automotivos. Cada serviço foi realizado em contêineres separados, pois os testes realizados identificaram que este método é viável e acaba por melhorar a latência existente em sistemas operacionais Linux sem contêineres, que obteve uma latência de 5 a 8\% end-to-end, além de reduzir a latência máxima, o que mostra a vantagem no uso de conteinerização para os sistemas automotivos em tempo real. Foi concluído que o ROS 2, utilizado para avaliar a arquitetura de microserviços para uma aplicação real de direção autônoma, foi de extrema importância por conta de sua arquitetura distribuída que é baseada em nós e possui comunicação DDS, o que levou ao isolamento das funções do veículo e facilitou a migração para contêineres. Na conteinerização, o ROS 2 perde um pouco de seu desempenho, mas em aplicações complexas como o Autoware, a mesma acaba por melhorar, reduzindo o uso de CPU e memória. Este artigo auxilia no entendimento do uso da conteinerização com relação ao ROS 2, seus problemas e seus acertos. \cite{Wen2024}.
+\ante{Conforme Wen et. al. (2024), o artigo} 
+\novo{O trabalho de \citeonline{Wen2024}} 
+aborda a arquitetura baseada em microserviços para sistemas automotivos 
+\novo{autônomos usando ROS2}. 
+Cada serviço foi 
+\ante{realizado}
+\novo{executado} em contêineres separados, pois os testes realizados identificaram que este método é viável e acaba por melhorar a latência existente em sistemas operacionais Linux sem contêineres, que obteve uma latência de 5 a 8\% end-to-end, além de reduzir a latência máxima, o que mostra a vantagem no uso de conteinerização para os sistemas automotivos em tempo real.
+\novo{Neste projeto foram utilizados}.
+Foi concluído que o ROS 2, utilizado para avaliar a arquitetura de microserviços para uma aplicação real de direção autônoma, foi de extrema importância por conta de sua arquitetura distribuída que é baseada em nós e possui comunicação DDS, o que levou ao isolamento das funções do veículo e facilitou a migração para contêineres. Na conteinerização, o ROS 2 perde um pouco de seu desempenho, mas em aplicações complexas como o Autoware, a mesma acaba por 
+\ante{melhorar}
+\novo{ter um desempenho melhor}
+, reduzindo o uso de CPU e memória. 
+\ante{Este artigo auxilia no entendimento do uso da conteinerização com relação ao ROS 2, seus problemas e seus acertos.}
+\novo{Este artigo demostrou que o uso de containeres para o tipo de problema proposto neste trabalho é viável e que pode trazer benefícios em relação a execução em bare-metal.}
