@@ -6,12 +6,12 @@
 \novo{\section{EXPERIMENTOS EM SIMULAÇÃO}}
 Os experimentos usam um modelo digital da arena física presente no laboratório da sala K4-04 da instituição 
 \novo{e usam um robô TurtleBot3 Burger simulado disponível no ROS e Gazebo}. O motivo de esta
-\ante{arena}
+%\ante{arena}
 \novo{combinação} ter sido escolhida se deu por conta da comparação que
-\ante{futuramente} pode ser realizada entre os testes virtuais e reais.
+%\ante{futuramente} pode ser realizada entre os testes virtuais e reais.
 
 Foram
-\ante{feitos cinco}
+%\ante{feitos cinco}
 \novo{propostos sete} experimentos com resultados satisfatórios, e um que acabou não fornecendo os resultados devidos por conta de instabilidades.
 \novo{
 Todos os testes foram feitos em um computador com as seguintes especificações:
@@ -20,14 +20,14 @@ Todas as ferramentas e configurações destas estão disponíveis em um playbook
 A imagem Docker utilizada no projeto se baseia na imagem usada para ROS 2 Humble, presente no repositório oficial da robotis\footnote{https://github.com/ROBOTIS-GIT/turtlebot3/tree/main/docker/humble}, modificada para ter as configurações e arquivos necessários.
 }
 
-\ante{O primeiro deles (Setup)teve testes iniciais para confirmar o comportamento do ROS 2 dentro de um container Docker.No segundo experimento (Base), usaram-se simulações utilizando o mapa base sem patrulheiros. O terceiro experimento (Patrulheiros) usou simulações utilizando o mapa base com patrulheiros. O quarto experimento (Base + Docker) usou simulações utilizando o mapa base sem patrulheiros, com a stack nav2 e rviz dentro de um container Docker. No quinto experimento (Patrulheiros + Docker), usaram-se simulações utilizando o mapa base com patrulheiros, com a stack nav2 e rviz dentro de um container Docker.}
+%\ante{O primeiro deles (Setup)teve testes iniciais para confirmar o comportamento do ROS 2 dentro de um container Docker.No segundo experimento (Base), usaram-se simulações utilizando o mapa base sem patrulheiros. O terceiro experimento (Patrulheiros) usou simulações utilizando o mapa base com patrulheiros. O quarto experimento (Base + Docker) usou simulações utilizando o mapa base sem patrulheiros, com a stack nav2 e rviz dentro de um container Docker. No quinto experimento (Patrulheiros + Docker), usaram-se simulações utilizando o mapa base com patrulheiros, com a stack nav2 e rviz dentro de um container Docker.}
 Foram também realizados experimentos usando arenas com labirintos para testar a navegação do robô,
-\ante{mas a navegação acabou tendo problemas em experimentos com e sem Docker, dando a indicar que é um problema com o mapa, ou com as bibliotecas ROS 2 utilizadas, e não com a conteinerização.} 
+%\ante{mas a navegação acabou tendo problemas em experimentos com e sem Docker, dando a indicar que é um problema com o mapa, ou com as bibliotecas ROS 2 utilizadas, e não com a conteinerização.} 
 
 \novo{Os sete experimentos propostos foram:
 \begin{enumerate}
     \item Setup: testes iniciais para confirmar o comportamento do ROS 2 dentro de um contêiner Docker e a viabilidade do projeto proposto.
-    \item Arena: navegação do robô de um lado a outro na arena da sala K404 sem nenhum obstáculo, conforme o caminho exibido na Figura~\ref{fig:AB}.
+    \item Arena: navegação do robô de um lado a outro na arena da sala K4-04 sem nenhum obstáculo, conforme o caminho exibido na Figura~\ref{fig:AB}.
     \item Patrulheiros: usa o mesmo mapa do experimento anterior, porém 3 robôs TurtleBot3 Burger foram adicionados para realizar um percurso pré-definido (Figura~\ref{fig:AP}) com o objetivo de atrapalhar a movimentação do robô que faz a navegação na arena. Os robôs patrulheiros faziam um trajeto em linha reta onde saiam e retornavam aos seus pontos de origem.
     \item Arena com Docker: Este experimento é idêntico ao experimento Arena, porém o robô executa a parte do ROS de dentro de um contêiner Docker.
     \item Patrulheiros com Docker: Assim como o anterior, este experimento repete o que foi realizado no experimento Patrulheiros mas com o robô usando o ROS em um contêiner.
@@ -50,7 +50,7 @@ Foram também realizados experimentos usando arenas com labirintos para testar a
     \label{fig:AP}
 \end{subfigure}
 \begin{subfigure}[b]{0.45\textwidth}
-    \caption{Labirinto 1. Labirinto feito adicionando paredes à arena da K404.}
+    \caption{Labirinto 1. Labirinto feito adicionando paredes à arena da K4-04.}
     \includegraphics[width=\textwidth]{Figures/Arena/ArenaLabirinto1.png}
     \label{fig:AL1}
 \end{subfigure}
@@ -65,6 +65,10 @@ Foram também realizados experimentos usando arenas com labirintos para testar a
 
 \novo{Para todos os experimentos as métricas de uso de CPU, RAM e rede foram medidas usando o nmon e armazenadas em arquivos para que os resultados fossem analisados após a execução de todos os testes. Cada experimento foi executado pelo menos 30 vezes para garantir que a amostragem dos resultados é estatisticamente relevante.}
 
+\novo{\section{Experimentos no robô real}}
+
+\novo{Os experimentos utilizaram somente um robô TurtleBot3 Burger que utilizava a Raspberry Pi 4 Model B Rev 1.5, com 4 núcleos, utilizando um processador Quad core Cortex-A72 (ARM v8) 64-bit SoC 1.8GHz com 2GB de memória RAM. O robô utilizava também Ubuntu 22.04.5LTS, Docker 28.4.0 (esta imagem foi baixada do repositório do Ubuntu) e ROS 2 Humble Hawksbill. Os testes foram realizados somente na arena base (sem obstáculos) na sala K4-04 (Figura \ref{fig:AB}). Estes testes consistiam em repetir o teste de navegação simulada, mas na arena física. Neste teste, o robô precisa sair de uma ponta e se locomover até a outra. O teste iniciava quando o Nmon era acionado por meio de um script armazenando os dados da CPU, memória RAM e tráfego de rede, e então, com outro script, o robô inicializava o xterm que inicializava o rviz. Com isso, o robô começava a se locomover. Quando o robô finalizava o trajeto, eram executados os scripts para encerrar o Nmon e o xterm, com isso o robô era reposicionado e depois o teste era repetido mais 29 vezes, este teste foi executado tanto sem quanto com o Docker. Foram executados no total 60 testes, divididos entre sem e com Docker. Após os dados serem obtidos, os mesmos eram analisados no software NMONVisualizer e então convertidos para “.csv” para serem utilizados em gráficos}.
+
 \section{CONTEÚDO REPOSITÓRIO}
 \novo{
 O repositório GitHub\footnote{Disponível em https://github.com/joca2511/TCC\_Docker} criado para este projeto possui várias ferramentas que podem ser utilizadas para facilitar a reprodução dos testes executados.
@@ -77,11 +81,10 @@ Esta modificação faz com que os robôs inicializados entrem em um loop infinit
 Há também uma versão modificada de \texttt{multi\_robot\_Arena.launch.py} com as posições iniciais dos robôs patrulheiros e do arquivo \texttt{turtlebot3\_world.launch.py} modificado em \texttt{turtlebot3\_Arena.launch.py}, que permite carregar o robô em uma posição fixa em qualquer mapa, contanto que o nome seja especificado e o arquivo \texttt{.world} presente em /tcc/worlds.
 }
 
+%\ante{\section{TESTES ARENA} Foram feitos testes para adquirir os dados de desempenho das simulações sem Docker, utilizando a arena base sem patrulheiros (Figura \ref{fig:AB}). Estes testes consistiam em fazer o robô percorrer um trajeto de uma ponta até a outra da arena. Durante a execução, foi utilizado o software Nmon para verificar o desempenho de CPU, memória RAM e rede, e assim armazenar os dados. Os testes com a arena base + Docker, o robô realizou o mesmo trajeto que o teste anterior de seguir de uma ponta da arena até a outra. Os testes foram realizados enquanto o software Nmon verificava o desempenho do sistema.}
 
-\ante{\section{TESTES ARENA} Foram feitos testes para adquirir os dados de desempenho das simulações sem Docker, utilizando a arena base sem patrulheiros (Figura \ref{fig:AB}). Estes testes consistiam em fazer o robô percorrer um trajeto de uma ponta até a outra da arena. Durante a execução, foi utilizado o software Nmon para verificar o desempenho de CPU, memória RAM e rede, e assim armazenar os dados. Os testes com a arena base + Docker, o robô realizou o mesmo trajeto que o teste anterior de seguir de uma ponta da arena até a outra. Os testes foram realizados enquanto o software Nmon verificava o desempenho do sistema.}
-
-\ante{\section{TESTES PATRULHEIROS}}
+%\ante{\section{TESTES PATRULHEIROS}}
 Neste teste foram posicionados robôs patrulheiros que percorriam um
-\ante{simples trajeto} 
+%\ante{simples trajeto} 
 \novo{trajeto de linha reta onde saiam e retornavam as seus pontos de origem (Figura \ref{fig:AP})}
 para servir de obstáculo para o robô que deveria percorrer o mesmo trajeto de antes. Novamente foi utilizada a arena base, e sem o uso do Docker. Foram feitos testes para adquirir os dados de desempenho de simulações com Docker, utilizando a arena base com patrulheiros.

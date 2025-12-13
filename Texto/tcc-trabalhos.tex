@@ -5,10 +5,10 @@
 
 \section{Bare-Metal vs. Hypervisors and Containers: Performance Evaluation of Virtualization Technologies for Software-Defined Vehicles}
 
-\ante{O projeto de Wen et. al. (2023), auxilia com relação ao entendimento da conteinerização em sistemas embarcados e também com relação ao seu desempenho.No artigo, é detalhada}
+%\ante{O projeto de Wen et. al. (2023), auxilia com relação ao entendimento da conteinerização em sistemas embarcados e também com relação ao seu desempenho.No artigo, é detalhada}
 \novo{O artigo de \citeonline{Wen2023} detalha }
-a utilização de diferentes formas de conteinerização e seu efeito no desempenho em diferentes tipos de hardware. Foram realizados testes gerais que envolviam CPU, memória, rede e disco, em três ambientes diferentes: 
-\ante{máquina virtual, contêiner e um contêiner dentro de uma máquina virtual}.
+a utilização de diferentes formas de conteinerização e seu efeito no desempenho em diferentes tipos de hardware. Foram realizados testes gerais que envolviam CPU, memória, rede e disco, em três ambientes diferentes:
+%\ante{máquina virtual, contêiner e um contêiner dentro de uma máquina virtual}.
 \novo{Integrado (utilizando uma Raspberry Pi 4 Modelo B), Computador desktop (Dell Optiplex 7040 PC) e uma estação de trabalho customizada de alto desempenho}
 \novo{Para realizar estes testes, foram utilizados Whetstone (versão 1.2), Dhrystone (versão 2.2a) e Kcbench (0.9.5), ferramentas de medição de desempenho, para realizar os testes de CPU. Os testes de memória foram medidos pelo software RAMspeed (versão 3.5.0). Foi utilizado o iperf3 (versão 3.9) para medir os testes de rede, enquanto para analisar o desempenho do disco, utilizou-se o Dbench (versão 4.00), Bonnie++ (versão 2.00) e o Sysbench (versão 1.0.20). Foram utilizados e analisados diversos contêineres engine, sendo estes o Docker (versão 20.10.17), KVM (v1.25.3), Podman (versão 3.4.4) e Systemd-Nspawn (versão 249.11). Para realizar os testes em diversos contêineres, foi utilizada uma versão leve do Kubernetes, o k3s (versão V1.25.3). Foi utilizado o Autoware, um framework para realizar simulações de condução autônoma, para verificar a inicialização dos ambientes virtualizados e contêinerizados}.
 
@@ -21,14 +21,14 @@ Com isso, foi concluído que as máquinas virtuais e os contêineres possuem um 
 \section{Docker Performance Evaluation across Operating Systems}
 
 O
-\ante{trabalho}
+%\ante{trabalho}
 \novo{artigo}
 de \citeonline{SMKD2024} auxilia no entendimento dos conceitos de avaliação do Docker com relação a outros sistemas operacionais.
 \novo{Este estudo realiza testes onde o Docker é executado em diversos sistemas operacionais instalados em um MacBook Pro 13, com uma CPU da Intel i5-8257u @ 1.40GHz, 16GB LPDDR3 2133 Mhz de RAM e  256GB NVME SSD de armazenamento, com a versão 4.20 do Docker Engine e configurado para utilizar 8 CPUs lógicos, 16GB de RAM e 1GB de memória swap}.
 Para verificar a diferença entre os sistemas operacionais, 
-\ante{foram utilizados sistemas operacionais recém-instalados que eram macOS Ventura, Ubuntu 22.04 e Windows 10 rodando em um MacBook Pro 13}
+%\ante{foram utilizados sistemas operacionais recém-instalados que eram macOS Ventura, Ubuntu 22.04 e Windows 10 rodando em um MacBook Pro 13}
 \novo{foram utilizados os sistemas operaiocnais MacOS Ventura 13.5.1, Ubuntu 22.04-6.4.8-t2-jammy e Windows 10 22H2 recem-instalados}.
-\ante{Os testes consistiam em estressar o Docker com relação à CPU, rede e na resiliência do mesmo}.
+%\ante{Os testes consistiam em estressar o Docker com relação à CPU, rede e na resiliência do mesmo}.
 \novo{Neste projeto, o objetivo foi estressar o Docker para medir o desempenho da CPU usando um programa escrito em linguagem C para realizar o cálculo de Pi pela fórmula de Leibniz, sendo a métrica escolhida o tempo de execução do programa. Outro teste foi o teste do Sysbench, em que eram realizados cálculos dos números primos para verificar o desempenho do processador, com as métricas sendo a quantidade de operações por segundo}.
 
 \novo{Além disso, foram feitas diversas leituras e gravações aleatórias e sequenciais no disco rígido para medir o tempo de resposta e taxa de transferência das operações (teste de Input/Output). As métricas foram os testes de leitura e escrita.
@@ -39,25 +39,25 @@ Por último, foi feito o teste de Apache slowhttp attack, em que foram abertas d
 Após realizar os testes, foi observado que o sistema operacional possui uma importante influência sobre o desempenho presente no conteiner. Alguns possuíam benefícios em relação a outros em uma determinada categoria. O macOS se destacou com relação aos dados obtidos nas configurações utilizadas nos sistemas docker, não sofrendo grandes perdas de desempenho, se mostrando extremamente versátil,
 o Linux se mostrou mais eficiente quanto às aplicações que raramente utilizam escrita no disco, se mostrando uma escolha melhor que o MacOS com relação a bancos de dados em memória, cache e entre outros, pois por não necessitarem de tanta escrita, essas aplicações se beneficiam mais quando executadas em um conteiner com Linux,
 o Windows acabou não se beneficiando tanto quanto os outros, a não ser pela taxa de transferência de rede entre os contêineres. Assim como o Linux, o Windows possui problemas com a velocidade em que a escrita é feita e com isso.
-\ante{Este artigo auxilia no entendimento com relação aos tipos de testes que podem ser realizados para analisar o desempenho do Docker, auxiliando de uma maneira que possa ser um pontapé inicial para o desenvolvimento dos testes com o Docker, e como medir o desempenho de um contêiner}
+%\ante{Este artigo auxilia no entendimento com relação aos tipos de testes que podem ser realizados para analisar o desempenho do Docker, auxiliando de uma maneira que possa ser um pontapé inicial para o desenvolvimento dos testes com o Docker, e como medir o desempenho de um contêiner}
 \novo{Este trabalho auxilia com o entendimento sobre o desempenho do Docker em diferentes sistemas operacionais, mostrando qual opção mais se aplica a este trabalho, que no caso deste trabalho, foi o Linux, por ser mais acessível que o macOS e por possuir um desempenho superior ao do Windows, além de mostrar tipos de testes que podem ser realizados para verificar o desempenho e quais métricas utilizar}.
 
 \section{DA Containerized Microservice Architecture for a ROS 2 Autonomous Driving Software: An End-to-End Latency Evaluation}
 
-\ante{Conforme Wen et. al. (2024), o artigo} 
+%\ante{Conforme Wen et. al. (2024), o artigo} 
 \novo{O trabalho de \citeonline{Wen2024}} 
 aborda a arquitetura baseada em microserviços para sistemas automotivos 
 \novo{autônomos usando ROS 2}. 
 Cada serviço foi 
-\ante{realizado}
+%\ante{realizado}
 \novo{executado} em contêineres separados, pois os testes realizados identificaram que este método é viável e acaba por melhorar a latência existente em sistemas operacionais Linux sem contêineres, que obteve uma latência de 5 a 8\% end-to-end, além de reduzir a latência máxima, o que mostra a vantagem no uso de conteinerização para os sistemas automotivos em tempo real.
 \novo{Neste projeto foram utilizadas duas plataformas de computação distintas, uma com arquitetura x86 (InoNet Mayflower-B17) e outra aarch64 (Armv8 ADLINK AVA COM-HPC), com ambas utilizando o sistema operacional Ubuntu 22.04.3 LTS Jammy Jellyfish, GPU NVIDIA RTX A6000 48 GB e Kernel 6.2.0-34-generic. Foi utilizado o ROS 2 Humble Hawksbill com o middleware Eclipse CycloneDDS e, por conta de utilizar esta versão do ROS 2, foi utilizado o Autoware baseado nessa versão também. Utilizou-se o Docker engine (versão 24.0.5) para fazer a conteinerização e o k3s (versão v1.27.3+k3s1) para orquestrar os contêineres.
 Foram realizados alguns testes, sendo eles a avaliação de desempenho da comunicação DDS que verifica o impacto que o desempenho sofre por conta da contêinerização na comunicação do DDS. O teste consistia em verificar a comunicação entre dois nós utilizando o DDS padrão e verificando o tempo de ida e de volta das mensagens e a taxa de entrega de pacotes, sendo as métricas utilizadas.
 O segundo teste era de verificar o desempenho do ROS 2 com o ros2\_benchmark, verificando o impacto da contêinerização sobre o desempenho das aplicações do ROS 2. O teste verificava a comunicação e processamento de dados, usando como métrica a latência de ponta a ponta, o jitter e o quanto da CPU foi utilizado nos diferentes cenários.
 Após esses testes, foi verificada a aplicação de direção autônoma com o Autoware, onde foi avaliado como a conteinerização afeta o desempenho de uma aplicação de direção autônoma real. Neste teste, o Autoware foi dividido em oito contêineres que isolavam módulos funcionais diferentes. Com isso, foi simulado um trajeto em Nishi-Shinjuku, localizada em Tóquio, em um ambiente simulado da AWSIM, para medir como a conteinerização era impactada pela latência ponta a ponta. Foi registrado o uso de CPU e de memória como métricas de comparação de impacto entre as configurações}.
 Foi concluído que o ROS 2, utilizado para avaliar a arquitetura de microserviços para uma aplicação real de direção autônoma, foi de extrema importância por conta de sua arquitetura distribuída que é baseada em nós e possui comunicação DDS, o que levou ao isolamento das funções do veículo e facilitou a migração para contêineres. Na conteinerização, o ROS 2 perde um pouco de seu desempenho, mas em aplicações complexas como o Autoware, a mesma acaba por
-\ante{melhorar}
+%\ante{melhorar}
 \novo{ter um desempenho melhor},
 reduzindo o uso de CPU e memória. 
-\ante{Este artigo auxilia no entendimento do uso da conteinerização com relação ao ROS 2, seus problemas e seus acertos}
+%\ante{Este artigo auxilia no entendimento do uso da conteinerização com relação ao ROS 2, seus problemas e seus acertos}
 \novo{Este artigo demostrou que o uso de containeres para o tipo de problema proposto neste trabalho é viável e que pode trazer benefícios em relação a execução em bare-metal}.

@@ -4,10 +4,10 @@
 \novo{Este capítulo apresenta os resultados obtidos para os experimentos propostos no capítulo anterior. Para facilitar a comparação, as seções apresentam os resultados dos experimentos com e sem Docker em conjunto.}
 
 \section{EXPERIMENTO SETUP}
-\ante{Foram feitos testes para implementar a parte simulada proposta, foi utilizado o manual \cite{turtlebot3_manual} e pacotes\footnote{(https://github.com/ROBOTIS-GIT/turtlebot3)} disponíveis pelo grupo ROBOTIS}\novo{Os testes foram implementados usando o material disponível por \citeonline{turtlebot3_manual} junto com pacotes disponobilizados no repositório oficial da ROBOTIS\footnote{O spacotes estão disponíveis em https://github.com/ROBOTIS-GIT/turtlebot3}}, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS 2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens \novo{dos contêineres} de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava mais de 20 minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
+%\ante{Foram feitos testes para implementar a parte simulada proposta, foi utilizado o manual \cite{turtlebot3_manual} e pacotes\footnote{(https://github.com/ROBOTIS-GIT/turtlebot3)} disponíveis pelo grupo ROBOTIS}\novo{Os testes foram implementados usando o material disponível por \citeonline{turtlebot3_manual} junto com pacotes disponobilizados no repositório oficial da ROBOTIS\footnote{O spacotes estão disponíveis em https://github.com/ROBOTIS-GIT/turtlebot3}}, tornando o desenvolvimento desta parte rápido. A utilização e desenvolvimento dos projetos ROS 2 dentro do Docker foi facilitada pela utilização de workflows no GitHub, onde as imagens \novo{dos contêineres} de teste foram automaticamente construídas e publicadas como pacotes no repositório, o que reduziu o tempo do processo de construir as imagens localmente, que demorava mais de 20 minutos para no máximo 5 minutos, além de também as disponibilizar para outros usarem.
 
 Houve certas dificuldades para integrar o ROS 2 dentro do contêiner Docker com o ROS 2 nativo, que lidaria com a simulação Gazebo.
-\ante{Foi descoberto que o FastDDS (middleware utilizado por padrão pelo ROS 2 Humble) não interage de forma consistente com Docker. Ele era capaz de compartilhar os tópicos entre os ambientes, mas causava falha na publicação e recebimento de mensagens, não mostrando nenhuma.} \novo{O problema encontrado foi no uso do FastDDS (middleware utilizado por padrão no ROS 2 Humble) que não interagia de forma consistente com o Docker, conforme exibido na Figura~\ref{fig:tpf}, em que o terminal à esquerda mostra o ROS sendo executado no host, enquanto o terminal à direita mostra o ROS sendo executado de dentro do Docker. Enquanto o host consegue enviar as mensagens, o contêiner consegue interagir com o host.}
+%\ante{Foi descoberto que o FastDDS (middleware utilizado por padrão pelo ROS 2 Humble) não interage de forma consistente com Docker. Ele era capaz de compartilhar os tópicos entre os ambientes, mas causava falha na publicação e recebimento de mensagens, não mostrando nenhuma.} \novo{O problema encontrado foi no uso do FastDDS (middleware utilizado por padrão no ROS 2 Humble) que não interagia de forma consistente com o Docker, conforme exibido na Figura~\ref{fig:tpf}, em que o terminal à esquerda mostra o ROS sendo executado no host, enquanto o terminal à direita mostra o ROS sendo executado de dentro do Docker. Enquanto o host consegue enviar as mensagens, o contêiner consegue interagir com o host.}
 
 Para solucionar isso, o FastDDS foi substituído por outro middleware disponível para ROS 2 Humble, CycloneDDS, o qual foi utilizado especificamente no container Docker. \novo{Como mostra a Figura~\ref{fig:tcs}, o CycloneDDS fez a troca de mensagens sem problemas.}
 
@@ -27,7 +27,7 @@ Para solucionar isso, o FastDDS foi substituído por outro middleware disponíve
 \end{figure}
 
 \section{EXPERIMENTO ARENA}
-\ante{Os resultados obtidos foram salvos e utilizados em gráficos gerados pela biblioteca Pandas. Os dados apresentados foram a porcentagem do uso do sistema (CPU, memória RAM e Rede), com relação ao passo executado no Nmon. Estes gráficos revelam que a utilização do Docker afetou o desempenho, mas de uma maneira mínima. No gráfico de CPU (Figura~\ref{fig:arena-cpu}), pode-se ver que a mesma acabou por ser mais exigida quando não se utilizava o Docker, por volta de 1\% da média de uso. Nos gráfico de memória RAM (Figura \ref{fig:arena-mem}), pode-se ver que a diferença do uso é de cerca de 500 MB a mais quando se usa o Docker. Este aumento ocorreu por conta da necessidade do Docker de subir o container. Nos gráficos de rede (Figura \ref{fig:arena-rede}), pode-se ver que o uso do Docker é mais evidente, tendo um pico inicial muito alto, mas que diminui logo em seguida. Este aumento ocorreu por conta da necessidade do Docker em se comunicar, via rede, com os outros tópicos utilizados pelo host. }
+%\ante{Os resultados obtidos foram salvos e utilizados em gráficos gerados pela biblioteca Pandas. Os dados apresentados foram a porcentagem do uso do sistema (CPU, memória RAM e Rede), com relação ao passo executado no Nmon. Estes gráficos revelam que a utilização do Docker afetou o desempenho, mas de uma maneira mínima. No gráfico de CPU (Figura~\ref{fig:arena-cpu}), pode-se ver que a mesma acabou por ser mais exigida quando não se utilizava o Docker, por volta de 1\% da média de uso. Nos gráfico de memória RAM (Figura \ref{fig:arena-mem}), pode-se ver que a diferença do uso é de cerca de 500 MB a mais quando se usa o Docker. Este aumento ocorreu por conta da necessidade do Docker de subir o container. Nos gráficos de rede (Figura \ref{fig:arena-rede}), pode-se ver que o uso do Docker é mais evidente, tendo um pico inicial muito alto, mas que diminui logo em seguida. Este aumento ocorreu por conta da necessidade do Docker em se comunicar, via rede, com os outros tópicos utilizados pelo host.}
 
 \novo{Os gráficos da Figura~\ref{fig:res-arena} mostram os valores medidos pelo nmon para os experimentos com e sem Docker para as métricas de uso de CPU, RAM e rede no experimento Arena.}
 
@@ -51,6 +51,7 @@ Para solucionar isso, o FastDDS foi substituído por outro middleware disponíve
         \includegraphics[width=\textwidth]{Figures/novaArena/arena_cpu-ttest.png}
         \label{fig:arena-cpu-t}
     \end{subfigure}
+    \vfill
     \begin{subfigure}{0.49\textwidth}
         \caption{Uso de RAM}
         \includegraphics[width=\textwidth]{Figures/novaArena/arena_mem-bars.png}
@@ -62,6 +63,7 @@ Para solucionar isso, o FastDDS foi substituído por outro middleware disponíve
         \includegraphics[width=\textwidth]{Figures/novaArena/arena_mem-ttest.png}
         \label{fig:arena-mem-t}
     \end{subfigure}
+    \vfill
     \begin{subfigure}{0.49\textwidth}
         \caption{Uso de rede}
         \includegraphics[width=\textwidth]{Figures/novaArena/arena_net-bars.png}
@@ -79,7 +81,7 @@ Para solucionar isso, o FastDDS foi substituído por outro middleware disponíve
 \novo{Portanto, considerando os resultados obtidos neste experimento, é possível concluir que o uso de Docker gera o aumento do uso de RAM e de rede, mas este era um resultado esperado por conta da forma como o Docker e ROS funcionam, e pode levar a uma pequena diminuição do uso de CPU, sendo consistente com o que foi encontrado durante a revisão bibliográfica.}
 
 \section{EXPERIMENTO PATRULHEIROS}
-\ante{Os testes nas arenas com patrulheiros se demonstraram muito semelhantes aos testes das arenas bases em termos de gráficos, mas os mesmos utilizaram bem mais recursos do sistema. Nos gráficos de CPU (Figura \ref{fig:patrulha-cpu}), pode-se ver que foi exigido bem mais da CPU do sistema. Enquanto na arena base era exigido até 30\% da CPU, com os patrulheiros foi exigido 50\%, nesta arena a falta do Docker exigiu mais do sistema, enquanto com o Docker houve poucos picos de uso. Nos gráficos de memória RAM (Figura \ref{fig:patrulha-mem}) se pode ver que se diferenciaram no uso de cerca de 500 MB a mais no uso do Docker, semelhante à arena base, exigindo mais da memória no geral do teste. Nos testes de rede (Figura \ref{fig:patrulha-rede}), pode-se ver que o uso do Docker é novamente mais evidente, tendo um pico de uso muito alto, que logo diminuiu, mas que ainda ficou mais acima dos testes sem Docker.}
+%\ante{Os testes nas arenas com patrulheiros se demonstraram muito semelhantes aos testes das arenas bases em termos de gráficos, mas os mesmos utilizaram bem mais recursos do sistema. Nos gráficos de CPU (Figura \ref{fig:patrulha-cpu}), pode-se ver que foi exigido bem mais da CPU do sistema. Enquanto na arena base era exigido até 30\% da CPU, com os patrulheiros foi exigido 50\%, nesta arena a falta do Docker exigiu mais do sistema, enquanto com o Docker houve poucos picos de uso. Nos gráficos de memória RAM (Figura \ref{fig:patrulha-mem}) se pode ver que se diferenciaram no uso de cerca de 500 MB a mais no uso do Docker, semelhante à arena base, exigindo mais da memória no geral do teste. Nos testes de rede (Figura \ref{fig:patrulha-rede}), pode-se ver que o uso do Docker é novamente mais evidente, tendo um pico de uso muito alto, que logo diminuiu, mas que ainda ficou mais acima dos testes sem Docker.}
 
 \novo{Os resultados obtidos no experimento dos patrulheiros apresentam resultados muito semelhantes aos resultados do experimento anterior, porém utilizando mais recursos do sistema. Este aumento do uso de recursos possivelmente ocorreu pelo fato da simulação ter 3 robôs adicionais quando comparado ao experimento anterior, o que demanda maior uso de CPU e RAM pela simulação.}
 
@@ -97,26 +99,31 @@ Para solucionar isso, o FastDDS foi substituído por outro middleware disponíve
         \includegraphics[width=\textwidth]{Figures/novaPatrulha/patrulha_cpu-bars.png}
         \label{fig:patrulha-cpu}
     \end{subfigure}
+    \hfill
     \begin{subfigure}{0.49\textwidth}
         \caption{Teste T do uso de CPU}
         \includegraphics[width=\textwidth]{Figures/novaPatrulha/patrulha_cpu-ttest.png}
         \label{fig:patrulha-cpu-t}
     \end{subfigure}
+    \vfill
     \begin{subfigure}{0.49\textwidth}
         \caption{Uso de RAM}
         \includegraphics[width=\textwidth]{Figures/novaPatrulha/patrulha_mem-bars.png}
         \label{fig:patrulha-mem}
     \end{subfigure}
+    \hfill
     \begin{subfigure}{0.49\textwidth}
         \caption{Teste T do uso de RAM}
         \includegraphics[width=\textwidth]{Figures/novaPatrulha/patrulha_mem-ttest.png}
         \label{fig:patrulha-mem-t}
     \end{subfigure}
+    \vfill
     \begin{subfigure}{0.49\textwidth}
         \caption{Uso de rede}
         \includegraphics[width=\textwidth]{Figures/novaPatrulha/patrulha_net-bars.png}
         \label{fig:patrulha-rede}
     \end{subfigure}
+    \hfill
     \begin{subfigure}{0.49\textwidth}
         \caption{Teste T do uso da rede}
         \includegraphics[width=\textwidth]{Figures/novaPatrulha/patrulha_net-ttest.png}
@@ -124,16 +131,62 @@ Para solucionar isso, o FastDDS foi substituído por outro middleware disponíve
     \end{subfigure}
 \end{figure}
 
-\ante{\section{TESTES LABIRINTOS} Inicialmente, foram realizados testes sem patrulheiros, com e sem o uso de Docker, em duas arenas com labirintos (Figuras \ref{fig:AL1} e \ref{fig:AL2}) como obstáculo para o robô. Os labirintos foram desenvolvidos utilizando placas, que são os obstáculos presentes na arena física da K4-04, respeitando o espaço da arena, placas e possíveis posições. Estes testes acabaram por falhar, por conta da inconsistência da navegação do teste, tendo casos em que a navegação falhava no meio do caminho, ou outros em que }
-\ante{eram necessárias entre 4 - 12 recuperações}
+%\ante{\section{TESTES LABIRINTOS} Inicialmente, foram realizados testes sem patrulheiros, com e sem o uso de Docker, em duas arenas com labirintos (Figuras \ref{fig:AL1} e \ref{fig:AL2}) como obstáculo para o robô. Os labirintos foram desenvolvidos utilizando placas, que são os obstáculos presentes na arena física da K4-04, respeitando o espaço da arena, placas e possíveis posições. Estes testes acabaram por falhar, por conta da inconsistência da navegação do teste, tendo casos em que a navegação falhava no meio do caminho, ou outros em que }
+%\ante{eram necessárias entre 4 - 12 recuperações}
 \novo{Era necessário refazer o teste de 4 a 12 vezes para o robô conseguir realizar o trajeto completo}.
 Por conta disso, os testes com os patrulheiros não tiveram resultados consistentes em relação as métricas que seriam medidas.
 %}
 
-\novo{O último teste proposto usava duas arenas sem outros robôs, mas com paredes usadas para formar labirintos (Figuras~\ref{fig:AL1} e~\ref{fig:AL2}) que poderiam ser montados na arena real da K4-04. Por conta de problemas na navegação que por vezes forçavam a recuperação entre 4 e 12 vezes, os testes falharam e não foi possível obter as medidas com o nmon para este experimentos. Porém, os problemas ocorreram tanto na execução dos experimentos sem e com o Docker de forma consistente de forma que o problema em si não foi no ambiente de execução (com Docker ou sem), mas na interação entre o ROS e o Gazebo. Portanto, mesmo não obtendo resultados possíveis de serem analisados, o experimento demonstra que mesmo em casos de falhas na simulação o comportamento do ROS com e sem Docker permaneceu o mesmo.}
+\novo{O último teste simulado proposto usava duas arenas sem outros robôs, mas com paredes usadas para formar labirintos (Figuras~\ref{fig:AL1} e~\ref{fig:AL2}) que poderiam ser montados na arena real da K4-04. Por conta de problemas na navegação que por vezes forçavam a recuperação entre 4 e 12 vezes, os testes falharam e não foi possível obter as medidas com o nmon para este experimentos. Porém, os problemas ocorreram tanto na execução dos experimentos sem e com o Docker de forma consistente de forma que o problema em si não foi no ambiente de execução (com Docker ou sem), mas na interação entre o ROS e o Gazebo. Portanto, mesmo não obtendo resultados possíveis de serem analisados, o experimento demonstra que mesmo em casos de falhas na simulação o comportamento do ROS com e sem Docker permaneceu o mesmo.}
 
-\novo{\section{Interface para produzir arenas para a arena K4-04 (IHC)}}
-\novo{Durante as aulas da matéria de CC8122 - Interface Humano-Computador, foi desenvolvido um protótipo da interface que possui a função de permitir que um usuário desenvolva as próprias arenas para a sala K4-04. A interface é uma imagem da versão simulada da arena da K4-04. Esta imagem possui botões que correspondem às posições onde se é possível posicionar placas que funcionam como paredes para montar labirintos na arena, facilitando o desenvolvimento de arenas para serem usadas em testes ou para se desenvolver as próprias simulações para então executar na arena física.\footnote{Todas as informações da interface estão no \url{https://github.com/mdarce765/ProjetoIHC}}}
+\novo{\section{EXPERIMENTOS NO ROBÔS REAIS}}
+\novo{Os resultados dos testes com robôs reais estão nos gráficos da Figura~\ref{fig:res_real}. Os resultados para uso de RAM e rede estão similares aos resultados obtidos na simulação. O resultados mostram um aumento no uso de RAM quando o contêiner Docker é usado, necessitando de aproximadamente 200MB de memória a mais. No caso do uso de rede, os dois testes mostraram um uso maior de rede no início do experimento, o que se deve ao uso de ssh para a conexão remota com o robô e a necessidade do sistema operacional de trocar informações entre o robô e o notebook usado para realizar os experimentos.}
+
+\novo{Para o uso de CPU os resultados são consistentes com o que foi observado nos anteriores quando analisamos o Teste T. Pelo Teste T, as duas amostragens são diferentes entre si. Quando analisamos o gráfico com as medidas do nmon vemos um grande aumento no uso de CPU quando usamos o contêiner Docker chegando aproximadamente 100\% do uso de CPU. Apensar do aumento no uso de CPU, o tempo de execução da tarefa pelo robô não aumentou, levando a conclusão de que o aumento no uso de CPU se deve a execução de outros processos não relacionados à navegação do robô, mas a execução de programas como o Rviz que ficou visivelmente mais lento quando executado de dentro do contêiner Docker.}
+
+\begin{figure}[htp!]
+  \centering
+  \caption{Resultados obtidos no teste com robô real para replicar os experimentos Arena e Arena com Docker}
+  \label{fig:res_real}
+    \begin{subfigure}{0.49\textwidth}
+        \caption{Uso de CPU}
+        \includegraphics[width=\textwidth]{Figures/RoboReal/real_cpu-bars.png}
+        \label{fig:real-cpu}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
+        \caption{Teste T do uso de CPU}
+        \includegraphics[width=\textwidth]{Figures/RoboReal/real_cpu_all-ttest.png}
+        \label{fig:real-cpu-t}
+    \end{subfigure}
+    \vfill
+    \begin{subfigure}{0.49\textwidth}
+        \caption{Uso de RAM}
+        \includegraphics[width=\textwidth]{Figures/RoboReal/real_mem-bars.png}
+        \label{fig:real-mem}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
+        \caption{Teste T do uso de RAM}
+        \includegraphics[width=\textwidth]{Figures/RoboReal/real_mem-ttest.png}
+        \label{fig:real-mem-t}
+    \end{subfigure}
+    \vfill
+    \begin{subfigure}{0.49\textwidth}
+        \caption{Uso de rede}
+        \includegraphics[width=\textwidth]{Figures/RoboReal/real_net-bars.png}
+        \label{fig:real-rede}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
+        \caption{Teste T do uso da rede}
+        \includegraphics[width=\textwidth]{Figures/RoboReal/real_nettotal-ttest.png}
+        \label{fig:real-rede-t}
+    \end{subfigure}
+\end{figure}
+
+\novo{\section{INTERFACE PARA PRODUZIR ARENAS PARA A ARENA K4-04}}
+\novo{Durante as aulas da matéria de CC8122 - Interface Humano-Computador, foi desenvolvido um protótipo da interface que possui a função de permitir que um usuário desenvolva as próprias arenas para a sala K4-04. A interface (Figura~\ref{fig:ihc}) é uma imagem da versão simulada da arena e possui botões que correspondem às posições onde se é possível posicionar placas que funcionam como paredes para montar labirintos na arena, facilitando o desenvolvimento de arenas para serem usadas em testes ou para se desenvolver as próprias simulações para então executar na arena física.\footnote{Todas as informações da interface estão no \url{https://github.com/mdarce765/ProjetoIHC}}}
 
 \begin{figure}[ht!]
 \centering
@@ -149,4 +202,7 @@ Por conta disso, os testes com os patrulheiros não tiveram resultados consisten
         \label{fig:ihc2}
     \end{subfigure}
     \caption*{Fonte: Autores}
+    \label{fig:ihc}
 \end{figure}
+
+\novo{Este capítulo apresentou os experimentos realizados neste projeto com os 3 experimentos realizados em simulação, 1 experimento replicando o simulado em um robô real, além de apresentar o protótipo de interface que foi desenvolvido durante o semestre com o objetivo de auxiliar no desenvolvimento de novos experimentos em trabalhos futuros.}

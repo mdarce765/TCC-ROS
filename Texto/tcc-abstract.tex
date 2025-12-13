@@ -3,7 +3,9 @@
 \vspace{8mm}
 
 Containerization is a very useful tool when dealing with projects that require different dependencies or programs that may conflict with each other, that require a large amount of initial configuration, or that require portability. This project aims to identify and show the difference in performance between robots using Robot Operating System 2 (ROS 2), simulated with and without containerization. To verify this difference, tests were performed in the simulated environment of the Gazebo Classic software.
-\ante{The results show that simulation performance is not impacted by the use of Docker, which causes a small increase in memory usage, but without significant variations in processor usage}
-\novo{The results show that despite the increase in memory usage and a significant variation in processor usage (according to the T-test performed), simulation performance is not impacted by the use of Docker}, indicating that simulation using containers is feasible during the development process.
+%\ante{The results show that simulation performance is not impacted by the use of Docker, which causes a small increase in memory usage, but without significant variations in processor usage}
+\novo{The results show that despite the increase in memory usage and a significant variation in processor usage (according to the T-test performed), simulation performance is not impacted by the use of Docker},
+indicating that simulation using containers is feasible during the development process.
+\novo{However, initial results using real robots show an increase in CPU usage although not impacting task performance.}
 
 \textbf{Keywords:} Robot, Robot Operating System 2 (ROS 2), Gazebo Classic, Docker, Containerization.
