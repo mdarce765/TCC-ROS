@@ -27,11 +27,7 @@ Para solucionar isso, o FastDDS foi substituído por outro middleware disponíve
 \end{figure}
 
 \section{EXPERIMENTO ARENA}
-\ante{Os resultados obtidos foram salvos e utilizados em gráficos gerados pela biblioteca Pandas. Os dados apresentados foram a porcentagem do uso do sistema (CPU, memória RAM e Rede), com relação ao passo executado no Nmon. Estes gráficos revelam que a utilização do Docker afetou o desempenho, mas de uma maneira mínima.
-No gráfico de CPU (Figura~\ref{fig:arena-cpu}), pode-se ver que a mesma acabou por ser mais exigida quando não se utilizava o Docker, por volta de 1\% da média de uso.
-Nos gráfico de memória RAM (Figura \ref{fig:arena-mem}), pode-se ver que a diferença do uso é de cerca de 500 MB a mais quando se usa o Docker. Este aumento ocorreu por conta da necessidade do Docker de subir o container.
-Nos gráficos de rede (Figura \ref{fig:arena-rede}), pode-se ver que o uso do Docker é mais evidente, tendo um pico inicial muito alto, mas que diminui logo em seguida. Este aumento ocorreu por conta da necessidade do Docker em se comunicar, via rede, com os outros tópicos utilizados pelo host.
-}
+\ante{Os resultados obtidos foram salvos e utilizados em gráficos gerados pela biblioteca Pandas. Os dados apresentados foram a porcentagem do uso do sistema (CPU, memória RAM e Rede), com relação ao passo executado no Nmon. Estes gráficos revelam que a utilização do Docker afetou o desempenho, mas de uma maneira mínima. No gráfico de CPU (Figura~\ref{fig:arena-cpu}), pode-se ver que a mesma acabou por ser mais exigida quando não se utilizava o Docker, por volta de 1\% da média de uso. Nos gráfico de memória RAM (Figura \ref{fig:arena-mem}), pode-se ver que a diferença do uso é de cerca de 500 MB a mais quando se usa o Docker. Este aumento ocorreu por conta da necessidade do Docker de subir o container. Nos gráficos de rede (Figura \ref{fig:arena-rede}), pode-se ver que o uso do Docker é mais evidente, tendo um pico inicial muito alto, mas que diminui logo em seguida. Este aumento ocorreu por conta da necessidade do Docker em se comunicar, via rede, com os outros tópicos utilizados pelo host. }
 
 \novo{Os gráficos da Figura~\ref{fig:res-arena} mostram os valores medidos pelo nmon para os experimentos com e sem Docker para as métricas de uso de CPU, RAM e rede no experimento Arena.}
 
@@ -83,10 +79,7 @@ Nos gráficos de rede (Figura \ref{fig:arena-rede}), pode-se ver que o uso do Do
 \novo{Portanto, considerando os resultados obtidos neste experimento, é possível concluir que o uso de Docker gera o aumento do uso de RAM e de rede, mas este era um resultado esperado por conta da forma como o Docker e ROS funcionam, e pode levar a uma pequena diminuição do uso de CPU, sendo consistente com o que foi encontrado durante a revisão bibliográfica.}
 
 \section{EXPERIMENTO PATRULHEIROS}
-\ante{Os testes nas arenas com patrulheiros se demonstraram muito semelhantes aos testes das arenas bases em termos de gráficos, mas os mesmos utilizaram bem mais recursos do sistema.
-Nos gráficos de CPU (Figura \ref{fig:patrulha-cpu}), pode-se ver que foi exigido bem mais da CPU do sistema. Enquanto na arena base era exigido até 30\% da CPU, com os patrulheiros foi exigido 50\%, nesta arena a falta do Docker exigiu mais do sistema, enquanto com o Docker houve poucos picos de uso.
-Nos gráficos de memória RAM (Figura \ref{fig:patrulha-mem}) se pode ver que se diferenciaram no uso de cerca de 500 MB a mais no uso do Docker, semelhante à arena base, exigindo mais da memória no geral do teste.
-Nos testes de rede (Figura \ref{fig:patrulha-rede}), pode-se ver que o uso do Docker é novamente mais evidente, tendo um pico de uso muito alto, que logo diminuiu, mas que ainda ficou mais acima dos testes sem Docker.}
+\ante{Os testes nas arenas com patrulheiros se demonstraram muito semelhantes aos testes das arenas bases em termos de gráficos, mas os mesmos utilizaram bem mais recursos do sistema. Nos gráficos de CPU (Figura \ref{fig:patrulha-cpu}), pode-se ver que foi exigido bem mais da CPU do sistema. Enquanto na arena base era exigido até 30\% da CPU, com os patrulheiros foi exigido 50\%, nesta arena a falta do Docker exigiu mais do sistema, enquanto com o Docker houve poucos picos de uso. Nos gráficos de memória RAM (Figura \ref{fig:patrulha-mem}) se pode ver que se diferenciaram no uso de cerca de 500 MB a mais no uso do Docker, semelhante à arena base, exigindo mais da memória no geral do teste. Nos testes de rede (Figura \ref{fig:patrulha-rede}), pode-se ver que o uso do Docker é novamente mais evidente, tendo um pico de uso muito alto, que logo diminuiu, mas que ainda ficou mais acima dos testes sem Docker.}
 
 \novo{Os resultados obtidos no experimento dos patrulheiros apresentam resultados muito semelhantes aos resultados do experimento anterior, porém utilizando mais recursos do sistema. Este aumento do uso de recursos possivelmente ocorreu pelo fato da simulação ter 3 robôs adicionais quando comparado ao experimento anterior, o que demanda maior uso de CPU e RAM pela simulação.}
 
@@ -131,12 +124,11 @@ Nos testes de rede (Figura \ref{fig:patrulha-rede}), pode-se ver que o uso do Do
     \end{subfigure}
 \end{figure}
 
-\ante{\section{TESTES LABIRINTOS}
-Inicialmente, foram realizados testes sem patrulheiros, com e sem o uso de Docker, em duas arenas com labirintos (Figuras \ref{fig:AL1} e \ref{fig:AL2}) como obstáculo para o robô. Os labirintos foram desenvolvidos utilizando placas, que são os obstáculos presentes na arena física da K4-04, respeitando o espaço da arena, placas e possíveis posições. Estes testes acabaram por falhar, por conta da inconsistência da navegação do teste, tendo casos em que a navegação falhava no meio do caminho, ou outros em que
+\ante{\section{TESTES LABIRINTOS} Inicialmente, foram realizados testes sem patrulheiros, com e sem o uso de Docker, em duas arenas com labirintos (Figuras \ref{fig:AL1} e \ref{fig:AL2}) como obstáculo para o robô. Os labirintos foram desenvolvidos utilizando placas, que são os obstáculos presentes na arena física da K4-04, respeitando o espaço da arena, placas e possíveis posições. Estes testes acabaram por falhar, por conta da inconsistência da navegação do teste, tendo casos em que a navegação falhava no meio do caminho, ou outros em que }
 \ante{eram necessárias entre 4 - 12 recuperações}
-\novo{era necessário refazer o teste de 4 a 12 vezes para o robô conseguir realizar o trajeto completo}.
+\novo{Era necessário refazer o teste de 4 a 12 vezes para o robô conseguir realizar o trajeto completo}.
 Por conta disso, os testes com os patrulheiros não tiveram resultados consistentes em relação as métricas que seriam medidas.
-}
+%}
 
 \novo{O último teste proposto usava duas arenas sem outros robôs, mas com paredes usadas para formar labirintos (Figuras~\ref{fig:AL1} e~\ref{fig:AL2}) que poderiam ser montados na arena real da K4-04. Por conta de problemas na navegação que por vezes forçavam a recuperação entre 4 e 12 vezes, os testes falharam e não foi possível obter as medidas com o nmon para este experimentos. Porém, os problemas ocorreram tanto na execução dos experimentos sem e com o Docker de forma consistente de forma que o problema em si não foi no ambiente de execução (com Docker ou sem), mas na interação entre o ROS e o Gazebo. Portanto, mesmo não obtendo resultados possíveis de serem analisados, o experimento demonstra que mesmo em casos de falhas na simulação o comportamento do ROS com e sem Docker permaneceu o mesmo.}
 
