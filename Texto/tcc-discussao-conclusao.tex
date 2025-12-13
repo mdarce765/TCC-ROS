@@ -3,7 +3,7 @@
 
 A partir dos resultados obtidos por meio dos experimentos realizados,
 %\ante{pode ser constatado que o uso do Docker gera um impacto no desempenho do robô simulado. Esse impacto pode ser medido e observado por meio do consumo do desempenho da CPU, memória RAM e tráfego de rede, obtidos por meio da ferramenta Nmon, que mediu os testes realizados no simulador gazebo, onde o robô realizou trajetos com e sem o uso do Docker. Foi observado que a diferença no desempenho foi mínima, mostrando que o uso do Docker não compromete o funcionamento da simulação.}
-\novo{foi observado que o uso do Docker afeta o desempenho do robô, tanto simulado quanto real. Os testes foram realizados primariamente na simulação por conta de problemas envolvendo o acesso à sala K4-04 e seus equipamentos que nos auxiliariam com os testes. Com isso, pode-se concluir, por meio das análises do consumo da CPU, memória RAM e tráfego de rede, obtidos pelo Nmon, que o Docker apresenta diferenças de desempenho, principalmente no uso do tráfego de rede, mas que o mesmo não impacta de maneira a inutilizar o uso do robô. Para a parte física, foi realizado o teste apenas na arena base, os testes constataram a diferença mínima de consumo, exigindo bem mais na inicialização do teste, mas que em seguida se estabiliza e conclui a tarefa exigida}.
+\novo{foi observado que o uso do Docker afeta o desempenho do robô, tanto simulado quanto real. Os testes foram realizados primariamente na simulação por conta de problemas envolvendo o acesso à sala K4-04 e seus equipamentos que nos auxiliariam com os testes. Com isso, pode-se concluir, por meio das análises do consumo da CPU, memória RAM e tráfego de rede, obtidos pelo Nmon, que o Docker apresenta diferenças de desempenho, principalmente no uso do tráfego de rede, mas que o mesmo não impacta de maneira a inutilizar o uso do robô. Para a parte física, foram realizados os exprimntos iniciais (Experimento do robô na arena base), esses testes constataram a diferença mínima de consumo, exigindo bem mais na inicialização do teste, mas que em seguida se estabiliza e conclui a tarefa exigida}.
 Com isso, foi concluído que o Docker pode ser utilizado, 
 %\ante{mas pode ter alguns problemas, pois}
 \novo{podendo apresentar alguns problemas, devido a}
@@ -15,6 +15,13 @@ testes com tarefas críticas ou com pouco recurso disponível.
 \novo{Mesmo com alguns possíveis problemas, o Docker pode ser implementado de maneira segura para realizar testes simulados ou práticos com o ROS 2. O uso de contêineres gera praticidade e maior portabilidade ao usuário. Com os dados obtidos, foi observado que o usuário pode utilizar sem preocupações por conta do baixo impacto sofrido pelo uso do Docker}.
 
 \section{TRABALHOS FUTUROS}
-Devido a problemas com relação ao uso da sala K4-04 e seus equipamentos e à falta de tempo, os testes em um robô real não foram realizados, isso acabou por alterar o escopo do projeto, removendo o componente real das avaliações, sendo decidido que os testes e avaliações do robô real seriam realizados como um trabalho futuro.
+Devido a problemas com relação ao uso da sala K4-04 e seus equipamentos e à falta de tempo,
+%\ante{os testes em um robô real não foram realizados, isso acabou por alterar o escopo do projeto, removendo o componente real das avaliações, sendo decidido que os testes e avaliações do robô real seriam realizados como um trabalho futuro}
+\novo{foram realizados somente os testes iniciais, causando alterações no escopo geral do projeto. Foi decidido que o aprofundamento dos testes físicos seria realizado como um trabalho futuro}.
 
-Como trabalho futuro, ficaria a avaliação e estudo da integração em um robô real, utilizando as ferramentas, arquivos e metodologias criadas por este projeto para facilitar a obtenção de dados, como a Dockerfile customizada, os scripts para fácil utilização e organização de vários comandos.
+Como trabalho futuro, ficaria 
+%\ante{a avaliação e estudo da integração em um robô real}
+\novo{o aprofundamento dos testes físicos e da integração no robô real},
+utilizando as ferramentas, arquivos e metodologias criadas por este projeto para facilitar a obtenção de dados, como a Dockerfile customizada, os scripts para fácil utilização e organização de vários comandos.
+\novo{Outro trabalho futuro seria o desenvolvimento da interface que, por enquanto, é somente um protótipo da matéria de IHC, mas que pode ser implementado e auxiliar com o uso da arena da K4-04.}
+

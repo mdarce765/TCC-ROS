@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.11.2)  13 DEC 2025 11:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.11.2)  13 DEC 2025 12:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1895,7 +1895,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  106i,12n,105p,1449b,38917s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on _TCC-principal.pdf (34 pages, 2041836 bytes).
+Output written on _TCC-principal.pdf (34 pages, 2041970 bytes).
 PDF statistics:
  456 PDF objects out of 1000 (max. 8388607)
  360 compressed objects within 4 object streams
