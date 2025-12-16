@@ -12,9 +12,9 @@ Accessed: 2025-05-25.
 Dispon{\'\i}vel em:
   \url{https://docs.docker.com/get-started/docker-overview/}.}
 
-\bibitem[Eclipse e Foundation 2022]{cdds2025}
-\abntrefinfo{Eclipse e Foundation}{ECLIPSE; FOUNDATION}{2022}
-{ECLIPSE; FOUNDATION. \textbf{CycloneDDS}. 2022.
+\bibitem[{Eclipse Foundation} 2022]{cdds2025}
+\abntrefinfo{{Eclipse Foundation}}{{Eclipse Foundation}}{2022}
+{{Eclipse Foundation}. \textbf{CycloneDDS}. 2022.
 Accessed: 2025-05-24.
 Dispon{\'\i}vel em: \url{https://cyclonedds.io/}.}
 
@@ -36,14 +36,16 @@ Dispon{\'\i}vel em: \url{https://nmon.sourceforge.io/pmwiki.php}.}
 Accessed: 2025-05-24.
 Dispon{\'\i}vel em: \url{https://www.omg.org/omg-dds-portal/}.}
 
-\bibitem[Open et al. 2018]{ros2025}
-\abntrefinfo{Open et al.}{OPEN et al.}{2018}
-{OPEN et al. \textbf{ROS}. 2018.
+\bibitem[{Open Source Robotics Foundation} 2018]{ros2025}
+\abntrefinfo{{Open Source Robotics Foundation}}{{Open Source Robotics
+  Foundation}}{2018}
+{{Open Source Robotics Foundation}. \textbf{ROS}. 2018.
 Accessed: 2025-05-24.
 Dispon{\'\i}vel em: \url{https://wiki.ros.org/ROS/Introduction}.}
 
-\bibitem[Open et al. 2025]{gzb2025}
-\abntrefinfo{Open et al.}{OPEN et al.}{2025}
+\bibitem[{Open Source Robotics Foundation} 2025]{gzb2025}
+\abntrefinfo{{Open Source Robotics Foundation}}{{Open Source Robotics
+  Foundation}}{2025}
 {\underline{\ \ \ \ \ \ \ \ }. \textbf{Gazebo Simulator}. 2025.
 Accessed: 2025-05-24.}
 
@@ -55,9 +57,9 @@ Accessed: 2025-12-10.
 Dispon{\'\i}vel em:
   \url{https://www.automate.org/robotics/tech-papers/optimizing-robotic-precision-unleash-real-time-performance-with-advanced-foundational-software-solutions}.}
 
-\bibitem[Red e Hat 2023]{mdw2025}
-\abntrefinfo{Red e Hat}{RED; HAT}{2023}
-{RED; HAT. \textbf{Middleware}. 2023.
+\bibitem[{Red Hat} 2023]{mdw2025}
+\abntrefinfo{{Red Hat}}{{Red Hat}}{2023}
+{{Red Hat}. \textbf{Middleware}. 2023.
 Accessed: 2025-05-24.
 Dispon{\'\i}vel em:
   \url{https://www.redhat.com/en/topics/middleware/what-is-middleware}.}
